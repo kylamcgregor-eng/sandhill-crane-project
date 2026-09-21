@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introduction | Sandhill Crane Migration Over Time</title>
+<meta name="description" content="Data science project on sandhill crane migration patterns over time, built with eBird community-science data.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <p class="kicker">CSCI 5612</p>
+  <h1>Sandhill Crane Migration Over Time</h1>
+  <p class="sub">How the timing and routes of sandhill crane migration have changed over time</p>
+</header>
+<nav class="tabs" aria-label="Project sections">
+  <ul>
+      <li><a href="index.html" aria-current="page">Introduction</a></li>
+      <li><a href="dataprep_eda.html">DataPrep/EDA</a></li>
+      <li><a href="clustering.html">Clustering</a></li>
+      <li><a href="pca.html">PCA</a></li>
+      <li><a href="naivebayes.html">NaiveBayes</a></li>
+      <li><a href="dectrees.html">DecTrees</a></li>
+      <li><a href="svms.html">SVMs</a></li>
+      <li><a href="regression.html">Regression</a></li>
+      <li><a href="nn.html">NN</a></li>
+      <li><a href="conclusions.html">Conclusions</a></li>
+      <li><a href="about.html">About Me</a></li>
+  </ul>
+</nav>
+<main id="main">
+
+<div class="prose">
+<h2>Introduction</h2>
+
+<p>Every spring, about a million sandhill cranes stage along the Platte River in central Nebraska, which the Nebraska Game &amp; Parks Commission describes as the largest gatherings of cranes in the world (<a href="https://outdoornebraska.gov/learn/nebraska-wildlife/nebraska-animals/birds/sandhill-cranes/">Nebraska Game &amp; Parks Commission</a>). They start to come in mid-February and leave early to mid-April and peak in mid to late March. The river is there stopping point in the middle of their migration: at night the birds roost in shallow water about six inches deep, and during the day they feed in nearby cornfields, pastures and open grassland, typically within ten miles of the river. Corn makes up about 90 percent of the diet during the stay, and collectively the cranes eat nearly 1,600 tons of it. Sandhill cranes are also ancient birds, with fossil evidence placing them in Nebraska more than nine million years ago. Individuals have been known to live more than 25 years in the wild, and, according to the Cornell Lab of Ornithology, they mate for life and usually lay two eggs although typically only one chick survives to fledge (<a href="https://www.allaboutbirds.org/guide/Sandhill_Crane/lifehistory">All About Birds</a>). Five subspecies exist, two migratory and three non-migratory, and along the Platte roughly 80 percent of the birds are lesser sandhill cranes and the other 20 percent are greater sandhill cranes. Across the continent, Partners in Flight estimates the breeding population at 560,000, the species is rated as a low conservation concern, and its numbers increased a little over 4 percent per year between 1966 and 2019 with great conservation efforts. Not all the population have had this success, because the Mississippi subspecies is endangered and the isolated Florida population is a concern. This mixture of abundance, deep evolutionary history, and local fragility makes the sandhill crane a useful species for understanding how migratory birds respond to a changing landscape.</p>
+
+<div class="photo-row"><figure class="photo">
+  <a href="images/photos/cranes-sandbar-display.jpg"><img src="images/photos/cranes-sandbar-display.jpg" alt="Sandhill cranes standing on a sandbar and in shallow water at low sun, one with wings spread, with more cranes in the distance" loading="lazy"></a>
+  <figcaption><b>By night, shallow water.</b> Sandhill cranes gather on sandbars and in shallow channels, the kind of open water where the birds roost overnight. Cranes like to make displays for each other.  This is on the south side of the Platte River at a blind at Iain Nicolson Auduobn Center at Rowe Sanctuary in April. <span class="credit">Photo: Kyla McGregor.</span></figcaption>
+</figure><figure class="photo">
+  <a href="images/photos/cranes-feeding-cornfield.jpg"><img src="images/photos/cranes-feeding-cornfield.jpg" alt="A large flock of sandhill cranes feeding in a harvested cornfield with three birds flying in from the left" loading="lazy"></a>
+  <figcaption><b>By day, harvested cornfields.</b> Cranes feed on waste grain in a stubble field. Fields like this supply most of the corn eaten during the stay. This is a cornfield near Gibbon, Nebraska in March. <span class="credit">Photo: Kyla McGregor.</span></figcaption>
+</figure></div>
+
+<p>Migration is not limited to the Platte. Farther west, the Rocky Mountain population of greater sandhill cranes winters near Bosque del Apache National Wildlife Refuge in New Mexico, stops at Monte Vista National Wildlife Refuge in Colorado's San Luis Valley, and nests at Grays Lake National Wildlife Refuge in southern Idaho (<a href="https://www.fws.gov/story/2026-04/spring-break-sandhill-cranes-colorado">U.S. Fish &amp; Wildlife Service</a>). More than 20,000 cranes pass through the San Luis Valley each spring and fall, stopping between February and April with numbers peaking in March. The geography in the supports them, because spring snowmelt drains from the mountains into the valley and sustains the wetlands and shallow ponds. Grain fields on the refuge are mowed in spring to provide food at a time when food is scarcer on private lands. A study that followed 106 cranes fitted with GPS transmitters between 2015 and 2022 found that arrivals in the valley peaked around February 21 in spring and October 13 in autumn (Vanausdall and colleagues, <a href="https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2024.1279279/full">Frontiers in Ecology and Evolution, 2024</a>). The same study found that autumn stopovers were longer and more variable than spring stopovers, which suggests that cranes hurry in spring and conserve energy in autumn. In spring, cranes tended to leave when crosswinds were lower and barometric pressure was higher, and in autumn they left with stronger tailwinds, weaker crosswinds, and more surface water available. Wind, air pressure, and water all help decide when a crane moves on. Since the conditions are different each year the time the cranes stopover varies from year to year.</p>
+
+<figure class="hero">
+  <a href="images/intro_flyway_schematic.png"><img src="images/intro_flyway_schematic.png" alt="Schematic showing the Rocky Mountain sandhill crane population's winter, stopover and nesting sites, and the Central Platte River spring staging area"></a>
+  <figcaption><b>Two well-known crane sites.</b> The schematic places the sites named in this introduction on a latitude and longitude grid: the Rocky Mountain population's winter, stopover and nesting refuges, and the Central Platte River staging area in Nebraska. Arrows are illustrative and do not trace actual flight paths.</figcaption>
+</figure>
+
+<figure class="hero">
+  <a href="images/audubon_sandhill_crane_range_map.png"><img src="images/audubon_sandhill_crane_range_map.png" alt="Range map of the sandhill crane across North America, with colored shading for the species' range from the Arctic to Florida and Mexico" loading="lazy"></a>
+  <img class="map-key" src="images/audubon_range_map_key.png" alt="Map key: purple is all seasons, red is breeding, blue is winter, and gray is migration, each with a darker shade for common and a lighter shade for uncommon" loading="lazy">
+  <figcaption><b>Sandhill crane range across North America.</b> The range map from the <a href="https://www.audubon.org/field-guide/bird/sandhill-crane">Audubon Field Guide</a> colors each area by season and by how common the species is there: breeding areas (red) across the far north, migration areas (gray) through the middle of the continent, winter areas (blue) in the southwestern and Gulf Coast states and Mexico, and all-season areas (purple) in Florida, with darker shades for common and lighter shades for uncommon. An automated, interactive version of this map, which can show how the birds' distribution changes through the year, can be explored at the <a href="https://explorer.audubon.org/explore/species/1390/sandhill-crane/migration">Audubon Bird Migration Explorer</a>. Map and key: Audubon.</figcaption>
+</figure>
+
+<p>Cranes depend on habitat that people have reshaped. According to Cody Wagner of Iain Nicholson Audubon at Rowe Sanctuary, the Platte offered wide, braided, mostly treeless river channels bordered by fertile wet meadows (<a href="https://www.audubon.org/great-plains/news/keeping-crane-river-crane-friendly">Audubon Great Plains</a>). The shallow water they sleep in at night serves as an early warning system for predators. The biggest changes to the habitat came when the European settlers came through and removed the natural vegetation introduced invasive species. There are no longer natural floods to keep the vegetation down on the sandbars.  The river is highly managed by reservoir control for the release of water. Phragmites is one invasive species that spreads very quickly and narrow the channels that cranes need. Keeping the river crane friendly is expensive, because clearing sandbars with heavy equipment costs up to $16,000 per mile and controlling Phragmites costs the Platte Valley Weed Management Area almost $600,000 every year. Conservation is a collaborative effort, including more than twenty years of work through the Platte River Recovery Implementation Program and land management at the Rowe Sanctuary and The Crane Trust that uses prescribed burns, grazing coordination, and tree removal. In Colorado, the health of the San Luis Valley's wetlands is tied to mountain snowpack, the water that reaches the valley in spring shapes the habitat available to cranes. Every change to a river, a farm field, or a winter storm has the potential to shift where and when cranes stop, and those shifts affect the towns and economies that host them.</p>
+
+<div class="photo-row"><figure class="photo">
+  <a href="images/photos/cranes-water-edge.jpg"><img src="images/photos/cranes-water-edge.jpg" alt="Sandhill cranes wading in shallow water next to a sandbar with frosted grasses in the foreground" loading="lazy"></a>
+  <figcaption><b>Cranes at the water&#x27;s edge.</b> Cranes wade in shallow water beside a sandbar, with frosted grasses in the foreground. Open, shallow channels of this kind give roosting birds a wide view of approaching predators at the south side of the Platte River at Iain Nicholson Audubon Center at Rowe Sanctuary in March. <span class="credit">Photo: Kyla McGregor.</span></figcaption>
+</figure><figure class="photo">
+  <a href="images/photos/cranes-icy-channel-mcgregor.jpg"><img src="images/photos/cranes-icy-channel-mcgregor.jpg" alt="Sandhill cranes standing along the far edge of a shallow, partly frozen channel with many more flying overhead in warm low light, bare trees behind and golden grass in the foreground" loading="lazy"></a>
+  <figcaption><b>Cranes over shallow, icy water.</b> Cranes crowd the far edge of a shallow, partly frozen channel while others fly in overhead, with bare trees and golden grass in the warm low light. Shallow, open water like this is the kind of roosting habitat that river management works to maintain in a blind on the south side of the Platte River at the Iain Nicholson Audubon Center at Rowe Sanctuary in March. <span class="credit">Photo: Cody McGregor.</span></figcaption>
+</figure></div>
+
+<p>Scientists have monitored cranes for decades. The Crane Trust has flown aerial surveys along an 85-mile stretch of the Central Platte River between Chapman and Overton, Nebraska, since 1998, and standardized weekly flights have been in place since 2002 (<a href="https://www.cranetrust.org/crane-counts/">Crane Trust</a>). Each survey starts about 30 minutes before sunrise, when cranes are still gathered on the river, and produces a reliable population index rather than an exact count. Beginning in 2024, fall and winter surveys were added because of the increasing number of crane using it during the off season.  There has been an over wintering population near Alda, Nebraska a few times in the last few years. Long-term records elsewhere show that migratory patterns can move. In the eastern population, Christmas Bird Count records from 1966 to 2013 shows a significant northern shift in the average latitude of where cranes winter, and the researchers site weather variation, long-term climate change, and land use combined to produce such changes (<a href="https://savingcranes.org/news/resources/exploring-changes-in-the-eastern-sandhill-crane-population/">International Crane Foundation</a>). Whooping cranes are an example: an analysis of 2,806 observations between  1942 to 2016 found that spring migration began about 22 days earlier in 2016 than in 1942, and that cranes appeared to respond to warming temperatures rather than to the length of the day, which has not changed (<a href="https://www.audubon.org/news/climate-change-has-whooping-cranes-starting-their-spring-migration-earlier">Audubon</a>). The fall migration started about 21 days later over the same period, although no temperature trend was found in the fall data. Earlier arrival could give chicks more time to develop, but it also risks arriving before food is available and meeting late-winter storms. EBird by Cornell of Ornithology launched in 2002, which provides community science data.  There is more than 2 billion bird sightings from over 150 million checklists submitted by more than one million users, and its data have supported more than 1,250 published studies (<a href="https://news.cornell.edu/stories/2025/08/lab-ornithology-hits-2-billion-bird-sightings-3-million-recordings">Cornell Chronicle</a>). Tools such as the International Crane Foundation's <a href="https://sandhillfinder.savingcranes.org/">Sandhill Crane Finder</a> already draw on those sightings to help people locate cranes. Many questions still remain about how sandhill crane timing at different stopovers has changed, how weather and drought shape it, and whether reports from birdwatchers can reveal patterns that formal surveys miss.</p>
+
+
+<h2>From the field</h2>
+<p>The photograph and video below show the birds and river habitat described above.</p>
+<div class="photo-row">
+<figure class="photo">
+  <a href="images/photos/cranes-stubble-field-mcgregor.jpg"><img src="images/photos/cranes-stubble-field-mcgregor.jpg" alt="A group of sandhill cranes in a harvested cornfield with a line of trees in the background" loading="lazy"></a>
+  <figcaption><b>Cranes in stubble.</b> A group of sandhill cranes stands, forage and dance in a harvested cornfield near Gibbon, Nebraska in March. <span class="credit">Photo: Cody McGregor.</span></figcaption>
+</figure>
+</div>
+<div class="photo-row">
+<figure class="video">
+  <video controls preload="metadata" playsinline poster="media/crane-video-1-poster.jpg" aria-label="Video of a large flock of birds in the sky over a river at sunrise">
+    <source src="media/crane-video-1.mp4" type="video/mp4">
+    Video not supported in this browser. <a href="media/crane-video-1.mp4">Download the video</a>.
+  </video>
+  <figcaption><b>A flock lifting off at sunrise.</b> A very large flock of birds fills the sky above a river at first light, from a blind on the south side of the Platte River in March at Iain Nicholson Audubon Center at Rowe Sanctuary. <span class="credit">Video: Kyla.</span></figcaption>
+</figure>
+</div>
+
+
+<h2>Research Questions</h2>
+<ol class="questions">
+  <li>Has the timing of the spring peak of sandhill cranes at major stopovers, such as the Central Platte River in Nebraska and the San Luis Valley in Colorado, moved earlier or later over the past fifteen years?</li>
+  <li>Do warmer late-winter and early-spring temperatures go together with earlier appearances of large numbers of cranes?</li>
+  <li>How does the timing of migration at the Platte River differ from the timing in the San Luis Valley, and do the two stopovers respond to the same conditions?</li>
+  <li>Are cranes being reported farther north during winter now than in the past, as happened with the eastern population?</li>
+  <li>Do daily temperature and precipitation help explain the days on which the largest numbers of cranes are reported at a stopover?</li>
+  <li>Are more cranes being reported outside the traditional spring window, such as in fall and winter, at the places where they have long stopped in spring?</li>
+  <li>Where the land around a stopover has been developed, farmed more, or has gained wetland over the past fifteen years, have crane reports moved toward or away from those places?</li>
+  <li>Which states and provinces receive the largest concentrations of cranes in each season, and does that pattern shift from year to year?</li>
+  <li>Can the part of the annual cycle a sighting belongs to, such as spring migration, fall migration, or wintering, be recognized from where and when the sighting was made and the weather that day?</li>
+  <li>How much of the apparent growth in crane sightings over time reflects more birdwatchers submitting more reports rather than more cranes?</li>
+</ol>
+
+
+<h2>Photo and video credits</h2>
+<ul class="refs">
+  <li>Photos: Kyla (sandbar and roost scene, feeding in a cornfield, cranes at the water's edge). Photos: Cody McGregor (cranes in stubble, cranes over shallow, icy water).</li>
+  <li>Video: Kyla (flock lifting off at sunrise).</li>
+</ul>
+
+
+<h2>References</h2>
+<ol class="refs">
+  <li>Nebraska Game &amp; Parks Commission. <em>Sandhill Cranes.</em> <a href="https://outdoornebraska.gov/learn/nebraska-wildlife/nebraska-animals/birds/sandhill-cranes/">https://outdoornebraska.gov/learn/nebraska-wildlife/nebraska-animals/birds/sandhill-cranes/</a></li>
+  <li>Cornell Lab of Ornithology. <em>Sandhill Crane Life History</em>, All About Birds. <a href="https://www.allaboutbirds.org/guide/Sandhill_Crane/lifehistory">https://www.allaboutbirds.org/guide/Sandhill_Crane/lifehistory</a></li>
+  <li>U.S. Fish &amp; Wildlife Service (2026). <em>Spring break for sandhill cranes in Colorado.</em> <a href="https://www.fws.gov/story/2026-04/spring-break-sandhill-cranes-colorado">https://www.fws.gov/story/2026-04/spring-break-sandhill-cranes-colorado</a></li>
+  <li>Vanausdall, R. A., et al. (2024). Time of year and weather influence departure decisions of sandhill cranes at a primary stopover. <em>Frontiers in Ecology and Evolution.</em> <a href="https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2024.1279279/full">https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2024.1279279/full</a></li>
+  <li>Audubon Great Plains. <em>Keeping the Crane River &ldquo;Crane Friendly.&rdquo;</em> <a href="https://www.audubon.org/great-plains/news/keeping-crane-river-crane-friendly">https://www.audubon.org/great-plains/news/keeping-crane-river-crane-friendly</a></li>
+  <li>Crane Trust. <em>Crane Counts.</em> <a href="https://www.cranetrust.org/crane-counts/">https://www.cranetrust.org/crane-counts/</a></li>
+  <li>International Crane Foundation. <em>Exploring Changes in the Eastern Sandhill Crane Population.</em> <a href="https://savingcranes.org/news/resources/exploring-changes-in-the-eastern-sandhill-crane-population/">https://savingcranes.org/news/resources/exploring-changes-in-the-eastern-sandhill-crane-population/</a></li>
+  <li>Audubon. <em>Sandhill Crane</em>, Audubon Field Guide (range map). <a href="https://www.audubon.org/field-guide/bird/sandhill-crane">https://www.audubon.org/field-guide/bird/sandhill-crane</a></li>
+  <li>Audubon. <em>Sandhill Crane migration</em>, Bird Migration Explorer. <a href="https://explorer.audubon.org/explore/species/1390/sandhill-crane/migration">https://explorer.audubon.org/explore/species/1390/sandhill-crane/migration</a></li>
+  <li>Audubon. <em>Climate Change Has Whooping Cranes Starting Their Spring Migration Earlier.</em> <a href="https://www.audubon.org/news/climate-change-has-whooping-cranes-starting-their-spring-migration-earlier">https://www.audubon.org/news/climate-change-has-whooping-cranes-starting-their-spring-migration-earlier</a></li>
+  <li>Cornell Chronicle (2025). <em>Lab of Ornithology hits 2 billion bird sightings, 3 million recordings.</em> <a href="https://news.cornell.edu/stories/2025/08/lab-ornithology-hits-2-billion-bird-sightings-3-million-recordings">https://news.cornell.edu/stories/2025/08/lab-ornithology-hits-2-billion-bird-sightings-3-million-recordings</a></li>
+  <li>International Crane Foundation. <em>Sandhill Crane Finder.</em> <a href="https://sandhillfinder.savingcranes.org/">https://sandhillfinder.savingcranes.org/</a></li>
+  <li>U.S. Geological Survey. <em>Temporospatial shifts in Sandhill Crane staging in the Central Platte River Valley in response to climatic variation and habitat change.</em> Monographs of the Western North American Naturalist, 11(1). <a href="https://www.usgs.gov/publications/temporospatial-shifts-sandhill-crane-staging-central-platte-river-valley-response">https://www.usgs.gov/publications/temporospatial-shifts-sandhill-crane-staging-central-platte-river-valley-response</a></li>
+  <li>U.S. Geological Survey, Multi-Resolution Land Characteristics (MRLC) Consortium. <em>National Land Cover Database.</em> <a href="https://www.mrlc.gov/">https://www.mrlc.gov/</a></li>
+</ol>
+</div>
+
+</main>
+<footer>CSCI 5612 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
+</body>
+</html>

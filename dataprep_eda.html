@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataPrep/EDA | Sandhill Crane Migration Over Time</title>
+<meta name="description" content="Data science project on sandhill crane migration patterns over time, built with eBird community-science data.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <p class="kicker">CSCI 5612</p>
+  <h1>Sandhill Crane Migration Over Time</h1>
+  <p class="sub">How the timing and routes of sandhill crane migration have changed over time</p>
+</header>
+<nav class="tabs" aria-label="Project sections">
+  <ul>
+      <li><a href="index.html">Introduction</a></li>
+      <li><a href="dataprep_eda.html" aria-current="page">DataPrep/EDA</a></li>
+      <li><a href="clustering.html">Clustering</a></li>
+      <li><a href="pca.html">PCA</a></li>
+      <li><a href="naivebayes.html">NaiveBayes</a></li>
+      <li><a href="dectrees.html">DecTrees</a></li>
+      <li><a href="svms.html">SVMs</a></li>
+      <li><a href="regression.html">Regression</a></li>
+      <li><a href="nn.html">NN</a></li>
+      <li><a href="conclusions.html">Conclusions</a></li>
+      <li><a href="about.html">About Me</a></li>
+  </ul>
+</nav>
+<main id="main">
+
+<div class="prose">
+<h2>DataPrep/EDA</h2>
+<p>Understanding when and where sandhill cranes appear requires observations that span many years, many places, and a range of weather conditions. This page shows where each dataset came from, how it was gathered, how it was cleaned, and what the cleaned data looks like. Everything on the page can be reproduced by running the three Python scripts linked below, in order.</p>
+<div class="note info"><b>Data currency.</b> The data were pulled on September 20, 2026. GBIF's copy of the eBird dataset contains no records for 2025 yet, so the historical study period is 2010 to 2024, the eBird API extends the record to the present, and land cover is available for six dates between 2008 and 2021.</div>
+</div>
+
+<div class="prose">
+<h2>1. Data sources</h2>
+<p>Six sources were combined. Five come from web services and APIs (Application Programming Interfaces) accessed with Python, and one was created by hand. Bird sightings come from two of those services, weather comes from NOAA station records and from the Open-Meteo weather-model service, and land cover comes from the U.S. Geological Survey.</p>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Dataset</th><th>How it was obtained</th><th>Why it was gathered</th><th>Raw data</th><th>Clean data</th></tr></thead>
+<tbody>
+<tr><td><b>eBird sightings via GBIF</b><br><a href="https://www.gbif.org/dataset/4fa7b334-ce0d-4e88-aaae-2e0c138d049e">EOD &ndash; eBird Observation Dataset</a></td>
+    <td>GBIF Occurrence API (no key), Sandhill Crane, 2010&ndash;2024. Two pulls: a sample of up to 600 records per country-year-month across the United States and Canada, and every record within about 60 km of each of the seven reference sites. A third request counts all eBird records of any species in each site area per year, which measures reporting effort.</td>
+    <td>Large numbers of community-science sightings give dates, places, and flock sizes across the whole range and many years.</td>
+    <td><a href="data/raw/gbif_ebird_sandhill_raw.csv">gbif_ebird_sandhill_raw.csv</a> (sample)<br><a href="data/raw/gbif_ebird_sites_raw.csv">gbif_ebird_sites_raw.csv</a> (site areas)<br><a href="data/raw/gbif_ebird_effort_raw.csv">gbif_ebird_effort_raw.csv</a> (effort)</td>
+    <td><a href="data/clean/observations_clean.csv">observations_clean.csv</a><br><a href="data/clean/site_observations_clean.csv">site_observations_clean.csv</a><br><a href="data/clean/site_year_effort_clean.csv">site_year_effort_clean.csv</a></td></tr>
+<tr><td><b>eBird API 2.0</b><br><a href="https://documenter.getpostman.com/view/664302/S1ENwy59">API documentation</a></td>
+    <td>Recent-observation and hotspot endpoints (free API key). Each pull covers the last 30 days, and pulls are appended over time.</td>
+    <td>Provides the newest sightings, hotspot locations, and a growing time series that continues after the historical data end.</td>
+    <td><a href="data/raw/ebird_api_recent_raw.csv">ebird_api_recent_raw.csv</a><br><a href="data/raw/ebird_hotspots_raw.csv">ebird_hotspots_raw.csv</a></td>
+    <td><a href="data/clean/ebird_api_recent_clean.csv">ebird_api_recent_clean.csv</a><br><a href="data/clean/ebird_hotspots_clean.csv">ebird_hotspots_clean.csv</a></td></tr>
+<tr><td><b>Station weather</b><br><a href="https://www.ncei.noaa.gov/access/services/data/v1">NOAA NCEI Access Data Service</a> (GHCN-Daily)</td>
+    <td>Web service (no key). For each reference site the script chooses the nearest GHCN-Daily station that reports temperature and precipitation for the whole study period, then downloads daily maximum and minimum temperature, precipitation, snowfall, snow depth, and wind, 2010&ndash;2024</td>
+    <td>Direct thermometer and gauge readings from a federal weather network are the most trusted record of the conditions cranes experienced. Research on crane departures points to weather as a key influence on when cranes move (Vanausdall and colleagues, 2024).</td>
+    <td><a href="data/raw/ncei_daily_weather_raw.csv">ncei_daily_weather_raw.csv</a><br><a href="data/raw/ncei_stations_used.csv">ncei_stations_used.csv</a> (stations chosen)</td>
+    <td><a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a> (weather joined to daily crane reports)</td></tr>
+<tr><td><b>Snow and wind</b><br><a href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo Historical Weather API</a></td>
+    <td>Web service (no key). One request per reference site returns daily snowfall, wind speed, wind gusts, wind direction and mean temperature, for 2010&ndash;2024. The values are a computer-model reconstruction of the weather (the ERA5 reanalysis) at a grid point near each site, not station readings.</td>
+    <td>The station files from NCEI were too patchy for snowfall, snow depth, and wind (see the cleaning steps), and spring storms and headwinds are thought to shape when cranes move. The model record has no gaps, so it fills that need, with the caveat that it is modelled.</td>
+    <td><a href="data/raw/openmeteo_daily_weather_raw.csv">openmeteo_daily_weather_raw.csv</a></td>
+    <td><a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a> (<code>om_</code> columns)</td></tr>
+<tr><td><b>Land cover</b><br><a href="https://www.mrlc.gov/data-services-page">USGS National Land Cover Database (NLCD)</a></td>
+    <td>MRLC Web Coverage Service (no key). For each site and each of six NLCD dates (2008, 2011, 2013, 2016, 2019, 2021) a small 30 m map of about 124 km by 124 km is requested and its pixels are counted by land-cover class inside 5 km grid cells.</td>
+    <td>Shows whether the land around each site was developed, farmed, or wetland, and whether that changed while the bird reports were being collected.</td>
+    <td><a href="data/raw/nlcd_cell_class_pixels_raw.csv">nlcd_cell_class_pixels_raw.csv</a> (pixel counts by cell and class)</td>
+    <td><a href="data/clean/landcover_cell_year_clean.csv">landcover_cell_year_clean.csv</a><br><a href="data/clean/landcover_site_year_clean.csv">landcover_site_year_clean.csv</a><br><a href="data/clean/cell_change_clean.csv">cell_change_clean.csv</a> (land cover and crane reports per cell)</td></tr>
+<tr><td><b>Reference sites</b><br>(created dataset)</td>
+    <td>Hand-built table of refuges and staging areas named in the Introduction, plus two additional well-known crane areas, with approximate coordinates</td>
+    <td>Anchors the site-area sighting pull and the weather station choice, and groups nearby sightings into site-level daily records.</td>
+    <td><a href="data/raw/sites_reference.csv">sites_reference.csv</a></td>
+    <td>used inside <a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a></td></tr>
+</tbody></table></div>
+
+<div class="prose">
+<h3>API endpoints and example GET requests</h3>
+<p><b>GBIF Occurrence API</b> (core endpoint <code>/v1/occurrence/search</code>). The species key is first resolved with <code>/v1/species/match</code>.</p>
+<pre><code>GET https://api.gbif.org/v1/species/match?name=Antigone%20canadensis
+
+GET https://api.gbif.org/v1/occurrence/search?taxonKey=&lt;KEY&gt;
+    &amp;datasetKey=4fa7b334-ce0d-4e88-aaae-2e0c138d049e
+    &amp;country=US&amp;year=2018&amp;month=3
+    &amp;hasCoordinate=true&amp;occurrenceStatus=PRESENT&amp;limit=300&amp;offset=0
+
+# every record near a site (example: Kearney, Nebraska), paged with offset
+GET https://api.gbif.org/v1/occurrence/search?taxonKey=&lt;KEY&gt;
+    &amp;datasetKey=4fa7b334-ce0d-4e88-aaae-2e0c138d049e&amp;year=2018
+    &amp;decimalLatitude=40.16,41.24&amp;decimalLongitude=-99.79,-98.37
+    &amp;hasCoordinate=true&amp;occurrenceStatus=PRESENT&amp;limit=300&amp;offset=0</code></pre>
+<p><b>eBird API 2.0</b> (key sent in the <code>X-eBirdApiToken</code> header; free keys are issued at <a href="https://ebird.org/api/keygen">ebird.org/api/keygen</a>).</p>
+<pre><code>GET https://api.ebird.org/v2/data/obs/US-NE/recent/sancra?back=30&amp;detail=full&amp;maxResults=10000
+GET https://api.ebird.org/v2/ref/hotspot/US-CO?fmt=json</code></pre>
+<p><b>NOAA NCEI</b> (no key). Two public station files are read to choose stations, then the Access Data Service returns the daily observations as CSV. The station ID in the example is illustrative, because the script selects stations automatically.</p>
+<pre><code>GET https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt
+GET https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-inventory.txt
+
+GET https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries
+    &amp;stations=USW00014935&amp;startDate=2010-01-01&amp;endDate=2024-12-31
+    &amp;dataTypes=TMAX,TMIN,TAVG,PRCP,SNOW,SNWD,AWND&amp;format=csv&amp;units=metric&amp;includeStationName=true</code></pre>
+<p><b>Open-Meteo Historical Weather API</b> (no key). The service returns snowfall in centimeters, which the cleaning step converts to millimeters.</p>
+<pre><code>GET https://archive-api.open-meteo.com/v1/archive?latitude=40.7&amp;longitude=-99.08
+    &amp;start_date=2010-01-01&amp;end_date=2024-12-31&amp;timezone=auto
+    &amp;daily=temperature_2m_mean,snowfall_sum,wind_speed_10m_max,wind_gusts_10m_max,wind_direction_10m_dominant</code></pre>
+<p><b>MRLC Web Coverage Service (NLCD land cover)</b> (no key). X and Y are meters in the map projection the service uses (EPSG:5070); the script computes them from each site&rsquo;s latitude and longitude.</p>
+<pre><code>GET https://www.mrlc.gov/geoserver/mrlc_download/wcs?service=WCS&amp;version=2.0.1&amp;request=GetCoverage
+    &amp;coverageId=mrlc_download__NLCD_2011_Land_Cover_L48&amp;format=image/geotiff
+    &amp;subset=X(-320051,-196051)&amp;subset=Y(1907577,2031577)</code></pre>
+<p><b>GBIF reporting effort</b> (all species, one request per site with a year facet).</p>
+<pre><code>GET https://api.gbif.org/v1/occurrence/search?datasetKey=4fa7b334-ce0d-4e88-aaae-2e0c138d049e
+    &amp;decimalLatitude=40.16,41.24&amp;decimalLongitude=-99.79,-98.37&amp;hasCoordinate=true
+    &amp;year=2010,2024&amp;facet=year&amp;facetLimit=40&amp;limit=0</code></pre>
+<h3>Code</h3>
+<p>All scripts are written in Python 3 and use the <code>requests</code>, <code>pandas</code>, <code>numpy</code>, <code>matplotlib</code>, <code>tifffile</code>, and <code>pyproj</code> packages (see <a href="code/requirements.txt">requirements.txt</a>). They run in order and share settings through <a href="code/config.py">config.py</a>.</p>
+<ul>
+  <li><a href="code/00_intro_schematic.py">00_intro_schematic.py</a> &ndash; draws the schematic used in the Introduction.</li>
+  <li><a href="code/01_gather_data.py">01_gather_data.py</a> &ndash; pulls data from the APIs and web services, chooses the NOAA weather stations, retrieves the land-cover maps, and writes the raw files.</li>
+  <li><a href="code/02_clean_data.py">02_clean_data.py</a> &ndash; cleans, discretizes, and normalizes; writes the clean files and a cleaning log.</li>
+  <li><a href="code/03_eda_figures.py">03_eda_figures.py</a> &ndash; produces the figures and data previews on this page.</li>
+</ul>
+
+<h2>2. Raw data and clean data</h2>
+<p>Previews show the first rows of a raw file next to the cleaned version. The raw files are stored exactly as received.</p>
+</div>
+<div class="preview-row">
+<figure>
+  <a href="images/eda/preview_raw_gbif.png"><img src="images/eda/preview_raw_gbif.png" alt="RAW eBird sightings (GBIF)" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>RAW eBird sightings (GBIF).</b> The first rows of the raw file show GBIF's original field names and formats, including a full timestamp for each sighting. Fields such as coordinate uncertainty and individual count can be empty in the raw data.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/preview_clean_observations.png"><img src="images/eda/preview_clean_observations.png" alt="CLEAN observations" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>CLEAN observations.</b> The cleaned file keeps only complete, plausible records and adds calendar, season, flock-size, and normalized columns. Column names are shortened and every field is filled in.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/preview_raw_weather.png"><img src="images/eda/preview_raw_weather.png" alt="RAW station weather (NOAA NCEI)" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>RAW station weather (NOAA NCEI).</b> The raw NCEI file holds one row per station and day, with blank cells wherever a station did not report a variable. Temperatures are in degrees Celsius and precipitation and snow are in millimeters.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/preview_clean_site_daily.png"><img src="images/eda/preview_clean_site_daily.png" alt="CLEAN site-day table" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>CLEAN site-day table.</b> The cleaned table joins each site's daily station weather to the number of eBird reports and cranes counted within 60 km that day. Standardized column names, and derived columns such as a 7-day mean temperature are added for later modeling.</figcaption>
+</figure>
+</div>
+
+<div class="prose">
+<h2>3. Cleaning and preparation</h2>
+<p>Cleaning and visualization were done together: each figure below either exposed a data problem or confirmed that one had been fixed. All decisions are implemented in <a href="code/02_clean_data.py">02_clean_data.py</a>, and every filtering step is counted in <a href="data/clean/cleaning_log.json">cleaning_log.json</a>.</p>
+<h3>Steps applied during cleaning</h3>
+<ul>
+  <li><b>Duplicates.</b> Records with a repeated GBIF identifier were removed.</li>
+  <li><b>Missing or invalid location and date.</b> Records without a usable date or coordinates were removed, and so were coordinates outside North America (latitude 14&ndash;72, longitude &minus;170 to &minus;50).</li>
+  <li><b>Vague locations.</b> Records whose reported coordinate uncertainty exceeded 10 km were removed, because they cannot be mapped or matched to weather reliably.</li>
+  <li><b>Presence-only reports.</b> eBird allows an &ldquo;X&rdquo; when a species is present but not counted. These arrive with no count and were removed. The share removed is charted in the figure on presence-only reports.</li>
+  <li><b>Impossible counts.</b> Counts below 1 or above 500,000 birds in a single report were removed. Large but plausible flocks were kept and flagged instead (see below).</li>
+  <li><b>Missing state or province.</b> Filled with &ldquo;Unknown&rdquo; so the column stays complete.</li>
+  <li><b>Site-area records.</b> The same steps were applied to the site-area pull. Each remaining record was then kept only if it lay within 60 km of its nearest reference site, which removes the corners of the search boxes and the copies of records that fall inside the overlapping boxes of the two Platte River sites.</li>
+</ul>
+<h3>Steps applied to the weather and station site tables</h3>
+<ul>
+  <li><b>Station choice.</b> For each reference site, the nearest GHCN-Daily station within 60 km (widened to 100 km if needed) that reports maximum temperature, minimum temperature, and precipitation from 2010 through 2024 was selected. First-order weather stations, and stations that also report snow and wind, were favored. A site with no suitable station is left out of the weather table. The stations chosen are listed in <a href="data/raw/ncei_stations_used.csv">ncei_stations_used.csv</a>.</li>
+  <li><b>Required values.</b> Days missing maximum temperature, minimum temperature, or precipitation were removed, along with physically impossible values (a maximum below the minimum, temperatures beyond &plusmn;60&nbsp;&deg;C, or negative precipitation, snow, or wind).</li>
+  <li><b>Daily mean temperature.</b> Calculated as the average of the daily maximum and minimum, because the station average temperature field is blank at many stations.</li>
+  <li><b>Snow and wind gaps in the station data.</b> Snow depth and snowfall blanks in June through September were set to zero because snow does not fall then, and other gaps of up to three days were filled by linear interpolation. A station variable was kept only if every site had at least 85 percent of its days filled. Snowfall (77 percent at the weakest site), snow depth (75 percent), and station wind (reported at only two of the seven stations) all fell short, so none of them was kept from NCEI.</li>
+  <li><b>Snow and wind from Open-Meteo.</b> Because those station variables were dropped, snowfall and wind were taken from the Open-Meteo reanalysis instead. Duplicate days, days with a missing value, and physically impossible values (negative snow or wind, a gust below the sustained wind, or a wind direction outside 0 to 360 degrees) were removed, and snowfall was converted from centimeters to millimeters. The result was joined to the station table by site and date, and only days with both sources were kept. The temperature and precipitation columns still come from the stations. As a check, the model&rsquo;s daily mean temperature and the station-based value agree closely (a correlation of 0.96, with the model averaging 0.3&nbsp;&deg;C warmer).</li>
+  <li><b>Crane reports per site.</b> The cleaned site-area records were summed by site and day into the number of reports, the total cranes counted, and the largest single count. Days with no counted report at a site were recorded as zero reports, not as missing, because an unreported day is the absence of observers as much as the absence of cranes. Site-days with reports but no usable weather were removed, and a <code>has_records</code> column keeps the zero-versus-reported distinction visible.</li>
+</ul>
+<h3>Steps applied to the land-cover and effort tables</h3>
+<ul>
+  <li><b>Pixel counts to shares.</b> Each 30 m pixel of the NLCD map carries one of 16 land-cover codes. Codes were combined into groups (developed, cropland, pasture and hay, grassland and shrub, forest, wetland, open water, barren), and each 5 km cell&rsquo;s pixel counts were turned into percentages of that cell.</li>
+  <li><b>Complete cells only.</b> Cells cut off at the edge of a map (fewer than 95 percent of their pixels) and cells whose center is more than 60 km from the site were removed, so every cell is a full square inside the site area.</li>
+  <li><b>Land-cover change.</b> For each cell the 2011 shares were subtracted from the 2021 shares, giving the change in percentage points. The 2011 and 2021 maps were chosen because they fall closest to the start (2010&ndash;2014) and the end (2020&ndash;2024) of the bird record.</li>
+  <li><b>Crane reports per cell.</b> Cleaned site-area sightings were placed in the same 5 km cells and counted for the early and late periods. Each cell&rsquo;s <em>share</em> of its site&rsquo;s reports in each period was calculated so that the overall growth in reporting does not hide where cranes were reported. Cells with no reports keep a value of zero, and cells with fewer than five crane reports in total are flagged (<code>enough_reports</code>) rather than deleted.</li>
+  <li><b>Observer access.</b> The number of eBird hotspots (public birding locations) in each cell was added, because cranes cannot be reported where nobody goes.</li>
+  <li><b>Reporting effort.</b> Crane records per year at each site were divided by all eBird records of any species in the same area and year, giving crane records per 1,000 eBird records.</li>
+</ul>
+<h3>Columns added</h3>
+</div>
+<div class="table-wrap"><table>
+<thead><tr><th>Column(s)</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><code>year, month, day, week</code></td><td>Calendar parts of the sighting date (<code>day</code> is the day of the year, 1 to 366, not the day of the month; <code>week</code> is the ISO week).</td></tr>
+<tr><td><code>season</code></td><td>Winter, spring, summer, or fall from the calendar month (a discretized label).</td></tr>
+<tr><td><code>phase</code></td><td>Spring migration (Feb&ndash;Apr), fall migration (Sep&ndash;Nov), or breeding/winter (all other months).</td></tr>
+<tr><td><code>era</code></td><td>2010&ndash;2017 or 2018&ndash;2024, for comparing two time periods.</td></tr>
+<tr><td><code>log10_count, count_class</code></td><td>Log of the flock size, and a size class: 1&ndash;9, 10&ndash;99, 100&ndash;999, or 1000+.</td></tr>
+<tr><td><code>large_flock</code></td><td>1 for reports at or above the 99th percentile of flock size (flagged, not removed).</td></tr>
+<tr><td><code>lat_norm, lon_norm, day_norm</code></td><td>Min-max normalized (0 to 1) latitude, longitude, and day of year.</td></tr>
+<tr><td><code>temp_mean_c, temp_max_c, temp_min_c, precip_mm</code></td><td>Standardized NCEI daily temperature (&deg;C) and precipitation (mm).</td></tr>
+<tr><td><code>om_snowfall_mm</code></td><td>Modelled daily snowfall (mm) from Open-Meteo.</td></tr>
+<tr><td><code>om_wind_max_kmh, om_gust_max_kmh, om_wind_dir_deg</code></td><td>Modelled daily maximum 10 m wind speed and gust (km/h) and dominant wind direction (degrees) from Open-Meteo.</td></tr>
+<tr><td><code>pct_developed, pct_cropland, pct_wetland, pct_open_water, &hellip;</code></td><td>Percentage of a 5 km cell (or of a whole site area) in each land-cover group, by NLCD year, in the land-cover files.</td></tr>
+<tr><td><code>d_developed_pp, d_cropland_pp, d_wetland_pp, &hellip;</code></td><td>Change in each land-cover group from 2011 to 2021, in percentage points (<code>cell_change_clean.csv</code>).</td></tr>
+<tr><td><code>reports_early, reports_late, share_early_pct, share_late_pct, d_share_pp</code></td><td>Crane reports in each cell in 2010&ndash;2014 and 2020&ndash;2024, the cell&rsquo;s share of its site&rsquo;s reports in each period, and the change in that share.</td></tr>
+<tr><td><code>hotspots, enough_reports</code></td><td>Number of eBird hotspots in the cell, and a flag for cells with at least five crane reports.</td></tr>
+<tr><td><code>crane_per_1000</code></td><td>Crane records per 1,000 eBird records of any species for a site and year (<code>site_year_effort_clean.csv</code>).</td></tr>
+<tr><td><code>temp_range_c, temp_7d_mean_c, has_records</code></td><td>Daily temperature range, trailing 7-day mean temperature, and an indicator that the site had at least one report that day.</td></tr>
+</tbody></table></div>
+
+<div class="prose">
+<h3>Cleaning log</h3>
+<p>The table below is read directly from the log written by the cleaning script.</p>
+</div>
+<div class="table-wrap"><table id="log-table">
+<thead><tr><th>Dataset</th><th>Step</th><th class="num">Rows before</th><th class="num">Rows after</th><th class="num">Removed</th></tr></thead>
+<tbody><tr><td colspan="5">The log appears here once <code>data/clean/cleaning_log.json</code> has been generated and the site is served over http(s).</td></tr></tbody>
+</table></div>
+
+<div class="prose">
+<h3>Known limitations</h3>
+<ul>
+  <li><b>Sampling.</b> The continent-wide sample used for the maps and distributions reads at most 600 records from each country-year-month to keep the raw file a manageable size. The site-area pull is different: it contains every record GBIF holds inside each site's search box, so daily counts at a site are complete for the records GBIF has. GBIF returns records in a fixed order rather than at random, so randomly placed slices approximate, but do not perfectly equal, a random sample. The true record totals for each month are stored in the raw file (<code>cell_total_records</code>) and are used for the reporting-effort charts.</li>
+  <li><b>Study period.</b> GBIF's copy of the eBird dataset had no 2025 records when the data were pulled, so the historical record ends in December 2024.</li>
+  <li><b>Overlapping reports.</b> Several observers often report the same flock, so the total cranes counted in a day can add the same birds more than once. The largest single count that day is the safer measure of flock size, and the daily total is best treated as an index of reporting.</li>
+  <li><b>Presence-only days.</b> A day with only presence-only reports is treated as a day with no counted report, even though cranes were seen.</li>
+  <li><b>Land-cover resolution.</b> NLCD classifies 30 m squares into broad classes, so small restoration projects, changes inside a river channel, and shifts between crop types are mostly invisible, and only six dates between 2008 and 2021 are available.</li>
+  <li><b>Land cover is not the whole story.</b> The tests compare cells and sites, not individual birds, and many things that matter to cranes, such as river flows, disturbance, and waste grain, are not in the land-cover maps. Any pattern found is an association and not proof of cause.</li>
+  <li><b>Observer effort.</b> Sightings come from volunteers, so places and months with more birdwatchers produce more reports. Counts of reports are not counts of birds.</li>
+  <li><b>Site coordinates.</b> Reference-site coordinates are approximate and the two sites added beyond those named in the Introduction should be verified before being cited.</li>
+  <li><b>Modelled snow and wind.</b> Open-Meteo values are a weather-model reconstruction on a grid of roughly 10 km to 25 km, so they smooth over local conditions, can understate snow depth and gusts at a particular field or river bend, and are not readings from an instrument. The grid point used for each site sits a few kilometers from the coordinates requested.</li>
+  <li><b>Snow depth not included.</b> Open-Meteo offers snow depth only as an hourly variable, which is a much larger download, and the free service refused that request when it was made because its daily allowance had been used up. Snowfall and wind, which are offered as daily values, were obtained. Snow depth can be added later by re-running the Open-Meteo step of <code>01_gather_data.py</code>.</li>
+  <li><b>Station distance.</b> A weather station can be tens of kilometers from the site it represents, so its readings approximate, rather than equal, conditions at the birds' location.</li>
+  <li><b>Recent API window.</b> The eBird API reaches back only 30 days, so its time series begins on the date of the first pull.</li>
+</ul>
+</div>
+
+<div class="prose">
+<h2>4. Exploratory visualizations</h2>
+<p>22 figures explore reporting effort, geography, timing, flock size, and weather. Each thumbnail links to the full-size image.</p>
+</div>
+<h3>Reporting effort and seasonality</h3>
+<div class="fig-grid">
+<figure>
+  <a href="images/eda/fig01_records_per_year.png"><img src="images/eda/fig01_records_per_year.png" alt="Records per year" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Records per year.</b> Bars show the number of Sandhill Crane records in the eBird dataset on GBIF for each year from 2010 to 2024 in the United States and Canada, rising from about 25,000 in 2010 to about 318,000 in 2024. Growth of that size mostly reflects more people using eBird rather than 13 times as many cranes, so raw record counts cannot be read as a population trend.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig02_records_per_month.png"><img src="images/eda/fig02_records_per_month.png" alt="Records by month" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Records by month.</b> Bars show total records for each calendar month pooled across 2010 to 2024, with February to April and September to November in blue. Records climb from January to a peak in May (about 363,000) and drop to a low in July (about 114,000), while each fall month holds only about 143,000 to 150,000, so spring produces far more reports than fall.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig03_heatmap_year_month.png"><img src="images/eda/fig03_heatmap_year_month.png" alt="Records by year and month" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Records by year and month.</b> Each cell shows the number of records in one month of one year on a log scale, with darker cells holding more records. The darkest cells sit in March through May of the most recent years, so both season and year of reporting must be accounted for when months or years are compared.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig14_presence_only_share.png"><img src="images/eda/fig14_presence_only_share.png" alt="Reports with no crane count" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Reports with no crane count.</b> The line shows the share of raw records each year that note only that a crane was present, with no count of birds, falling from about 18 percent in 2010 to about 2 to 3 percent from 2019 onward. Because these records cannot support count-based analysis they were removed, so the early years lose a larger share of their data than the later years do.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig09_top_states.png"><img src="images/eda/fig09_top_states.png" alt="States and provinces with the most reports" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>States and provinces with the most reports.</b> Horizontal bars rank the states and provinces with the most cleaned crane reports in the sample, led by Ontario (about 38,600 reports), then Florida, Wisconsin, and Michigan. Because the sample caps each country-year-month at 600 records, the bars show relative reporting effort within the sample and not the true share of cranes in each place.</figcaption>
+</figure>
+</div>
+<h3>Where and when cranes are reported</h3>
+<div class="fig-grid">
+<figure>
+  <a href="images/eda/fig04_location_scatter.png"><img src="images/eda/fig04_location_scatter.png" alt="Report locations by part of the year" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Report locations by part of the year.</b> Each dot is one cleaned report, colored by whether it was made in the spring migration months (February to April), the fall migration months (September to November), or the rest of the year. Reports from the Great Lakes and Florida are spread across all seasons like the sample as a whole, while near the central Platte River of Nebraska about 89 percent of the sampled reports fall in February to April.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig07_latitude_vs_doy.png"><img src="images/eda/fig07_latitude_vs_doy.png" alt="Latitude of reports through the year" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Latitude of reports through the year.</b> Each hexagon counts reports at a given latitude and day of the year, and darker hexagons hold more reports. Reports above 50 degrees north appear mainly between about day 100 and day 300, and the median report latitude is about 45 degrees in June and July but about 36 degrees in December and January, which shows the northward spring movement and the southern winter range.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig08_latitude_by_week_era.png"><img src="images/eda/fig08_latitude_by_week_era.png" alt="Median latitude by week, two time periods" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Median latitude by week, two time periods.</b> Lines show the median latitude of reports for each week of the year in 2010 to 2017 and in 2018 to 2024. The lines nearly coincide from spring through early fall, but from about week 45 to week 49 the later period's median latitude is roughly 3 to 5 degrees farther north, which may reflect cranes lingering farther north in late fall or a change in where people report.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig12_timing_trend.png"><img src="images/eda/fig12_timing_trend.png" alt="Timing of the spring peak by year" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Timing of the spring peak by year.</b> Each dot marks the day of the year by which half of the cranes reported from February to April had been recorded, with a dashed line showing the fitted trend. The trend is close to flat (+0.12 days per year in Nebraska and -0.19 days per year in Colorado) and the yearly points scatter by two to three weeks, so no clear shift in spring timing can be claimed from this chart alone.</figcaption>
+</figure>
+</div>
+<h3>How many cranes per report</h3>
+<div class="fig-grid">
+<figure>
+  <a href="images/eda/fig05_count_histogram.png"><img src="images/eda/fig05_count_histogram.png" alt="Distribution of cranes per report" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Distribution of cranes per report.</b> The histogram shows the number of cranes counted per report on a logarithmic axis, with the 99th percentile (1,200 birds) marked in orange. The median report holds 3 cranes and about three-quarters hold fewer than 10, while a few reports reach tens of thousands, which is why counts are log-transformed and very large counts are flagged rather than deleted.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig06_count_by_month_box.png"><img src="images/eda/fig06_count_by_month_box.png" alt="Report size by month" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Report size by month.</b> Box plots show the middle half of report sizes in each month on a log scale, with the median marked by a black line. The median report holds 2 cranes from April through July but 9 in November and 8 in December, so reports are largest in the fall and winter months and smallest in the breeding season.</figcaption>
+</figure>
+</div>
+<h3>Weather at the reference sites</h3>
+<div class="fig-grid">
+<figure>
+  <a href="images/eda/fig10_temperature_by_site.png"><img src="images/eda/fig10_temperature_by_site.png" alt="Yearly temperature cycle at each site" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Yearly temperature cycle at each site.</b> Each small panel shows the typical yearly temperature cycle at one reference site, with the line marking the median and the shaded band spanning the 10th to 90th percentile across years. Comparing panels shows how much colder or warmer each site is at the same point in the calendar.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig13_spring_temperature_box.png"><img src="images/eda/fig13_spring_temperature_box.png" alt="February to April temperature by site" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>February to April temperature by site.</b> Box plots compare daily mean temperatures from February to April at each site, ordered from coldest to warmest median. Medians range from about 1 degree Celsius at Grays Lake to about 11 degrees at Bosque del Apache, so cranes at different sites meet very different weather at the same time of year.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig15_counts_vs_temperature.png"><img src="images/eda/fig15_counts_vs_temperature.png" alt="Cranes reported vs. recent temperature near Kearney" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Cranes reported vs. recent temperature near Kearney.</b> Each dot is one day near Kearney, Nebraska from February to April with at least one crane report, plotting the 7-day average temperature against the largest single count reported that day on a log axis. The dots form a shapeless cloud (a rank correlation of about -0.02 across 450 days), so temperature alone shows no simple link to crane counts, and later modules will test other variables and combinations.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig11_correlation_heatmap.png"><img src="images/eda/fig11_correlation_heatmap.png" alt="Correlations among weather, season, and reports" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Correlations among weather, season, and reports.</b> Colors show rank correlations among temperature, precipitation, modelled snowfall and wind, day of year, number of reports, and cranes counted across all site-days, including days with no reports, with blue for negative, red for positive, and gray near zero. Reports and cranes counted move together almost perfectly (0.99) while temperature has only a weak negative link with either (about -0.17) and snowfall and wind are even closer to zero (-0.07 to -0.01), so weather explains little of the daily variation on its own.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig21_snow_and_wind_trends.png"><img src="images/eda/fig21_snow_and_wind_trends.png" alt="Snowfall and wind, 2010 to 2024" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Snowfall and wind, 2010 to 2024.</b> Each gray line shows one site's winter snowfall (November to March, left) or spring wind (February to April, right) as a difference from that site's own 2010 to 2024 average, and the blue line averages the seven sites. The dashed trend is essentially flat (about -0.07 centimeters of snowfall per winter and +0.06 kilometers per hour of wind per year), so the modelled weather shows no clear change in snow or wind at these sites that could explain shifts in where cranes are reported.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig22_crane_reports_by_snow_and_wind.png"><img src="images/eda/fig22_crane_reports_by_snow_and_wind.png" alt="Crane reports on snowy and windy spring days" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Crane reports on snowy and windy spring days.</b> Bars show how often a crane report was made on spring days (February to April) with different amounts of modelled snowfall or wind, relative to each site's average spring day (1.0), and each orange dot is one site. Reports were made about a third less often than usual on days with 2 centimeters or more of snowfall (0.67 versus 1.06 on snow-free days) and somewhat less often on the windiest third of days (0.88 versus 1.14 on the calmest), but stormy days also keep birdwatchers at home, so this shows a change in reports and not necessarily in where the cranes are.</figcaption>
+</figure>
+</div>
+<h3>Land use and cranes</h3>
+<div class="fig-grid">
+<figure>
+  <a href="images/eda/fig17_landcover_change_by_site.png"><img src="images/eda/fig17_landcover_change_by_site.png" alt="Land-cover change around each site" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Land-cover change around each site.</b> Bars show how much cropland, developed land, and wetland changed as a share of the land within 60 km of each site between the 2011 and 2021 versions of the National Land Cover Database. No site gained more than about 0.2 percentage points of developed land or wetland, and cropland changed most at Muleshoe, Texas (about 1.6 points), so the wider landscape around every site was nearly the same in 2021 as in 2011.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig18_crane_share_of_ebird_by_site.png"><img src="images/eda/fig18_crane_share_of_ebird_by_site.png" alt="Cranes as a share of all eBird reporting" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Cranes as a share of all eBird reporting.</b> Lines show crane records as a share of every eBird record of any species inside each site's search area, which removes the general growth in birdwatching. The share went from about 15 per 1,000 records in 2010 to 25 to 30 in most later years at the two Platte River sites, rose gradually at Monte Vista, and stayed flat or edged down at Grays Lake and Bosque del Apache, while the one-year spike at Muleshoe in 2014 is unexplained and should be treated with caution.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig19_landcover_change_vs_crane_shift.png"><img src="images/eda/fig19_landcover_change_vs_crane_shift.png" alt="Land-cover change vs. shifts in crane reports" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Land-cover change vs. shifts in crane reports.</b> Each dot is a 5 km cell with at least five crane reports, plotting its change in developed land (left) or wetland (right) from 2011 to 2021 against the change in its share of the site's crane reports between 2010-2014 and 2020-2024. The dots scatter around zero with rank correlations of +0.11 and -0.02, so cells that gained developed land or wetland did not gain or lose crane reports in any consistent way.</figcaption>
+</figure>
+<figure>
+  <a href="images/eda/fig20_water_wetland_and_crane_presence.png"><img src="images/eda/fig20_water_wetland_and_crane_presence.png" alt="Water, wetland, and where cranes were reported" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Water, wetland, and where cranes were reported.</b> Bars show the share of 5 km cells with at least one crane report in 2020 to 2024, grouped by how much of the cell is open water or wetland and split by whether the cell contains an eBird hotspot. Presence rose steadily with water and wetland, from 9 to 36 percent of cells without a hotspot and from 33 to 93 percent of cells with one, so cranes are reported where water is, although observers may also favor wet places.</figcaption>
+</figure>
+</div>
+<h3>Live eBird API pull</h3>
+<div class="fig-grid">
+<figure>
+  <a href="images/eda/fig16_ebird_api_recent_by_state.png"><img src="images/eda/fig16_ebird_api_recent_by_state.png" alt="Recent crane reports by state (eBird API)" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Recent crane reports by state (eBird API).</b> Bars show how many crane reports the eBird API returned for each state in the 30 days before the pull on September 20, 2026, with Wyoming, Idaho, and Colorado returning the most. Because the API only looks back 30 days, repeated pulls will build a running record over time.</figcaption>
+</figure>
+</div>
+
+
+<div class="prose">
+<h2>5. Land use and cranes: a first look</h2>
+<p>Research on the Central Platte River Valley found that cranes moved earlier in the spring and increasingly concentrated in the eastern part of the valley while river channels and land cover were changing (<a href="https://www.usgs.gov/publications/temporospatial-shifts-sandhill-crane-staging-central-platte-river-valley-response">U.S. Geological Survey</a>). That raised the question of whether land-use change, such as development or restored wetland, also shows up in the sightings collected here. A first check used the <a href="https://www.mrlc.gov/">National Land Cover Database</a>, which classifies every 30-meter square of the lower 48 states into land-cover classes, at six dates around each of the seven reference sites.</p>
+<p>Three results stand out. First, land cover barely changed within 60 km of any site between 2011 and 2021 (figure &ldquo;Land-cover change around each site&rdquo;). Second, in the 5 km cells where land use did change, crane reports did not move in a consistent direction. The 17 analyzed cells that gained at least one percentage point of developed land held about 41 percent of the analyzed crane reports in 2010&ndash;2014 and about 43 percent in 2020&ndash;2024, and none of the 69 cells that had crane reports early but none late had gained that much developed land. The 11 cells with the largest wetland gains showed no larger rise in crane share than other cells (a median change of +0.28 versus +0.25 percentage points). Third, where cranes are reported is strongly tied to water: cranes were reported in far more cells with open water or wetland, especially in cells with an eBird hotspot.</p>
+<p>These results do not show that development or restoration has no effect on cranes. The land-cover maps cannot see small restoration projects or changes inside a river channel, only a small number of cells changed much (17 gained at least one percentage point of developed land), and the tests are associations across cells rather than tests of cause. The share of all eBird records that were cranes also roughly doubled at the two Platte River sites between 2010 and the mid-2010s, and land cover at this scale cannot explain that; it may reflect changing observer behavior, the eastward shift described by the U.S. Geological Survey, or habitat features that NLCD does not measure. Later modules will use models that account for reporting effort and can bring in additional habitat data.</p>
+</div>
+
+<script>
+(function () {
+  var body = document.querySelector('#log-table tbody');
+  if (!window.fetch) return;
+  fetch('data/clean/cleaning_log.json').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (log) {
+    var rows = [];
+    var names = {observations: 'Sample sightings', site_observations: 'Site-area sightings', weather_ncei: 'NOAA weather', weather_openmeteo: 'Open-Meteo weather', landcover: 'NLCD land cover', effort: 'Reporting effort', site_daily: 'Site-day table', ebird_api: 'eBird API', hotspots: 'eBird hotspots'};
+    Object.keys(log).forEach(function (key) {
+      var ds = names[key] || key;
+      Object.keys(log[key]).forEach(function (step) {
+        var v = log[key][step];
+        if (v && typeof v === 'object' && v.rows_before !== undefined) {
+          rows.push('<tr><td>' + ds + '</td><td>' + step + '</td><td class="num">' + v.rows_before.toLocaleString() +
+            '</td><td class="num">' + v.rows_after.toLocaleString() + '</td><td class="num">' + v.removed.toLocaleString() + '</td></tr>');
+        } else if (typeof v === 'string') {
+          rows.push('<tr><td>' + ds + '</td><td>' + step.replace(/_/g, ' ') + '</td><td colspan="3">' + v + '</td></tr>');
+        }
+      });
+    });
+    if (rows.length) body.innerHTML = rows.join('');
+  }).catch(function () {});
+})();
+</script>
+
+</main>
+<footer>CSCI 5612 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
+</body>
+</html>

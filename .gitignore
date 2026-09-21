@@ -1,0 +1,6 @@
+# resumable download caches (large, not needed on the website)
+data/raw/.gbif_cells.jsonl
+data/raw/.gbif_site_cells.jsonl
+data/raw/.ncei_cache/
+__pycache__/
+data/raw/.openmeteo_cache/

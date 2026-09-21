@@ -1,0 +1,973 @@
+speciesCode,comName,sciName,locId,locName,obsDt,howMany,lat,lng,obsValid,obsReviewed,locationPrivate,subId,regionQuery,pulled_on
+sancra,Sandhill Crane,Antigone canadensis,L77430571,S CR 2E fields,2026-09-19 17:08,210.0,37.452074,-106.110122,True,False,True,S394417863,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77373153,"11468 3725 Rd, Paonia US-CO 38.82016, -107.66145",2026-09-18 18:53,3.0,38.820164,-107.661452,True,False,True,S394084281,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77370414,Roadside,2026-09-18 17:57,8.0,37.628059,-106.149304,True,False,True,S394069014,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77368448,"4338–4858 US-285, Monte Vista US-CO (37.6382,-106.1490)",2026-09-18 17:23,12.0,37.638166,-106.149017,True,False,True,S394050465,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1766567,Lake Avery,2026-09-18 11:16,3.0,39.9827335,-107.6441497,True,False,True,S393989916,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L305034,Douglas Reservoir,2026-09-18 07:41,,40.701322,-105.0819811,True,False,False,S393974132,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L282348,Colorado River SP--Wildlife Area section,2026-09-18 06:52,2.0,39.0578173,-108.4846598,True,False,False,S394374194,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L168162,Sweitzer Lake SP,2026-09-17 18:17,6.0,38.712734,-108.032265,True,False,False,S393796595,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L62350125,"5521–5737 CR-29, Craig US-CO 40.58339, -107.37904",2026-09-17 13:18,24.0,40.583389,-107.379044,True,False,True,S393803401,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2747329,Marjorie Perry Nature Preserve,2026-09-17 08:22,1.0,39.6204613,-104.9354517,True,False,False,S393685501,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2352973,Loudy-Simpson Nature Trail,2026-09-17 07:47,,40.4986,-107.55547,True,False,False,S393803357,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21165474,Colorado River SP--West Lake,2026-09-17 07:13,2.0,39.060388,-108.487689,True,False,False,S394374562,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77301973,"Ptarmigan Loop, Dillon US-CO 39.66310, -106.03962",2026-09-16 12:42,14.0,39.6631,-106.039624,True,True,True,S393671485,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L285939,Fossil Creek Reservoir & Regional Open Space,2026-09-16 12:38,1.0,40.4905049,-105.0088308,True,False,False,S393762066,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109296,Fruitgrowers Reservoir,2026-09-16 11:52,5.0,38.8295785,-107.9444504,True,False,False,S393476305,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77274158,"U.S. 40, Hayden, Colorado, US (40.494, -107.367)",2026-09-16 10:27,6.0,40.4937102,-107.3668726,True,False,True,S393490538,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L10720851,My Backyard,2026-09-16 07:30,12.0,37.5499354,-106.1389846,True,False,True,S393404633,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18577227,WFMC Ponds,2026-09-16 07:22,21.0,40.477394,-107.615424,True,False,True,S393492825,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21789303,"Leatheridge loop, 6200 Rd, Montrose US-CO 38.46291, -107.93020",2026-09-16 06:50,2.0,38.462909,-107.930199,True,False,True,S393403894,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L42020992,Yampa River SWA—Nature Trail (Aug 15-Feb 28 only),2026-09-15 15:42,60.0,40.497795,-107.373988,True,False,False,S393243732,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77239502,"1663–1737 US-34, Granby US-CO 40.10635, -105.93481",2026-09-15 15:21,1.0,40.106348,-105.934809,True,False,True,S393259482,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7809996,Rocky Mountain NP--Green Mountain Trail,2026-09-15 14:01,1.0,40.3089914,-105.8344733,True,False,False,S393243073,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77232422,"1165 12 1/2 Road, Loma, Colorado, US (39.174, -108.808)",2026-09-15 12:49,2.0,39.1737541,-108.8075136,True,False,True,S393208251,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77227508,"Auto selected 38.78257, -106.11302",2026-09-15 10:26,4.0,38.782565,-106.113023,True,False,True,S393178790,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109301,Monte Vista NWR,2026-09-15 09:39,2.0,37.4876656,-106.1308691,True,False,False,S393198525,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77235034,Monte Vista Country Club,2026-09-15 08:00,4.0,37.5837835,-106.1577634,True,False,True,S393230873,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L10189450,Big Salt Wash - feeders,2026-09-15 07:23,6.0,39.1708497,-108.7463064,True,False,True,S393127062,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L32640351,"County Road 70, Hayden, Colorado, US (40.504, -107.164)",2026-09-12 10:22,1.0,40.5044345,-107.163822,True,False,True,S392233113,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4012409,Pella Crossing Open Space,2026-09-10 10:21,1.0,40.1838602,-105.1781568,True,False,False,S391587256,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L61388150,Alamosa NWR--Rio Grande Nature Trail (closed Apr 15-Aug 30),2026-09-10 10:06,3.0,37.4296909,-105.7879538,True,False,False,S391606827,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76987902,Salida Golf Course,2026-09-10 08:10,3.0,38.5391519,-106.0040274,True,False,True,S391663248,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76944982,"920 West 1st Street, Craig, Colorado, US (40.507, -107.56)",2026-09-09 16:55,2.0,40.5069228,-107.5602254,True,False,True,S391396941,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2659703,Birding on Avon,2026-09-09 11:29,1.0,40.4423333,-105.1032829,True,False,True,S391342774,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77221794,King Mountain BLM,2026-09-09 10:30,200.0,40.0248009,-106.798037,True,False,True,S393401784,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L338916,Stagecoach SP,2026-09-09 08:51,1.0,40.277837,-106.8559887,True,False,False,S391352709,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L560852,Blanca Wetlands (BLM),2026-09-09 07:01,12.0,37.5594115,-105.695343,True,False,False,S391313289,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12746166,"Home, Salida US-CO (38.5294,-106.0014)",2026-09-09 06:33,1.0,38.529395,-106.001445,True,False,True,S391262216,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76902654,"E County Road 8 S, Monte Vista (37.4590,-106.1184)",2026-09-08 14:04,14.0,37.459041,-106.118395,True,False,True,S391117687,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L5801799,Private Ranch,2026-09-08 08:15,2.0,40.6049278,-106.0972881,True,False,True,S391145727,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L32076597,"Rainbow Ridge, Clark, Colorado, US (40.802, -106.983)",2026-09-08 07:28,1.0,40.8019767,-106.9825863,True,False,True,S391067830,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L452813,Carpenter Ranch,2026-09-07 07:16,2.0,40.4976145,-107.1737766,True,False,False,S391037586,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L338872,Home Lake SWA,2026-09-07 06:37,2.0,37.5723079,-106.0935203,True,False,False,S390753745,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76852280,70 at Morgan Creek,2026-09-07 05:55,1.0,40.5285213,-107.2004571,True,False,True,S390794922,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76819927,Merrill Ranch,2026-09-06 19:30,50.0,40.5079096,-107.2050681,True,False,True,S390568540,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L743334,Yampa River Preserve,2026-09-06 18:18,2.0,40.4851146,-107.1533844,True,False,False,S390564777,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4919039,Yampavian Ranch--PRIVATE,2026-09-06 17:19,120.0,40.5075542,-107.2057464,True,False,True,S390566009,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76818730,"40515 County Road 69A, Nancy’s House (Routt Cty, CO)",2026-09-06 16:48,130.0,40.507597,-107.205782,True,False,True,S390561739,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L357689,North Poudre Reservoir #3,2026-09-06 13:31,4.0,40.734332,-105.0422788,True,False,False,S390477770,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L26716457,Nofstger Reservoir,2026-09-06 13:15,1.0,40.4143479,-107.1469672,True,False,False,S391137489,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L52271296,"Maribou Ranch (Routt Cty, CO)",2026-09-06 07:05,2.0,40.522463,-106.919814,True,False,True,S390410737,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76747744,"861 Industrial Dr, Hayden US-CO 40.48982, -107.24422",2026-09-05 17:57,287.0,40.489816,-107.244218,True,False,True,S390132924,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76747578,"462 Commerce St, Hayden US-CO 40.49025, -107.24431",2026-09-05 17:46,520.0,40.490246,-107.244314,True,False,True,S390131909,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76808652,"861 Industrial Avenue, Hayden, Colorado, US (40.49, -107.244)",2026-09-05 17:45,259.0,40.4897682,-107.2442488,True,False,True,S390502545,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76747531,"861 Industrial Dr, Hayden US-CO 40.49001, -107.24414",2026-09-05 17:45,286.0,40.490009,-107.244142,True,False,True,S390131666,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76747430,"81639, Hayden US-CO (40.4907,-107.2394)",2026-09-05 17:40,287.0,40.490705,-107.239394,True,False,True,S390131014,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76745792,"12565 County Road 70, Hayden US-CO 40.52265, -107.19074",2026-09-05 17:09,6.0,40.522647,-107.190736,True,False,True,S390121477,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76749026,"CR-37, Hayden US-CO 40.49020, -107.24342",2026-09-05 16:48,220.0,40.490198,-107.243416,True,False,True,S390140519,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76808612,"12565 County Road 70, Hayden, Colorado, US (40.523, -107.191)",2026-09-05 16:48,13.0,40.522666,-107.1907708,True,False,True,S390502297,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76744532,"422 Commerce St, Hayden US-CO 40.49159, -107.24410",2026-09-05 16:43,64.0,40.49159,-107.244104,True,False,True,S390113799,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76710575,"12565 County Road 70, Hayden, Colorado, US (40.523, -107.191)",2026-09-05 16:42,7.0,40.5228668,-107.1910131,True,False,True,S390121840,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76745607,"11913–11951 County Road 70, Hayden US-CO 40.52817, -107.19115",2026-09-05 16:36,17.0,40.528167,-107.191145,True,False,True,S390120346,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L341350,Routt CR-80 (0 - 5 miles north of Yampa River),2026-09-05 15:55,1.0,40.5433847,-107.2191596,True,False,False,S390158055,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76752050,"10370–10524 US-40, Hayden US-CO 40.49517, -107.23449",2026-09-05 15:45,114.0,40.495173,-107.234489,True,False,True,S390158106,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76746021,Crane Festival,2026-09-05 14:35,45.0,40.4971269,-107.2480814,True,False,True,S390122916,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76860398,"10620 US-40, Hayden US-CO 40.49828, -107.22579",2026-09-05 11:17,75.0,40.498279,-107.225795,True,False,True,S390844003,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76723018,"15235 W US Hwy 40, Steamboat Springs US-CO 40.47489, -107.13966",2026-09-05 09:03,2.0,40.474888,-107.139656,True,False,True,S389999216,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76720479,Mt. Harris (Private Property),2026-09-05 08:22,2.0,40.475956,-107.139824,True,False,True,S389985019,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2983928,Yampa River--along CR-70 N of US-40,2026-09-05 08:12,50.0,40.4963091,-107.1589279,True,False,False,S389928295,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76804397,"12565 County Road 70, Hayden US-CO 40.52306, -107.19094",2026-09-05 07:51,70.0,40.523057,-107.190939,True,False,True,S390477157,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L685764,Moffat County Road Department ponds,2026-09-05 07:42,2.0,40.5052505,-107.5353277,True,False,False,S389921955,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L44431061,Two Bridges Open Space,2026-09-05 07:34,1.0,39.4135,-104.724902,True,True,True,S391330910,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76710204,12565 County Road 70,2026-09-05 07:28,54.0,40.5228766,-107.1909194,True,False,True,S389922698,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L151646,Walden Reservoir,2026-09-05 06:16,6.0,40.7321439,-106.3120244,True,False,False,S390154064,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76804394,"40625 County Road 69A, Hayden US-CO 40.50903, -107.20976",2026-09-05 06:08,90.0,40.509029,-107.209762,True,False,True,S390477132,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76913111,Morgan Bottoms Rd,2026-09-04 17:20,70.0,40.504217,-107.265204,True,False,True,S391187646,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76679450,"13015 North County Road 17, Wellington, Colorado, US (40.773, -105.095)",2026-09-04 17:06,40.0,40.7728542,-105.0950825,True,False,True,S389736789,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76667557,"31580 CR-14, Steamboat Springs US-CO (40.3798,-106.8266)",2026-09-04 10:33,11.0,40.379848,-106.826555,True,False,True,S389666020,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18817281,"Coalmont Lek--ARRIVE IN DARK, STAY IN CAR, DO NOT DISTURB DISPLAYING BIRDS!",2026-09-04 09:48,2.0,40.5465243,-106.440112,True,False,False,S390161126,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76866793,"37722–37788 Cn Rd 53, Hayden US-CO 40.47085, -107.22781",2026-09-04 07:42,100.0,40.470853,-107.227814,True,False,True,S390885158,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76660329,"37722–37788 Cn Rd 53, Hayden US-CO 40.47087, -107.22750",2026-09-04 07:23,50.0,40.470865,-107.227497,True,False,True,S389620749,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76658653,"40625 County Road 69A, Hayden US-CO 40.50906, -107.20980",2026-09-04 06:28,70.0,40.509061,-107.209797,True,False,True,S389608383,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76658512,"40625 County Road 69A, Hayden US-CO 40.50900, -107.20870",2026-09-04 06:23,250.0,40.509004,-107.208698,True,False,True,S389607534,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76640099,"32000–32036 CR-22, Steamboat Springs US-CO (40.3998,-106.8243)",2026-09-03 19:35,10.0,40.399752,-106.824348,True,False,True,S389502830,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76468934,Gone birding,2026-09-03 18:41,1.0,40.526478,-106.937061,True,False,True,S389506959,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76638466,"36641–36699 CR-14, Steamboat Springs US-CO (40.4507,-106.8282)",2026-09-03 18:07,1.0,40.450669,-106.828231,True,False,True,S389491547,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11000355,Hayden (town),2026-09-03 15:45,26.0,40.4936345,-107.2631885,True,False,False,S389669806,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L753439,Cowdrey Reservoir,2026-09-03 09:14,4.0,40.8376777,-106.3133454,True,False,False,S389403292,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76638274,Notch Mountain via North Ridge,2026-09-03 08:48,10.0,39.4921,-106.4553512,True,False,True,S389481416,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L342924,Loudy-Simpson Park,2026-09-03 07:41,2.0,40.49578,-107.55625,True,False,False,S389418994,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76595324,"North County Road 103, Wyoming, US",2026-09-02 16:07,6.0,40.9874629,-106.0021403,True,False,True,S389244867,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4514762,Yampa River SP--Visitor Center & Nature Trail,2026-09-02 10:48,50.0,40.4902507,-107.311213,True,False,False,S390846752,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7800776,Steamboat Lake SP--Sunrise Vista CG,2026-09-02 09:39,2.0,40.8077677,-106.9656372,True,False,False,S389158788,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76619319,Hoot Hoot,2026-09-02 08:22,1.0,40.533964,-106.924433,True,False,True,S389431592,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76555574,"Howelsen Park, Steamboat Springs US-CO 40.48253, -106.83292",2026-09-01 19:07,2.0,40.482528,-106.832918,True,False,True,S388999357,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L902167,Yampa River SWA--Wetlands,2026-08-31 15:40,76.0,40.5131711,-107.3906761,True,False,False,S389748023,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76510834,"24555 County Road 42, Steamboat Springs, Colorado, US (40.515, -106.961)",2026-08-31 14:59,8.0,40.5149849,-106.9612128,True,False,True,S388705290,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76674316,"1004 E County Road 70, Wellington US-CO 40.75503, -105.05869",2026-08-31 09:07,4.0,40.755033,-105.058691,True,False,True,S389704835,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L71302911,My House,2026-08-31 09:00,1.0,38.396124,-107.867993,True,False,True,S388655324,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4477854,Silt River Preserve,2026-08-30 16:04,2.0,39.536698,-107.662262,True,False,False,S388695262,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L44569317,"4674 U5 Rd, Paradox US-CO 38.37500, -108.98170",2026-08-30 09:06,,38.375004,-108.981698,True,False,True,S388466375,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76413217,"6120 State Highway 15 S, Monte Vista US-CO 37.48591, -106.14770",2026-08-29 18:20,,37.485909,-106.1477,True,True,True,S388111947,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4774737,Dumont Lake,2026-08-28 18:24,2.0,40.4045425,-106.6301787,True,False,False,S387770322,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76354775,"Wyoming Trail, Kremmling US-CO 40.40364, -106.62399",2026-08-28 17:57,2.0,40.403644,-106.62399,True,False,True,S387760736,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L168158,Vega SP,2026-08-28 10:38,2.0,39.22338,-107.79534,True,False,False,S388414205,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3702586,Mount Ouray SWA,2026-08-28 09:07,13.0,38.5572075,-106.0388138,True,True,False,S387674512,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L481533,Horsethief Canyon SWA,2026-08-28 07:59,1.0,39.16076,-108.78814,True,False,False,S387669830,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L280284,Frantz Lake SWA,2026-08-28 07:58,5.0,38.5435336,-106.0224427,True,True,False,S387743983,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L692254,CO-Routt Marabou,2026-08-28 07:03,5.0,40.5287404,-106.9276142,True,False,True,S388471958,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76402962,BLM Grassy Knoll River Access,2026-08-27 15:23,2.0,38.890573,-106.169248,True,True,True,S388050364,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11866692,Monte Vista (town),2026-08-26 08:22,,37.5778994,-106.1479221,True,True,False,S387091596,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3632359,Cottonwood Park (Mancos Dog Park),2026-08-26 06:55,1.0,37.3417255,-108.3008537,True,False,False,S387115799,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76175263,"Colorado 9, Silverthorne, Colorado, US (39.811, -106.194)",2026-08-23 16:14,2.0,39.8110624,-106.194144,True,True,True,S386627555,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76106409,"22047 U.S. 550, Ridgway, Colorado, US (38.144, -107.74)",2026-08-23 10:22,6.0,38.1439017,-107.7404167,True,True,True,S386225562,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76225900,"33450 Colorado 131, Steamboat Springs, Colorado, US (40.405, -106.826)",2026-08-22 18:23,2.0,40.4052166,-106.825511,True,False,True,S386951673,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76050969,"S Lincoln Ave, Steamboat Springs US-CO 40.46494, -106.82579",2026-08-22 13:47,2.0,40.464937,-106.825795,True,False,True,S385895706,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L31416487,Garvin Mesa,2026-08-22 07:30,2.0,38.9056472,-107.5868139,True,False,True,S386569643,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77424376,"County Road 7
+Morrill NE 69358
+United States",2026-09-19 16:43,2.0,41.926205,-103.948506,True,False,True,S394385674,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L41219526,Niobrara Boat Ramp and WTP,2026-09-17 16:42,2.0,42.7609622,-98.0274796,True,True,False,S393786773,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1102896,Lake Wanahoo,2026-09-17 10:38,2.0,41.2434171,-96.610508,True,False,False,S393703342,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1540350,Lake Wanahoo--Sand Creek Wetlands,2026-09-13 14:16,2.0,41.2637052,-96.6174567,True,False,False,S392660732,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L569258,Niobrara SP,2026-09-11 09:12,2.0,42.7653566,-98.062849,True,True,False,S391845045,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11980201,"Niobrara State Park, Niobrara US-NE 42.75148, -98.06556",2026-09-10 09:04,2.0,42.751485,-98.065558,True,True,True,S391779727,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L22609441,Niobrara River at NE-12,2026-09-10 08:05,2.0,42.7464112,-98.0499182,True,True,True,S391576846,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L209645,Box Butte Reservoir,2026-09-07 06:10,2.0,42.45848,-103.08634,True,True,False,S390884501,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1111719,Fort Kearny SRA--south Platte River bridge,2026-09-05 13:12,1.0,40.6604977,-98.987385,True,False,False,S390054711,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12032884,The Cabin,2026-09-04 07:17,1.0,42.946909,-98.470875,True,False,True,S389619005,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8010728,North Buffalo Road,2026-08-31 08:04,4.0,41.2064237,-100.7911382,True,False,True,S388633974,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1024345,Maxwell NWR--Lake 13,2026-09-18 09:26,1.0,36.5810737,-104.5828056,True,True,False,S393959612,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L265647,Maxwell NWR,2026-09-13 11:18,3.0,36.5688651,-104.5815831,True,True,False,S392646808,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12478660,Maxwell NWR--Lake 13,2026-09-11 07:30,2.0,36.5828908,-104.5814996,True,True,True,S393277774,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8460211,NM-211 Bridge over the Gila,2026-09-07 06:57,2.0,32.9690103,-108.5871804,True,True,False,S390871010,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76134355,Maxwell I-25 S Playa,2026-08-23 17:29,1.0,36.554974,-104.538351,True,True,True,S386383309,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L9644475,"Greenways Park, Amarillo",2026-09-12 19:04,1.0,35.1379844,-101.9295859,True,True,False,S392344429,US-TX,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L52757987,Sandhole (NO MOTORIZED ACCESS),2026-09-19 19:07,80.0,43.928225,-112.22805,True,False,True,S394422994,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L765722,Ben Ross Reservoir,2026-09-19 12:22,1.0,44.521953,-116.4487159,True,False,False,S394336598,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2418379,Cascade Lake--Gold Fork Arm,2026-09-19 10:57,2.0,44.685742,-116.0679603,True,False,False,S394327841,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109176,Camas NWR,2026-09-19 09:46,200.0,43.9509896,-112.2557731,True,False,False,S394333981,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L24704682,Mud Lake WMA--Camas Creek Delta,2026-09-19 09:37,2.0,43.8888989,-112.3570382,True,False,False,S394360617,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L466951,Beaver Dick Park,2026-09-19 09:28,3.0,43.8251772,-111.9061911,True,False,False,S394274230,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77368862,"2905 South 4000 West, Rexburg, Idaho, US (43.787, -111.858)",2026-09-19 09:18,7.0,43.7872384,-111.8584671,True,False,True,S394254226,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1676985,Mud Lake WMA--East End,2026-09-19 08:00,6.0,43.8924953,-112.357379,True,False,False,S394300363,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77407103,"83805, Bonners Ferry US-ID 48.71119, -116.41453",2026-09-19 07:58,1.0,48.711195,-116.414532,True,False,True,S394278395,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L31275455,First Pullout,2026-09-19 07:46,1.0,48.7141286,-116.4134679,True,False,False,S394278198,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1915425,Camas NWR--Headquarters,2026-09-19 07:15,80.0,43.9640943,-112.2639656,True,False,False,S394328392,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4585399,Beaver Dick Camp,2026-09-19 06:54,1.0,43.7780196,-112.0366055,True,False,False,S394259230,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1223385,Ashton Reservoir--Boat Launch,2026-09-18 14:11,125.0,44.1115929,-111.4556122,True,False,False,S394012720,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L352584,Silver Creek Preserve--General,2026-09-18 09:00,2.0,43.3166853,-114.1500092,True,False,False,S394015962,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1145057,Chester Wetlands,2026-09-18 08:16,2.0,44.0185621,-111.5833014,True,False,False,S394031454,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L51070177,Camas NWR Observation Tower,2026-09-18 07:10,30.0,43.92829,-112.270032,True,False,True,S393956934,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L878382,Hayspur Fish Hatchery,2026-09-17 18:04,2.0,43.3398492,-114.1469193,True,False,False,S393796777,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L33951478,West Silver Creek,2026-09-17 07:32,2.0,43.326294,-114.105446,True,False,True,S393796811,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77299237,W 2000 S,2026-09-16 18:55,160.0,43.6942481,-111.184862,True,False,True,S393651271,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1667722,Nickerson Bridge (Teton River at S Bates Road),2026-09-16 18:40,2.0,43.696165,-111.1657828,True,False,False,S393651340,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12585317,"18301 US-20, Bellevue US-ID (43.3306,-114.1953)",2026-09-16 18:18,120.0,43.330609,-114.195302,True,False,True,S393534834,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L807188,Blue Creek,2026-09-16 08:52,5.0,42.051842,-116.1807632,True,False,False,S393495443,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18440108,S 5000 W -- Bates to S Bates,2026-09-16 08:35,3.0,43.7064161,-111.2009079,True,False,True,S393426009,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77233577,Egin Lake Campground,2026-09-15 19:59,3.0,43.961862,-111.855009,True,False,True,S393279575,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L51338930,US Highway 20 -- Picabo to Idaho Highway 75,2026-09-15 18:53,48.0,43.3309384,-114.1519191,True,False,True,S393978698,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18519505,Horseshoe Bridge Pond,2026-09-15 10:25,16.0,43.771565,-111.204496,True,False,False,S393192256,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L25892677,Horseshoe bridge to cache,2026-09-15 10:19,5.0,43.773209,-111.215536,True,False,True,S393174256,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77222773,"I-84 E, Caldwell US-ID 43.62986, -116.62530",2026-09-15 08:49,1.0,43.629859,-116.625298,True,False,True,S393148321,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77200465,Granite Peak,2026-09-14 12:46,12.0,44.422953,-116.142547,True,False,True,S393002451,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L353105,Lake Cascade--South,2026-09-14 11:40,1.0,44.4939036,-116.0549486,True,False,False,S392942660,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77154010,"3003–3589 W Highway 31, Victor US-ID 43.59257, -111.17037",2026-09-13 16:50,3.0,43.592565,-111.170369,True,False,True,S392702934,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77158651,"5601 W Black Canyon Hwy, Emmett US-ID 43.90782, -116.60677",2026-09-13 16:28,5.0,43.907818,-116.606768,True,False,True,S392733086,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77126495,"956 Rainey Creek Rd, Swan Valley US-ID 43.43779, -111.30488",2026-09-13 07:15,8.0,43.437793,-111.304881,True,False,True,S392507213,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1894671,Camas NWR--Center Pond,2026-09-12 12:16,23.0,43.9358188,-112.2652129,True,False,False,S392247145,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77077439,"10570 Highway 52, Emmett, Idaho, US (43.923, -116.704)",2026-09-12 11:08,3.0,43.9233319,-116.70361,True,False,True,S392205792,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7212677,Little Rock (Thornock) Rd Ponds,2026-09-12 10:25,27.0,43.9183398,-116.693573,True,False,False,S392202194,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77070139,"83425, Hamer US-ID 43.92934, -112.26985",2026-09-12 08:51,2.0,43.929344,-112.26985,True,False,True,S392161026,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6377278,"4400–4476 N 1000 E, Sugar City US-ID (43.8933,-111.7578)",2026-09-11 19:18,5.0,43.893347,-111.757761,True,False,True,S391962981,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1766775,Chilly Slough,2026-09-11 15:17,2.0,44.0842018,-113.8418531,True,False,False,S391926184,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6031282,Kootenai NWR--HQ Area,2026-09-11 11:30,11.0,48.7066779,-116.4151642,True,True,False,S391929507,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L210639,Mountain View Lake,2026-09-11 10:03,87.0,42.0449588,-116.1654847,True,False,False,S391883702,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77015687,"13230–13242 Finlandia Rd, McCall US-ID 44.74727, -116.02749",2026-09-11 09:13,2.0,44.747269,-116.027493,True,False,True,S391830644,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109181,Kootenai NWR,2026-09-11 08:05,11.0,48.7166667,-116.4,True,True,False,S392178349,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3406540,Market Lake WMA--General,2026-09-11 07:44,2.0,43.7808238,-112.146163,True,False,False,S391851135,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L24665660,"Old Highway 95, Bonners Ferry, Idaho, US (48.7, -116.409)",2026-09-11 07:00,3.0,48.7000371,-116.4086102,True,False,True,S392165886,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76987658,"4582–4596 N Highway 20, Island Park US-ID 44.54400, -111.33192",2026-09-10 18:40,5.0,44.544005,-111.331924,True,False,True,S391659580,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12387826,Chester Dam Boat Ramp,2026-09-10 17:33,4.0,44.0173546,-111.5840149,True,False,True,S391651738,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2264981,Coeur d'Alene River WMA--Killarney Lake Rd.,2026-09-10 10:48,2.0,47.5354785,-116.5155029,True,False,False,S391595680,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8871237,Mud Lake WMA--North Boat Ramp,2026-09-10 10:31,2.0,43.8979357,-112.3886632,True,False,False,S391597772,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L20757966,Rails to Trails State Park -- Bull Elk Creek to Felt,2026-09-10 09:58,2.0,43.895055,-111.158268,True,False,False,S391612899,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76682450,"Lowell Pivot Pond, Baker, US-ID",2026-09-09 19:06,3.0,45.101386,-113.742,True,False,True,S391418694,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L47320830,Little Creek Drainage (private),2026-09-09 11:59,2.0,44.687107,-116.21039,True,False,True,S391400745,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8317391,Bates Bridge (Teton River at Bates Road),2026-09-09 09:28,8.0,43.72351,-111.1879535,True,False,False,S391352889,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76929548,"108–268 N Picabo Rd, Bellevue US-ID (43.3191,-114.0660)",2026-09-09 08:23,2.0,43.319114,-114.066043,True,False,True,S391295086,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L20782867,Rails to Trails State Park--Felt to Badger Creek,2026-09-09 08:12,2.0,43.8685419,-111.175668,True,False,False,S391316764,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6261987,Ball Creek Ranch Preserve Wetlands - From Westside Rd,2026-09-09 02:55,4.0,48.8200535,-116.4122915,True,False,True,S392556317,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2086108,Silver Creek Preserve--Visitor Center Grove,2026-09-08 11:36,5.0,43.3134926,-114.1493118,True,False,False,S391381645,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L125284,"Chilly Butte house area, Custer Co., ID",2026-09-08 10:45,20.0,44.08025,-113.89535,True,False,True,S391101617,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1529298,Intermountain Bird Observatory at Lucky Peak,2026-09-08 10:00,3.0,43.6056275,-116.0600716,True,True,False,S391172894,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11693985,Packsaddle Estates subdivision,2026-09-08 09:03,4.0,43.7704469,-111.2855071,True,False,True,S391082886,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76872600,"High Valley Rd, Cascade US-ID 44.22367, -116.16844",2026-09-07 19:41,3.0,44.223669,-116.168438,True,False,True,S390925058,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4682665,Bear Lake NWR--Dingle Unit,2026-09-07 10:34,12.0,42.2321105,-111.3492626,True,False,False,S390837912,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L829681,Cache Bridge (Teton River at Packsaddle Road),2026-09-07 09:14,4.0,43.7816293,-111.207304,True,False,False,S390794992,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L74708868,Camas NWR - Q2,2026-09-07 08:24,23.0,43.954067,-112.257627,True,False,True,S391108165,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2156107,Packsaddle Home,2026-09-06 19:31,2.0,43.7705476,-111.2866169,True,False,True,S390565745,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L340414,Stanley Creek Overlook,2026-09-06 18:22,2.0,44.2552818,-115.0052261,True,False,False,S391102858,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L50789341,"241 Lee Way, Donnelly, Idaho, US (44.662, -116.093)",2026-09-06 13:30,4.0,44.6624064,-116.0925222,True,False,True,S390521139,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2392377,Stanley Lake,2026-09-06 11:42,3.0,44.24751,-115.06186,True,False,False,S390540306,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L295755,Henrys Lake,2026-09-06 10:24,2.0,44.6459166,-111.4054871,True,False,False,S390517789,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77158075,"343 Beckwith Street, Montpelier, Idaho, US (42.313, -111.307)",2026-09-06 08:30,4.0,42.3127775,-111.3066031,True,False,True,S392729477,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4682750,Bear Lake NWR--Salt Meadow Unit,2026-09-06 08:12,2.0,42.2057796,-111.3359852,True,False,False,S390503451,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76780267,"10412–10482 SH-75, Bellevue US-ID 43.36187, -114.27023",2026-09-06 07:51,15.0,43.361872,-114.270227,True,False,True,S390334590,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76787434,"Dingle Bottoms Rd, Montpelier US-ID 42.23615, -111.35303",2026-09-06 07:08,4.0,42.236154,-111.353025,True,False,True,S390378661,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8709357,"Dogwood Lane, Salmon, Idaho, US (45.217, -113.896)",2026-09-05 17:48,3.0,45.2174794,-113.8961742,True,False,True,S390405027,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76745606,"Rocks Above Lick Creek Road, McCall, Idaho, US (44.925, -116.018)",2026-09-05 16:45,2.0,44.925145,-116.0180369,True,False,True,S390120339,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7832143,Fox Creek West,2026-09-05 15:39,3.0,43.65557,-111.178593,True,False,False,S390120677,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40276134,Lemhi Backroad - Town to Kirtley Cr,2026-09-05 15:36,2.0,45.173653,-113.864467,True,False,True,S390096434,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109179,Grays Lake NWR,2026-09-05 13:25,9.0,43.0343933,-111.4064482,True,False,False,S390110306,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4007448,Falk Bridge,2026-09-05 11:31,3.0,43.9531739,-116.7171514,True,False,False,S390011728,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21175514,"West Black Canyon Highway, Emmett, Idaho, US (43.908, -116.604)",2026-09-05 10:51,2.0,43.9084282,-116.6035104,True,False,True,S389995401,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77127058,Market Lake Management,2026-09-05 08:45,4.0,43.74199,-112.122335,True,False,True,S392511439,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L24419022,Texas Slough,2026-09-05 06:55,3.0,43.7682712,-111.9141228,True,False,False,S389949053,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6124281,Falls Campground,2026-09-04 16:55,8.0,43.4326331,-111.3624973,True,False,False,S389735596,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L41045079,"60th Ln, Cascade US-ID 44.33751, -115.99517",2026-09-04 16:12,2.0,44.337508,-115.995168,True,False,True,S389734640,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76676282,"218–298 Titus Ln, Donnelly US-ID 44.74189, -116.02794",2026-09-04 15:11,2.0,44.741889,-116.027938,True,False,True,S389716777,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77027864,"Soda Creek Campground, 690 W Highway 30, Soda Springs US-ID 42.65971, -111.62140",2026-09-04 12:21,5.0,42.659713,-111.621401,True,False,True,S391901246,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L25729577,Spring Creek North,2026-09-04 11:21,2.0,43.81737,-111.133139,True,False,True,S389677431,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2418405,Lake Cascade--shore at Old State Rd. South,2026-09-04 10:43,6.0,44.6299397,-116.068368,True,False,False,S389689675,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6358122,US-Idaho-McCall-13329 Vili Road - 44.759x-116.026,2026-09-04 09:22,1.0,44.7591081,-116.0264528,True,False,True,S389647711,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L787337,Lake Cascade--Sugarloaf Area North,2026-09-04 08:31,3.0,44.598046,-116.0679817,True,False,False,S389725671,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76639938,"Sawtooth National Recreation Area, Stanley US-ID (44.3063,-115.0167)",2026-09-03 17:40,7.0,44.306344,-115.016734,True,False,True,S389501784,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L15528975,Harriman State Park,2026-09-03 16:27,2.0,44.342351,-111.477078,True,False,True,S389488948,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76625366,"18048–18296 US-20, Bellevue US-ID 43.33083, -114.20444",2026-09-03 10:53,3.0,43.330833,-114.204445,True,False,True,S389413568,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21466857,"SwiftRiverFarm, Salmon",2026-09-03 08:00,3.0,45.2127564,-113.897516,True,False,True,S389488633,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76881907,"2046 Highway 93 N, North Fork US-ID 45.40680, -113.99519",2026-09-02 09:15,2.0,45.406799,-113.995192,True,False,True,S390976838,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76907427,"Highway 93 N, Carmen US-ID 45.26652, -113.89306",2026-09-02 08:42,2.0,45.266521,-113.893057,True,False,True,S391150793,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76863327,"2800 South 2400 West, Weston, Idaho, US (42.05, -111.935)",2026-09-01 15:00,2.0,42.0495361,-111.9354138,True,False,True,S390861628,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1247777,Grandine Ranger Station,2026-09-01 11:49,4.0,42.0499098,-112.650075,True,False,False,S388933976,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76548217,Kelly Island Campground,2026-09-01 10:44,1.0,43.6226377,-111.661587,True,False,True,S388949317,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1252383,Lolo Pass Visitor Center,2026-09-01,1.0,46.6348517,-114.5785296,True,False,False,S389080047,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76510230,Old Highway 28: Lemhi Rd,2026-08-31 13:23,2.0,45.030007,-113.654383,True,False,True,S388701608,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L443105,Ball Creek Ranch Preserve,2026-08-31 12:49,2.0,48.8169527,-116.4104462,True,False,False,S389404058,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76620973,Westside Road - overlooking refuge ponds,2026-08-31 11:30,4.0,48.7174047,-116.4164264,True,False,True,S389388567,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1650750,Cartier Slough WMA,2026-08-31 09:13,2.0,43.8146699,-111.9331388,True,False,False,S388640170,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76642323,"Clayton, Idaho SACR",2026-08-31 09:12,2.0,44.252265,-114.467778,True,False,True,S389515369,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1743141,Harriman SP--Ranchview Parking and River Trail Area,2026-08-30 15:51,6.0,44.3348585,-111.4654583,True,False,False,S388468049,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3284680,Meadows Valley North of 55,2026-08-30 11:00,4.0,44.9980191,-116.2637329,True,False,True,S388630041,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76457847,"Airport Rd, Montpelier US-ID (42.2464,-111.2995)",2026-08-30 10:37,5.0,42.246398,-111.299501,True,False,True,S388398558,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76468366,"US-26, Carey US-ID 43.25232, -113.94815",2026-08-30 09:26,2.0,43.252322,-113.948149,True,False,True,S388444819,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76443092,"Dingle Bottoms Rd, Montpelier US-ID (42.2313,-111.3701)",2026-08-30 07:43,6.0,42.23127,-111.370107,True,False,True,S388294144,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76441327,"S Main St, Saint Charles US-ID (42.1538,-111.3966)",2026-08-30 07:25,3.0,42.15379,-111.396564,True,False,True,S388281959,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L50746493,"S Main St, Saint Charles US-ID 42.17498, -111.40018",2026-08-29 18:51,22.0,42.174982,-111.400178,True,False,True,S388107742,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109184,Oxford Slough WPA,2026-08-29 17:19,2.0,42.25,-112.0,True,False,False,S388091977,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76412213,"Sawtooth National Recreation Area, Stanley US-ID (44.0958,-114.8530)",2026-08-29 15:30,2.0,44.095783,-114.852962,True,False,True,S388106443,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L765471,Minidoka NWR--West End,2026-08-29 10:36,2.0,42.6763779,-113.47435,True,False,False,S388074615,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L47160858,Camp Teebag,2026-08-29 10:28,2.0,44.254926,-116.134913,True,False,True,S387999824,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76346612,"11748–11760 SH-55, Cascade US-ID 44.54144, -116.02883",2026-08-28 13:13,11.0,44.541437,-116.028832,True,False,True,S387711382,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2268574,Brown's Pond,2026-08-28 09:15,3.0,44.8770082,-116.0998893,True,False,False,S387660062,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76339241,"Mesa Ln, Donnelly US-ID 44.69659, -116.06737",2026-08-28 08:24,2.0,44.696593,-116.067368,True,False,True,S387670273,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40976952,Jake's Twin Butte Road Menan,2026-08-28 08:11,20.0,43.8115003,-111.9648629,True,False,True,S387632499,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2272855,Harriman SP--Silver Lake,2026-08-27 10:04,2.0,44.3282611,-111.4669875,True,False,False,S387459543,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2261456,Mud Lake WMA--West End,2026-08-26 10:11,2.0,43.888429,-112.466054,True,False,False,S387143993,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4117167,Picabo Rd. Hot Springs,2026-08-26 08:55,4.0,43.3345872,-114.0855347,True,False,False,S387104228,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11577653,Palisades Reservoir—Indian Creek Delta,2026-08-25 18:34,2.0,43.246912,-111.1068657,True,False,False,S386940335,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76204151,Pond across the highway from Beaver Dick Park,2026-08-25 09:34,1.0,43.830021,-111.905896,True,False,True,S386818851,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L952612,Mud Lake WMA--South End,2026-08-25 09:22,2.0,43.8695595,-112.4142551,True,False,False,S386839951,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76223062,"Idaho 75, Stanley, Idaho, US (43.994, -114.833)",2026-08-25 08:55,4.0,43.9942567,-114.8331217,True,False,True,S386935373,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1425825,Home,2026-08-25 08:00,3.0,44.9573137,-116.2246686,True,False,True,S387356962,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76412742,Salmon to Stanley,2026-08-25 06:54,2.0,45.0476491,-113.9136432,True,False,True,S388106938,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76163993,"3707 Red Rock Pass Road, Island Park, Idaho, US (44.604, -111.416)",2026-08-24 15:48,2.0,44.6038834,-111.4164262,True,False,True,S386620366,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76347933,"Lola Creek - Forest Road 083C, Stanley, Idaho, US (44.406, -115.172)",2026-08-24 12:44,2.0,44.4059594,-115.1724065,True,False,True,S387718940,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L157943,Little Camas Reservoir,2026-08-24 08:50,,43.34624,-115.387566,True,False,False,S386535309,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1169019,Glendale Reservoir,2026-08-23 17:38,2.0,42.133431,-111.8028831,True,False,False,S386356117,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2980216,Casino Creek Campground,2026-08-23 10:22,2.0,44.2537449,-114.8569107,True,False,False,S386293549,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76105427,"12437–12477 SH-55, Donnelly US-ID (44.6438,-116.0493)",2026-08-23 10:10,2.0,44.643777,-116.049283,True,False,True,S386219705,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76130897,"Snake River Road, Swan Valley, Idaho, US (43.441, -111.378)",2026-08-23 10:00,2.0,43.4412909,-111.3783521,True,False,True,S386363555,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L35895215,"7683 Idaho 52, Emmett, Idaho, US (43.877, -116.635)",2026-08-23 09:39,24.0,43.8769412,-116.6348173,True,False,True,S386207444,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2329462,Henrys Lake--Hope Creek,2026-08-23 09:05,2.0,44.6119787,-111.4212799,True,False,False,S386246385,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6025274,North Menan Butte,2026-08-23 09:01,2.0,43.7828687,-111.9767332,True,False,False,S386233838,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11424553,Fox Creek East,2026-08-23 07:12,6.0,43.6505132,-111.1688611,True,False,False,S386140113,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L63334280,"Pond across from 28 Club, Salmon US-ID",2026-08-22 18:00,41.0,45.125796,-113.789399,True,False,True,S385972530,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2302227,Draper Wood River Preserve,2026-08-22 13:26,1.0,43.5118137,-114.3180442,True,False,False,S385889383,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3842017,Galena Overlook,2026-08-22 12:30,14.0,43.8729422,-114.7297043,True,False,False,S385958539,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76047000,"17137–17175 SH-75, Ketchum US-ID 43.98603, -114.83301",2026-08-22 11:44,8.0,43.986025,-114.833008,True,False,True,S385874908,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76046374,"Idaho Panhandle National Forest, Bonners Ferry US-ID 48.71242, -116.42050NWT NWR Overlook Myrtle Creek Rd",2026-08-22 11:08,4.0,48.712424,-116.420497,True,False,True,S385871839,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76027930,"Caribou-Targhee National Forest, Island Park US-ID (44.5871,-111.3119)",2026-08-22 06:00,2.0,44.587117,-111.31194,True,False,True,S385772083,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1246027,Sunny Gulch Campground,2026-08-22 05:25,1.0,44.1754,-114.91267,True,False,False,S385930709,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11059280,Sheep Lake,2026-08-21 14:00,5.0,45.3305651,-116.5395446,True,False,False,S386886181,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76047370,"SH-75, Ketchum US-ID 43.80844, -114.58785",2026-08-21 09:48,2.0,43.808444,-114.587853,True,False,True,S385876645,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L54314941,NWR Overlook,2026-08-21 09:30,1.0,48.7141516,-116.42295,True,False,True,S385494078,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75981752,Job Creek,2026-08-21 09:20,2.0,44.24748,-115.017677,True,False,True,S385504857,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L35334576,"Burns-Trout Creek Trail, Irwin US-ID 43.15772, -111.07226",2026-08-21 08:26,4.0,43.157723,-111.072255,True,False,True,S392975847,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L302080,Tolo Lake,2026-08-21 07:55,2.0,45.9154619,-116.2362737,True,False,False,S385554168,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77425969,"869–1005 WY-345, Ranchester US-WY 44.93289, -107.22059",2026-09-19 17:20,154.0,44.932889,-107.22059,True,False,True,S394392037,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3882767,Yellowstone NP--Hayden Valley--Alum Creek,2026-09-19 11:30,2.0,44.6774641,-110.4858524,True,False,False,S394425054,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2145511,Cokeville Meadows NWR,2026-09-19 11:00,220.0,41.93089,-110.975647,True,False,False,S394299927,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L10026572,Worland - sugarbeet setttling pond 1,2026-09-19 10:50,3.0,43.9909619,-107.9530793,True,False,True,S394287792,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3271366,WY highway 432 - Nowater Creek,2026-09-19 10:23,2.0,43.9738403,-107.9922152,True,False,True,S394286097,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8118503,Worland - Railway Ave,2026-09-19 10:10,45.0,43.9933674,-107.9685778,True,False,True,S394288111,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L421073,Beck & Alkali Lakes,2026-09-19 06:37,39.0,44.5096973,-109.0376973,True,False,False,S394245382,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L264617,Dry Lake,2026-09-18 18:08,2.0,42.740173,-108.6428976,True,False,False,S394067470,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1531258,Worland--BLM Duck Swamp,2026-09-18 10:15,4.0,44.0526065,-107.9602997,True,False,False,S393971787,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3633166,Fontenelle Recreation Area and causeway,2026-09-18 10:10,1.0,42.0803559,-110.1578522,True,False,False,S393985124,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77350250,"200–268 WY-31, Manderson US-WY 44.27600, -107.91571",2026-09-18 08:47,4.0,44.275998,-107.91571,True,False,True,S393940661,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77349673,"1177–1269 WY-31, Manderson US-WY 44.22239, -107.76256",2026-09-18 08:23,4.0,44.222387,-107.762561,True,False,True,S393933164,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77348438,"118 Second St, Ten Sleep US-WY 44.03404, -107.45050",2026-09-18 07:54,2.0,44.034036,-107.450495,True,False,True,S393925575,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21137147,"Road 7, Powell, Wyoming, US (44.734, -108.719)",2026-09-17 18:15,465.0,44.734089,-108.7193215,True,False,True,S393804842,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1298108,Yellowstone NP--Fountain Flats,2026-09-17 14:45,1.0,44.5653093,-110.8365369,True,False,False,S393801110,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12883475,Hudson (town),2026-09-17 08:41,1.0,42.9049347,-108.5836255,True,False,False,S393686621,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77300078,"85–107 Bear Creek Rd, Cody US-WY 44.40812, -109.29833",2026-09-17 07:43,1.0,44.408116,-109.298327,True,False,True,S393657667,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77282175,"Grand Teton National Park, Moran US-WY (43.7421,-110.6590)",2026-09-16 19:24,1.0,43.742092,-110.659015,True,False,True,S393543127,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L770156,Lake Viva Naughton,2026-09-16 17:29,3.0,41.9980289,-110.6644249,True,False,False,S393545389,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L69883341,Yellowstone NP--Bighorn Pass Trailhead,2026-09-16 12:00,4.0,44.9280735,-111.0491693,True,False,False,S394085398,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77269078,"Iron Bridge, Fort Laramie, Wyoming, US (42.211, -104.533)",2026-09-16 10:54,6.0,42.2107645,-104.5330911,True,False,True,S393458967,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L9307120,"National Elk Refuge Road, Jackson, Wyoming, US (43.516, -110.693)",2026-09-16 10:21,2.0,43.5163323,-110.6931087,True,False,True,S393472523,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L34657115,Thayne,2026-09-16 09:00,3.0,42.922611,-111.002648,True,False,True,S393543424,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1311129,Yellowstone NP--Black Sand Basin,2026-09-15 11:36,1.0,44.4620997,-110.8535689,True,False,False,S393198849,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77189277,"Mickelson Lane, Big Piney, Wyoming, US (42.556, -110.143)",2026-09-14 11:52,4.0,42.5555336,-110.1432982,True,False,True,S392932894,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77203032,"12475 Wolff Ranch Road, Moran, Wyoming, US (43.802, -110.519)",2026-09-14 09:55,3.0,43.8017377,-110.5185409,True,False,True,S393018198,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2172224,Ralston Reservoir,2026-09-14 08:28,4.0,44.7142939,-108.8918495,True,False,False,S392911084,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4130929,Laramie River--Monolith Public Access Area,2026-09-14 07:29,2.0,41.2559361,-105.667963,True,False,False,S392896361,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77037214,"82414, Cody US-WY 44.46811, -109.44650",2026-09-13 19:24,3.0,44.468109,-109.446495,True,False,True,S392730405,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11808914,Rock Creek Access Area,2026-09-13 18:47,2.0,41.625572,-106.166236,True,False,False,S392730167,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77157096,"Wyoming State Highway 89, Kemmerer, Wyoming, US (41.812, -110.99)",2026-09-13 18:39,250.0,41.8116117,-110.9901966,True,True,True,S392723598,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L271593,Flat Creek Wildlife Observation Point and Marshes,2026-09-13 17:52,2.0,43.4908574,-110.7611319,True,False,False,S392715663,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L603410,National Elk Refuge,2026-09-13 14:22,2.0,43.4890331,-110.7488394,True,False,False,S392706821,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L15411170,Grand Teton NP--Jackson Lake Overlook,2026-09-13 13:59,3.0,43.981794,-110.662129,True,False,False,S393552714,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6425455,Lovell Lakes,2026-09-13 12:26,5.0,44.8042063,-108.3565195,True,False,False,S392656596,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77182902,NORTHWEST OF ETHETE,2026-09-13 12:00,2.0,43.052043,-108.7863758,True,False,True,S392894319,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18780077,Treasure Island Access Area,2026-09-13 10:15,5.0,41.3318767,-106.7274157,True,False,False,S392717425,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1627403,Yellowstone NP--Pelican Creek,2026-09-13 09:49,5.0,44.557846,-110.3626563,True,False,False,S393780119,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3515736,Worland - Lane 17,2026-09-13 09:46,4.0,43.9316326,-107.9981697,True,False,True,S392581457,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L53393844,Dike Road,2026-09-13 09:15,3.0,44.4437137,-109.2064296,True,False,True,S392597872,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L385452,"Yellowstone NP--Wyoming (HISTORICAL DATA ONLY, NOT FOR CURRENT CHECKLISTS)",2026-09-13 08:00,5.0,44.5435052,-110.5993652,True,False,False,S393982087,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3054292,Grand Teton NP--Lizard Creek Campground,2026-09-13 07:38,5.0,44.0032346,-110.6885511,True,False,False,S392517186,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77087129,"1087 S Fork Rd, Cody US-WY 44.43314, -109.20907",2026-09-12 14:41,7.0,44.433139,-109.209068,True,False,True,S392262929,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1551069,Springer/Bump Sullivan WHMA--Goshen Hole Reservoir,2026-09-12 11:35,15.0,41.8842596,-104.2829132,True,False,False,S392318059,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L74525486,"152 S Muddy Rd
+Riverton WY 82501
+United States",2026-09-12 09:01,1.0,43.285584,-108.494923,True,False,True,S392160585,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4809185,Yellowstone NP--Pelican Valley Trail,2026-09-12 08:37,2.0,44.5800752,-110.2459574,True,False,False,S392675295,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77098364,Beaver creek,2026-09-12 08:00,5.0,41.1720494,-106.6205173,True,False,True,S392330881,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3829621,Swan Lake,2026-09-12 07:57,2.0,43.8908135,-110.632553,True,False,False,S392187108,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1041788,Hawk Springs Reservoir,2026-09-12 06:25,26.0,41.7097333,-104.1844654,True,False,False,S392318006,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77084839,"Multi Use Pathway Jackson to Gros Ventre Jct, Jackson US-WY 43.56218, -110.73257",2026-09-11 17:32,2.0,43.562183,-110.732566,True,False,True,S392249375,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L419819,Palisades Reservoir wetlands,2026-09-11 15:06,2.0,43.1377098,-111.0321339,True,False,False,S391941747,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7057623,Jackson Hole & Greater Yellowstone Visitor Center,2026-09-11 13:32,4.0,43.4862989,-110.7618213,True,False,False,S391946628,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L33817539,"Slough Creek Campground Road, Yellowstone National Park, Wyoming, US (44.932, -110.316)",2026-09-11 12:21,3.0,44.9318495,-110.3157817,True,False,True,S391973240,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77133373,lower wind river campground,2026-09-11 11:00,2.0,43.4310137,-108.178854,True,False,True,S392556124,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3088236,Yellowstone NP--Bunsen Peak Rd,2026-09-11 09:23,2.0,44.92204,-110.71988,True,False,False,S391971750,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77011357,Hudson House Bed,2026-09-11 07:52,1.0,42.089754,-105.016268,True,False,True,S391799877,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L955862,Grand Teton NP--Oxbow Bend,2026-09-11 07:24,4.0,43.8665429,-110.5501413,True,False,False,S391842100,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2204783,Yellowtail WHMA (general),2026-09-11 07:01,2.0,44.885778,-108.225948,True,False,False,S392337640,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4634172,Goose Ponds,2026-09-10 16:57,4.0,42.982168,-108.671461,True,False,True,S391658266,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40322424,Yellowstone NP--Steamboat Point,2026-09-10 14:50,5.0,44.5298778,-110.2979802,True,False,False,S393505931,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77301811,"East Entrance Road, Cody, Wyoming, US (44.558, -110.355)",2026-09-10 14:42,23.0,44.5584456,-110.3545926,True,False,True,S393670372,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L38185828,Stagecoach and 6Qs,2026-09-10 11:15,12.0,44.4253718,-109.2356793,True,False,True,S392593707,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77118905,"Grand Loop Rd, Yellowstone National Park US-WY 44.66900, -110.47159",2026-09-10 09:32,7.0,44.668996,-110.471591,True,False,True,S392452580,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L9635832,Big Sandy Reservoir (Sublette County),2026-09-10 07:36,2.0,42.2710546,-109.4280364,True,False,False,S391619324,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L771915,Grand Teton NP--Jackson Lake Dam area,2026-09-10 07:26,1.0,43.8581111,-110.5886364,True,False,False,S391539180,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76944103,"8720 U.S. 14, Ranchester, Wyoming, US (44.902, -107.197)",2026-09-09 16:18,5.0,44.9020676,-107.1967932,True,False,True,S391390712,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1311204,Grand Teton NP--Colter Bay Campground,2026-09-09 13:50,2.0,43.9121775,-110.6439543,True,False,False,S392922312,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L981925,Yellowstone NP--Fishing Bridge,2026-09-09 11:42,2.0,44.56641,-110.3820848,True,False,False,S391348980,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76941608,"2534–2898 S Fork Rd, Cody US-WY 44.29595, -109.43915",2026-09-09 11:01,4.0,44.295954,-109.439148,True,False,True,S391374034,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4685650,Yellowstone NP--Slough Creek,2026-09-09 08:28,4.0,44.9268147,-110.3228295,True,False,False,S391530571,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76929198,"CR-47, Ten Sleep US-WY (44.0819,-107.5247)",2026-09-09 07:38,1.0,44.081902,-107.524712,True,False,True,S391292539,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76926788,"101–113 CR-47, Ten Sleep US-WY 44.03481, -107.46592",2026-09-09 06:33,1.0,44.034815,-107.465918,True,False,True,S391276243,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2350471,Yellowstone NP--DeLacy Creek Trail,2026-09-08 15:19,2.0,44.43011,-110.70097,True,False,False,S391387247,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1283588,Yellowstone NP--LeHardy Rapids,2026-09-08 11:34,2.0,44.6073502,-110.3845739,True,False,False,S391348729,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6217651,Hwy 189--Hwy 30 to Lincoln Co. line,2026-09-08 11:29,2.0,41.6428365,-110.5713415,True,False,False,S391095935,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L963288,Grand Teton NP--Gros Ventre CG,2026-09-08 10:57,3.0,43.6148889,-110.6650686,True,False,False,S391142560,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7487348,Home,2026-09-07 18:50,4.0,44.4318776,-109.1740621,True,False,True,S390921402,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7619963,Buffalo Bill Reservoir--South Fork,2026-09-07 09:51,3.0,44.4454103,-109.2266424,True,False,False,S390781222,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76860257,"Swift Creek Trail, Jackson US-WY 43.34984, -110.43743",2026-09-07 09:29,2.0,43.349837,-110.437427,True,False,True,S390843072,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3757425,Yellowstone NP--Lamar Canyon,2026-09-07 06:48,4.0,44.9183824,-110.3037643,True,False,False,S392349819,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7529941,Upper Hoback Rd (Forest Rd 30700),2026-09-07 06:40,3.0,43.123897,-110.420242,True,False,False,S390883187,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76808159,"1087 S Fork Rd
+Cody WY 82414
+United States",2026-09-06 15:04,8.0,44.430187,-109.21164,True,False,True,S390509601,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76809656,"1024 Southfork Road, Cody, Wyoming, US (44.428, -109.209)",2026-09-06 14:57,8.0,44.4284196,-109.2088485,True,False,True,S390508241,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76893757,"39–65 Fayette Pole Creek Rd, Pinedale US-WY 42.85576, -109.84417",2026-09-06 13:30,1.0,42.855757,-109.844167,True,False,True,S391061842,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1510157,Bradford Brinton Memorial and Museum,2026-09-06 12:07,2.0,44.6445823,-107.0076299,True,False,False,S390566745,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L24397892,Ralston Reservoir - Ln 12,2026-09-06 10:10,2.0,44.7110993,-108.8774846,True,False,True,S390403925,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L559015,Lander--Water Treatment Ponds,2026-09-06 09:28,1.0,42.8463472,-108.7231493,True,False,False,S390425637,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76744882,"Upper Willow Flats, Moran US-WY (43.8730,-110.5741)",2026-09-05 18:20,4.0,43.873002,-110.574054,True,False,True,S390159696,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6357532,Yellowtail WHMA--Bighorn River Delta,2026-09-05 15:44,1.0,44.8314804,-108.1871474,True,False,False,S390111481,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L49595966,Skelton Rd near Lucerne,2026-09-05 14:30,3.0,43.7429537,-108.1553443,True,False,False,S390902650,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L16203002,"Peryam Ranch House, Encampment, Wyoming, US (41.233, -106.774)",2026-09-05 13:27,1.0,41.2333123,-106.7743954,True,False,True,S390061361,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L35683630,Yellowstone NP--Tuff Cliff,2026-09-05 10:23,1.0,44.650551,-110.829331,True,False,False,S390536033,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76742475,Salt River- Creamery Road Public Access Area,2026-09-05 09:00,40.0,43.044703,-111.036375,True,False,True,S390101296,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L74352716,Pinedale South Road,2026-09-05 08:38,2.0,42.852685,-109.861256,True,False,True,S391171754,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L59776786,Grand Teton NP--Lakeview Picnic Area,2026-09-05 08:13,3.0,43.976866,-110.656505,True,False,False,S390114642,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L981923,Grand Teton NP--Jackson Lake Lodge area,2026-09-05 08:09,2.0,43.8774947,-110.5777359,True,False,False,S390011112,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3766675,Yellowstone NP--Inspiration Point on Canyon,2026-09-05 08:06,2.0,44.7252869,-110.4705226,True,False,False,S390161205,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76728244,Fall Creek Road,2026-09-05 07:54,2.0,43.327978,-110.7980707,True,False,True,S390028399,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L743130,Yellowstone NP--Old Faithful area,2026-09-05 07:34,2.0,44.4584125,-110.8293915,True,False,False,S389911584,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77190503,"Peale Island, South Arm, Yellowstone Lake",2026-09-05 07:00,30.0,44.2881598,-110.3168988,True,False,True,S392943476,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76808898,"NE Entrance Rd, Yellowstone National Park US-WY 44.90743, -110.25139",2026-09-05 06:44,2.0,44.907428,-110.251391,True,False,True,S390503873,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2913410,Yellowstone NP--Nez Perce Ford Picnic Area,2026-09-05 06:36,2.0,44.62139,-110.41844,True,False,False,S390481956,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40735253,Clear Creek Wetlands,2026-09-05 06:35,2.0,44.340904,-106.71541,True,False,True,S391144661,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76873026,8j1 Campsite,2026-09-04 19:06,4.0,44.2773157,-110.475332,True,False,True,S390927645,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1873962,Yellowstone NP--Grizzly Overlook,2026-09-04 18:18,6.0,44.6683445,-110.4707959,True,False,False,S389865487,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76641258,"Mary Mountain-Nez Perce Trail, Wyoming, US (44.57, -110.816)",2026-09-04 12:29,2.0,44.5698931,-110.8161969,True,False,True,S389912780,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7949645,Grand Teton NP--Timbered Pullout,2026-09-04 10:08,7.0,43.59778,-110.697828,True,False,False,S389657049,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L760406,Yellowstone NP--Blacktail Ponds,2026-09-04 09:57,2.0,44.9531216,-110.6025195,True,False,False,S389762919,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L771967,Grand Teton NP--Colter Bay,2026-09-04 09:21,2.0,43.9033038,-110.643332,True,False,False,S389694689,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2954304,Yellowstone NP--Bunsen Peak Trail,2026-09-04 08:58,2.0,44.9326027,-110.7067823,True,False,False,S389769166,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L41730670,Buchanan Lake,2026-09-04 08:49,2.0,44.5103072,-109.0245359,True,False,True,S389643721,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4766653,Grand Teton NP--Grassy Lake Road (please use more precise locations),2026-09-04 08:26,4.0,44.108745,-110.685633,True,False,False,S391281912,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3495580,Wagner Reservoir,2026-09-04 08:25,4.0,44.925091,-107.2951198,True,False,False,S394223047,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1625282,Yellowstone NP--Fairy Falls Trail,2026-09-04 07:41,2.0,44.51818,-110.833,True,False,False,S389865226,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8055097,"Road 7, Powell, Wyoming, US (44.732, -108.719)",2026-09-03 18:35,112.0,44.7315458,-108.7192091,True,False,True,S389514184,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L68161209,Fear Access-Big Piney,2026-09-03 12:33,2.0,42.517871,-110.073198,True,False,True,S389464307,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3771551,National Museum of Wildlife Art area,2026-09-03 12:30,3.0,43.521015,-110.747948,True,False,False,S389957171,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76871190,Broader Wind River Range,2026-09-03 12:00,2.0,43.102279,-109.635657,True,False,True,S390915436,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76622839,"320 West Main Street, Kirby, Wyoming, US (43.804, -108.186)",2026-09-03 09:41,3.0,43.8038569,-108.1863394,True,False,True,S389397627,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76621375,"1558–1560 US Highway 20 S, Worland US-WY 43.95569, -108.01537",2026-09-03 09:00,2.0,43.955695,-108.015372,True,False,True,S389388325,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L9960437,Yellowstone NP--Elk Park turnout,2026-09-03 08:55,3.0,44.717578,-110.722784,True,False,False,S389493516,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76949647,"Soldier's Trail, Yellowstone National Park US-WY 44.95142, -110.30359",2026-09-03 08:20,2.0,44.951425,-110.303591,True,False,True,S391426721,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1414232,Yellowstone NP--Nymph Lake,2026-09-03 07:24,2.0,44.75298,-110.72532,True,False,False,S389481892,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76637030,"Grand Loop Rd, Yellowstone National Park US-WY 44.81927, -110.72787",2026-09-03 06:38,3.0,44.81927,-110.727867,True,False,True,S389481146,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L15855007,Wenzel Ln,2026-09-03 06:35,4.0,43.4902858,-110.8605599,True,False,True,S389366036,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76597104,Springer/Bump Sullivan WHMA,2026-09-02 13:40,14.0,41.8742473,-104.2885125,True,False,True,S389256176,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76581235,"1998–2010 N US Highway 89, Jackson US-WY 43.51134, -110.75204",2026-09-02 09:43,3.0,43.511337,-110.752044,True,False,True,S389155779,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6214528,Yellowstone NP--Lewis Falls,2026-09-02 08:53,4.0,44.267534,-110.636421,True,False,False,S389228407,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7960444,Grand Teton NP—Two Ocean Lake Rd pullout,2026-09-02 08:26,2.0,43.892367,-110.5002,True,False,False,S389148530,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76555080,"I-80 W, Lyman US-WY 41.35830, -110.33399",2026-09-01 18:49,2.0,41.358296,-110.333986,True,False,True,S388996139,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76555542,"Teton Park Rd, Moran US-WY",2026-09-01 18:13,1.0,43.721954,-110.726481,True,False,True,S388999126,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76683889,west thumb,2026-09-01 12:51,3.0,44.415757,-110.573558,True,False,True,S389763108,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3874127,Commissary Ridge HawkWatch,2026-09-01 09:15,2.0,42.02471,-110.5895779,True,False,False,S388996226,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L15649341,Four Bear Trailhead and trail,2026-09-01 07:59,8.0,44.4769623,-109.4126033,True,False,True,S388937985,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76516295,Lyman KOA,2026-09-01 07:47,4.0,41.350919,-110.29898,True,False,True,S388892362,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76485372,"Cedar Drive, Riverside, Wyoming, US",2026-09-01 06:17,1.0,41.2189828,-106.7671181,True,False,True,S389341811,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L5052864,Yellowstone NP--Lamar Ranger Station,2026-08-31 19:45,3.0,44.8952214,-110.233233,True,False,False,S389509620,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L47336503,Four Bear Trail,2026-08-31 18:54,2.0,44.4761231,-109.4143429,True,False,False,S389746172,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L981911,Yellowstone NP--Mud Volcano,2026-08-31 14:57,1.0,44.6245642,-110.4341626,True,False,False,S389711236,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77277508,LeHardy Rapids,2026-08-31 13:45,2.0,44.606,-110.3831,True,False,True,S393512268,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L27747103,Yellowstone NP--Hayden Valley-River Overlook,2026-08-31 11:00,2.0,44.6347871,-110.4479394,True,False,False,S388998910,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1935954,"5077 Riverview Rd.    Riverton,,WY",2026-08-31 07:50,1.0,43.0204766,-108.4631128,True,False,True,S388662050,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76474922,"2982–3012 WY-414, Green River US-WY (41.0282,-110.0012)",2026-08-30 20:05,6.0,41.028174,-110.001222,True,False,True,S388485965,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2928573,Sublette CR 354 (Daniel Merna Rd),2026-08-30 14:13,2.0,42.949418,-110.356282,True,False,False,S388465186,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L907919,Ocean Lake WHMA--Goose Knob Drive Access Area,2026-08-30 13:10,2.0,43.1648913,-108.5797473,True,False,False,S388420008,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L299762,Yellowstone NP--Mammoth Hot Springs area,2026-08-30 12:30,3.0,44.9734094,-110.7041482,True,False,False,S388998132,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76462516,"Colter Bay Marina Rd, Moran US-WY 43.90326, -110.64332",2026-08-30 11:21,6.0,43.903259,-110.643318,True,False,True,S388409476,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L67627541,Swamp Lake,2026-08-30 11:17,2.0,44.8385416,-109.6056718,True,False,True,S388462801,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L20682345,"Yellowstone National Park, Cody US-WY 44.70785, -110.50051",2026-08-30 10:14,12.0,44.707847,-110.500513,True,False,True,S391426743,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76451540,"Wyoming 230, Encampment, Wyoming, US",2026-08-30 10:13,2.0,41.2182316,-106.7374038,True,False,True,S388346305,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4758315,Grand Teton NP--Antelope Flats Rd,2026-08-29 11:18,2.0,43.647855,-110.663918,True,False,False,S388018967,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L34771481,River Road House (Private),2026-08-29 08:35,2.0,44.9016886,-107.1623548,True,False,True,S387942655,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76385840,"1505–1511 Stagecoach Trail, Cody US-WY 44.47885, -109.32733",2026-08-29 08:10,5.0,44.478848,-109.327331,True,False,True,S387953688,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11621372,Yellowstone NP--Slough Creek Trail (trailhead to first meadow),2026-08-29 08:09,2.0,44.9513419,-110.2770243,True,False,False,S390335509,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76393449,Canal by dike pond,2026-08-29 08:03,40.0,44.443572,-109.207366,True,False,True,S387998613,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40977058,Big Horn--Brinton Road,2026-08-28 11:15,3.0,44.6597013,-106.9980876,True,False,False,S388416828,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L299772,Yellowstone NP--Floating Island Lake,2026-08-28 06:38,,44.9423636,-110.4497081,True,False,False,S387608974,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4924472,Yellowstone NP--Lone Star Geyser trail,2026-08-27 17:20,2.0,44.4313896,-110.8133733,True,False,False,S387687679,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76312901,"Grand Loop Rd, Yellowstone National Park US-WY 44.77025, -110.73261",2026-08-27 13:18,2.0,44.770252,-110.732607,True,False,True,S387497832,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2982325,Yellowstone NP--Beaver Ponds Trail (WY),2026-08-27 08:19,2.0,44.9864963,-110.7089281,True,False,False,S387437032,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2659742,16 miles SW Cody,2026-08-27 08:00,2.0,44.4083141,-109.2902265,True,False,True,S387382835,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76313030,"NE Entrance Rd, Yellowstone National Park US-WY 44.87772, -110.21345",2026-08-27 06:59,2.0,44.877719,-110.213445,True,False,True,S387498913,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76307487,"Marshall Rd, Rock River US-WY 41.92462, -106.02575",2026-08-27 06:50,1.0,41.924621,-106.025747,True,False,True,S387461659,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L10063566,"986 Road 7, Powell, Wyoming, US (44.74, -108.719)",2026-08-26 19:15,72.0,44.7398806,-108.7191478,True,False,True,S387239837,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L68592622,Willow Creek Burn (2025)--Forest Service Rd. 10381,2026-08-26 18:11,2.0,42.5256701,-110.9194656,True,False,True,S387426160,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1900124,Yellowstone NP--Cascade Meadows,2026-08-26 10:30,3.0,44.7368944,-110.5109482,True,False,False,S388626955,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76254945,Salt River Upper Burton Access,2026-08-26 08:29,1.0,42.77079,-110.9730972,True,False,True,S387134006,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1435524,Ucross,2026-08-26 08:00,3.0,44.5626857,-106.5371126,True,False,False,S387104879,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2939066,Duck Creek Overlook,2026-08-26 07:24,4.0,42.8716239,-109.9316025,True,False,False,S387076331,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76251823,"Auto selected 44.90520, -110.24835",2026-08-26 06:48,8.0,44.905202,-110.248353,True,False,True,S387115911,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1626786,Yellowstone NP--Lamar Valley (please use more precise locations),2026-08-26,,44.8716252,-110.1849747,True,False,False,S387190389,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76268957,"Wyoming, US (44.729, -110.486)",2026-08-25 16:48,2.0,44.7289231,-110.4861843,True,False,True,S387221129,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75625569,Shoshone NF--Swamp Lake Area,2026-08-25 15:58,,44.84065,-109.57509,True,False,False,S386923456,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L955859,Grand Teton NP--Christian Pond,2026-08-25 09:00,2.0,43.8759247,-110.565784,True,False,False,S386936131,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L36531867,Worland -- Lower Hanover Canal,2026-08-25 08:54,2.0,44.0199831,-107.9358762,True,False,False,S386828377,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4354653,Yellowstone NP--Lamar Valley River Trail,2026-08-25 08:45,,44.8691921,-110.1658452,True,False,False,S386891187,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2161824,Springer/Bump Sullivan WHMA--Bump Sullivan Reservoir (currently dry),2026-08-25 07:39,2.0,41.863169,-104.3146706,True,False,False,S386785508,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76173294,"John D Rockefeller Junior Parkway, Moran, Wyoming, US (44.001, -110.677)",2026-08-24 11:53,3.0,44.0005297,-110.6772312,True,False,True,S386614891,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2350431,Yellowstone NP--Riddle Lake Trail,2026-08-24 10:15,2.0,44.3585384,-110.5816787,True,False,False,S393506117,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1515784,Healy Reservoir,2026-08-23 14:34,3.0,44.4134538,-106.6063384,True,False,False,S386330833,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76590432,US Hwy 89,2026-08-23 13:00,2.0,43.2147044,-110.787121,True,False,True,S388465391,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75898346,"Specimen Ridge Trail, Wyoming, US (44.903, -110.377)",2026-08-23 08:08,,44.9030038,-110.3772701,True,False,True,S386302619,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11497572,J's cabin,2026-08-23 07:45,2.0,43.1211969,-110.2334601,True,False,True,S387212281,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7247341,Country Garden Lane cupola,2026-08-23 06:21,3.0,42.885825,-108.610869,True,False,True,S386130064,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L41676805,Barker Road & Fivemile Reservoir,2026-08-22 18:30,40.0,44.9534828,-107.2717548,True,True,False,S385957919,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76125366,"Northeast Entrance Road, Yellowstone National Park, Wyoming, US (44.882, -110.218)",2026-08-22 16:10,3.0,44.8822884,-110.2181524,True,False,True,S386330537,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76249927,"Grand Loop Rd, Yellowstone National Park US-WY 44.78855, -110.73900",2026-08-22 13:01,2.0,44.788548,-110.738999,True,False,True,S387104084,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76122592,Grand Teton NP--Uhl Hill,2026-08-22 10:44,1.0,43.809091,-110.476939,True,False,True,S386316186,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2956091,Grand Teton NP--Mormon Row Historic District,2026-08-22 08:38,2.0,43.6666638,-110.6640086,True,False,False,S385805176,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76122436,Bridger-Teton NF--Toppings Lakes Rd,2026-08-22 08:14,2.0,43.765394,-110.537534,True,False,True,S386315389,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40329976,Crandall Ranger Station,2026-08-22 08:11,,44.8471603,-109.6341705,True,False,True,S386487945,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L30646674,Oxbow Bend Pullout,2026-08-22 07:26,1.0,43.866573,-110.550381,True,False,True,S385811879,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1313100,Grand Teton NP--Moose Junction,2026-08-21 17:35,2.0,43.6509197,-110.7077694,True,False,False,S385596520,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75984340,"CR-72, Sheridan US-WY 44.74452, -106.96937",2026-08-21 12:39,2.0,44.744522,-106.969369,True,False,True,S385518228,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75982910,"850 US Highway 14A W, Lovell US-WY (44.8159,-108.4711)",2026-08-21 11:45,2.0,44.815893,-108.471083,True,False,True,S385510908,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75993939,"Spread Creek Road, Moran, WY",2026-08-21 10:41,2.0,43.7756821,-110.5118434,True,False,True,S385572571,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75977169,"Dwight D. Eisenhower Highway, Lyman, Wyoming, US (41.376, -110.24)",2026-08-21 10:13,1.0,41.3757892,-110.2401195,True,False,True,S385480400,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75985085,"Blacktail Ponds Spur Trail, Wyoming, US (44.959, -110.6)",2026-08-21 08:42,,44.9585837,-110.6001326,True,False,True,S385522201,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L9539220,Yellowstone NP--Soda Butte,2026-08-21 06:50,6.0,44.877976,-110.1527941,True,False,False,S385604787,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77430571,S CR 2E fields,2026-09-19 17:08,210.0,37.452074,-106.110122,True,False,True,S394417863,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4903799,Clifton Nature Park,2026-09-19 12:15,4.0,39.0610714,-108.4519672,True,False,False,S394439852,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77373153,"11468 3725 Rd, Paonia US-CO 38.82016, -107.66145",2026-09-18 18:53,3.0,38.820164,-107.661452,True,False,True,S394084281,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77370414,Roadside,2026-09-18 17:57,8.0,37.628059,-106.149304,True,False,True,S394069014,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77368448,"4338–4858 US-285, Monte Vista US-CO (37.6382,-106.1490)",2026-09-18 17:23,12.0,37.638166,-106.149017,True,False,True,S394050465,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1766567,Lake Avery,2026-09-18 11:16,3.0,39.9827335,-107.6441497,True,False,True,S393989916,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L305034,Douglas Reservoir,2026-09-18 07:41,,40.701322,-105.0819811,True,False,False,S393974132,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L282348,Colorado River SP--Wildlife Area section,2026-09-18 06:52,2.0,39.0578173,-108.4846598,True,False,False,S394374194,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L168162,Sweitzer Lake SP,2026-09-17 18:17,6.0,38.712734,-108.032265,True,False,False,S393796595,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L62350125,"5521–5737 CR-29, Craig US-CO 40.58339, -107.37904",2026-09-17 13:18,24.0,40.583389,-107.379044,True,False,True,S393803401,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2747329,Marjorie Perry Nature Preserve,2026-09-17 08:22,1.0,39.6204613,-104.9354517,True,False,False,S393685501,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2352973,Loudy-Simpson Nature Trail,2026-09-17 07:47,,40.4986,-107.55547,True,False,False,S393803357,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21165474,Colorado River SP--West Lake,2026-09-17 07:13,2.0,39.060388,-108.487689,True,False,False,S394374562,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77301973,"Ptarmigan Loop, Dillon US-CO 39.66310, -106.03962",2026-09-16 12:42,14.0,39.6631,-106.039624,True,True,True,S393671485,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L285939,Fossil Creek Reservoir & Regional Open Space,2026-09-16 12:38,1.0,40.4905049,-105.0088308,True,False,False,S393762066,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109296,Fruitgrowers Reservoir,2026-09-16 11:52,5.0,38.8295785,-107.9444504,True,False,False,S393476305,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77274158,"U.S. 40, Hayden, Colorado, US (40.494, -107.367)",2026-09-16 10:27,6.0,40.4937102,-107.3668726,True,False,True,S393490538,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L10720851,My Backyard,2026-09-16 07:30,12.0,37.5499354,-106.1389846,True,False,True,S393404633,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18577227,WFMC Ponds,2026-09-16 07:22,21.0,40.477394,-107.615424,True,False,True,S393492825,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21789303,"Leatheridge loop, 6200 Rd, Montrose US-CO 38.46291, -107.93020",2026-09-16 06:50,2.0,38.462909,-107.930199,True,False,True,S393403894,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L42020992,Yampa River SWA—Nature Trail (Aug 15-Feb 28 only),2026-09-15 15:42,60.0,40.497795,-107.373988,True,False,False,S393243732,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77239502,"1663–1737 US-34, Granby US-CO 40.10635, -105.93481",2026-09-15 15:21,1.0,40.106348,-105.934809,True,False,True,S393259482,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7809996,Rocky Mountain NP--Green Mountain Trail,2026-09-15 14:01,1.0,40.3089914,-105.8344733,True,False,False,S393243073,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77232422,"1165 12 1/2 Road, Loma, Colorado, US (39.174, -108.808)",2026-09-15 12:49,2.0,39.1737541,-108.8075136,True,False,True,S393208251,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77227508,"Auto selected 38.78257, -106.11302",2026-09-15 10:26,4.0,38.782565,-106.113023,True,False,True,S393178790,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109301,Monte Vista NWR,2026-09-15 09:39,2.0,37.4876656,-106.1308691,True,False,False,S393198525,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77235034,Monte Vista Country Club,2026-09-15 08:00,4.0,37.5837835,-106.1577634,True,False,True,S393230873,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L10189450,Big Salt Wash - feeders,2026-09-15 07:23,6.0,39.1708497,-108.7463064,True,False,True,S393127062,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L32640351,"County Road 70, Hayden, Colorado, US (40.504, -107.164)",2026-09-12 10:22,1.0,40.5044345,-107.163822,True,False,True,S392233113,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4012409,Pella Crossing Open Space,2026-09-10 10:21,1.0,40.1838602,-105.1781568,True,False,False,S391587256,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L61388150,Alamosa NWR--Rio Grande Nature Trail (closed Apr 15-Aug 30),2026-09-10 10:06,3.0,37.4296909,-105.7879538,True,False,False,S391606827,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76987902,Salida Golf Course,2026-09-10 08:10,3.0,38.5391519,-106.0040274,True,False,True,S391663248,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76944982,"920 West 1st Street, Craig, Colorado, US (40.507, -107.56)",2026-09-09 16:55,2.0,40.5069228,-107.5602254,True,False,True,S391396941,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2659703,Birding on Avon,2026-09-09 11:29,1.0,40.4423333,-105.1032829,True,False,True,S391342774,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77221794,King Mountain BLM,2026-09-09 10:30,200.0,40.0248009,-106.798037,True,False,True,S393401784,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L338916,Stagecoach SP,2026-09-09 08:51,1.0,40.277837,-106.8559887,True,False,False,S391352709,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L560852,Blanca Wetlands (BLM),2026-09-09 07:01,12.0,37.5594115,-105.695343,True,False,False,S391313289,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12746166,"Home, Salida US-CO (38.5294,-106.0014)",2026-09-09 06:33,1.0,38.529395,-106.001445,True,False,True,S391262216,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76902654,"E County Road 8 S, Monte Vista (37.4590,-106.1184)",2026-09-08 14:04,14.0,37.459041,-106.118395,True,False,True,S391117687,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L5801799,Private Ranch,2026-09-08 08:15,2.0,40.6049278,-106.0972881,True,False,True,S391145727,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L32076597,"Rainbow Ridge, Clark, Colorado, US (40.802, -106.983)",2026-09-08 07:28,1.0,40.8019767,-106.9825863,True,False,True,S391067830,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L452813,Carpenter Ranch,2026-09-07 07:16,2.0,40.4976145,-107.1737766,True,False,False,S391037586,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L338872,Home Lake SWA,2026-09-07 06:37,2.0,37.5723079,-106.0935203,True,False,False,S390753745,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76852280,70 at Morgan Creek,2026-09-07 05:55,1.0,40.5285213,-107.2004571,True,False,True,S390794922,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76819927,Merrill Ranch,2026-09-06 19:30,50.0,40.5079096,-107.2050681,True,False,True,S390568540,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L743334,Yampa River Preserve,2026-09-06 18:18,2.0,40.4851146,-107.1533844,True,False,False,S390564777,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4919039,Yampavian Ranch--PRIVATE,2026-09-06 17:19,120.0,40.5075542,-107.2057464,True,False,True,S390566009,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76818730,"40515 County Road 69A, Nancy’s House (Routt Cty, CO)",2026-09-06 16:48,130.0,40.507597,-107.205782,True,False,True,S390561739,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L357689,North Poudre Reservoir #3,2026-09-06 13:31,4.0,40.734332,-105.0422788,True,False,False,S390477770,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L26716457,Nofstger Reservoir,2026-09-06 13:15,1.0,40.4143479,-107.1469672,True,False,False,S391137489,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L52271296,"Maribou Ranch (Routt Cty, CO)",2026-09-06 07:05,2.0,40.522463,-106.919814,True,False,True,S390410737,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76747744,"861 Industrial Dr, Hayden US-CO 40.48982, -107.24422",2026-09-05 17:57,287.0,40.489816,-107.244218,True,False,True,S390132924,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76747578,"462 Commerce St, Hayden US-CO 40.49025, -107.24431",2026-09-05 17:46,520.0,40.490246,-107.244314,True,False,True,S390131909,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76808652,"861 Industrial Avenue, Hayden, Colorado, US (40.49, -107.244)",2026-09-05 17:45,259.0,40.4897682,-107.2442488,True,False,True,S390502545,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76747531,"861 Industrial Dr, Hayden US-CO 40.49001, -107.24414",2026-09-05 17:45,286.0,40.490009,-107.244142,True,False,True,S390131666,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76747430,"81639, Hayden US-CO (40.4907,-107.2394)",2026-09-05 17:40,287.0,40.490705,-107.239394,True,False,True,S390131014,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76745792,"12565 County Road 70, Hayden US-CO 40.52265, -107.19074",2026-09-05 17:09,6.0,40.522647,-107.190736,True,False,True,S390121477,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76749026,"CR-37, Hayden US-CO 40.49020, -107.24342",2026-09-05 16:48,220.0,40.490198,-107.243416,True,False,True,S390140519,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76808612,"12565 County Road 70, Hayden, Colorado, US (40.523, -107.191)",2026-09-05 16:48,13.0,40.522666,-107.1907708,True,False,True,S390502297,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76744532,"422 Commerce St, Hayden US-CO 40.49159, -107.24410",2026-09-05 16:43,64.0,40.49159,-107.244104,True,False,True,S390113799,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76710575,"12565 County Road 70, Hayden, Colorado, US (40.523, -107.191)",2026-09-05 16:42,7.0,40.5228668,-107.1910131,True,False,True,S390121840,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76745607,"11913–11951 County Road 70, Hayden US-CO 40.52817, -107.19115",2026-09-05 16:36,17.0,40.528167,-107.191145,True,False,True,S390120346,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L341350,Routt CR-80 (0 - 5 miles north of Yampa River),2026-09-05 15:55,1.0,40.5433847,-107.2191596,True,False,False,S390158055,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76752050,"10370–10524 US-40, Hayden US-CO 40.49517, -107.23449",2026-09-05 15:45,114.0,40.495173,-107.234489,True,False,True,S390158106,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76746021,Crane Festival,2026-09-05 14:35,45.0,40.4971269,-107.2480814,True,False,True,S390122916,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76860398,"10620 US-40, Hayden US-CO 40.49828, -107.22579",2026-09-05 11:17,75.0,40.498279,-107.225795,True,False,True,S390844003,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76723018,"15235 W US Hwy 40, Steamboat Springs US-CO 40.47489, -107.13966",2026-09-05 09:03,2.0,40.474888,-107.139656,True,False,True,S389999216,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76720479,Mt. Harris (Private Property),2026-09-05 08:22,2.0,40.475956,-107.139824,True,False,True,S389985019,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2983928,Yampa River--along CR-70 N of US-40,2026-09-05 08:12,50.0,40.4963091,-107.1589279,True,False,False,S389928295,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76804397,"12565 County Road 70, Hayden US-CO 40.52306, -107.19094",2026-09-05 07:51,70.0,40.523057,-107.190939,True,False,True,S390477157,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L685764,Moffat County Road Department ponds,2026-09-05 07:42,2.0,40.5052505,-107.5353277,True,False,False,S389921955,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L44431061,Two Bridges Open Space,2026-09-05 07:34,1.0,39.4135,-104.724902,True,True,True,S391330910,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76710204,12565 County Road 70,2026-09-05 07:28,54.0,40.5228766,-107.1909194,True,False,True,S389922698,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L151646,Walden Reservoir,2026-09-05 06:16,6.0,40.7321439,-106.3120244,True,False,False,S390154064,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76804394,"40625 County Road 69A, Hayden US-CO 40.50903, -107.20976",2026-09-05 06:08,90.0,40.509029,-107.209762,True,False,True,S390477132,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76913111,Morgan Bottoms Rd,2026-09-04 17:20,70.0,40.504217,-107.265204,True,False,True,S391187646,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76679450,"13015 North County Road 17, Wellington, Colorado, US (40.773, -105.095)",2026-09-04 17:06,40.0,40.7728542,-105.0950825,True,False,True,S389736789,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76667557,"31580 CR-14, Steamboat Springs US-CO (40.3798,-106.8266)",2026-09-04 10:33,11.0,40.379848,-106.826555,True,False,True,S389666020,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18817281,"Coalmont Lek--ARRIVE IN DARK, STAY IN CAR, DO NOT DISTURB DISPLAYING BIRDS!",2026-09-04 09:48,2.0,40.5465243,-106.440112,True,False,False,S390161126,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76866793,"37722–37788 Cn Rd 53, Hayden US-CO 40.47085, -107.22781",2026-09-04 07:42,100.0,40.470853,-107.227814,True,False,True,S390885158,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76660329,"37722–37788 Cn Rd 53, Hayden US-CO 40.47087, -107.22750",2026-09-04 07:23,50.0,40.470865,-107.227497,True,False,True,S389620749,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76658653,"40625 County Road 69A, Hayden US-CO 40.50906, -107.20980",2026-09-04 06:28,70.0,40.509061,-107.209797,True,False,True,S389608383,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76658512,"40625 County Road 69A, Hayden US-CO 40.50900, -107.20870",2026-09-04 06:23,250.0,40.509004,-107.208698,True,False,True,S389607534,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76640099,"32000–32036 CR-22, Steamboat Springs US-CO (40.3998,-106.8243)",2026-09-03 19:35,10.0,40.399752,-106.824348,True,False,True,S389502830,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76468934,Gone birding,2026-09-03 18:41,1.0,40.526478,-106.937061,True,False,True,S389506959,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76638466,"36641–36699 CR-14, Steamboat Springs US-CO (40.4507,-106.8282)",2026-09-03 18:07,1.0,40.450669,-106.828231,True,False,True,S389491547,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11000355,Hayden (town),2026-09-03 15:45,26.0,40.4936345,-107.2631885,True,False,False,S389669806,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L753439,Cowdrey Reservoir,2026-09-03 09:14,4.0,40.8376777,-106.3133454,True,False,False,S389403292,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76638274,Notch Mountain via North Ridge,2026-09-03 08:48,10.0,39.4921,-106.4553512,True,False,True,S389481416,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L342924,Loudy-Simpson Park,2026-09-03 07:41,2.0,40.49578,-107.55625,True,False,False,S389418994,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76595324,"North County Road 103, Wyoming, US",2026-09-02 16:07,6.0,40.9874629,-106.0021403,True,False,True,S389244867,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4514762,Yampa River SP--Visitor Center & Nature Trail,2026-09-02 10:48,50.0,40.4902507,-107.311213,True,False,False,S390846752,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7800776,Steamboat Lake SP--Sunrise Vista CG,2026-09-02 09:39,2.0,40.8077677,-106.9656372,True,False,False,S389158788,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76619319,Hoot Hoot,2026-09-02 08:22,1.0,40.533964,-106.924433,True,False,True,S389431592,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76555574,"Howelsen Park, Steamboat Springs US-CO 40.48253, -106.83292",2026-09-01 19:07,2.0,40.482528,-106.832918,True,False,True,S388999357,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L902167,Yampa River SWA--Wetlands,2026-08-31 15:40,76.0,40.5131711,-107.3906761,True,False,False,S389748023,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76510834,"24555 County Road 42, Steamboat Springs, Colorado, US (40.515, -106.961)",2026-08-31 14:59,8.0,40.5149849,-106.9612128,True,False,True,S388705290,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76674316,"1004 E County Road 70, Wellington US-CO 40.75503, -105.05869",2026-08-31 09:07,4.0,40.755033,-105.058691,True,False,True,S389704835,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L71302911,My House,2026-08-31 09:00,1.0,38.396124,-107.867993,True,False,True,S388655324,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4477854,Silt River Preserve,2026-08-30 16:04,2.0,39.536698,-107.662262,True,False,False,S388695262,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L44569317,"4674 U5 Rd, Paradox US-CO 38.37500, -108.98170",2026-08-30 09:06,,38.375004,-108.981698,True,False,True,S388466375,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76413217,"6120 State Highway 15 S, Monte Vista US-CO 37.48591, -106.14770",2026-08-29 18:20,,37.485909,-106.1477,True,True,True,S388111947,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4774737,Dumont Lake,2026-08-28 18:24,2.0,40.4045425,-106.6301787,True,False,False,S387770322,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76354775,"Wyoming Trail, Kremmling US-CO 40.40364, -106.62399",2026-08-28 17:57,2.0,40.403644,-106.62399,True,False,True,S387760736,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L168158,Vega SP,2026-08-28 10:38,2.0,39.22338,-107.79534,True,False,False,S388414205,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3702586,Mount Ouray SWA,2026-08-28 09:07,13.0,38.5572075,-106.0388138,True,True,False,S387674512,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L481533,Horsethief Canyon SWA,2026-08-28 07:59,1.0,39.16076,-108.78814,True,False,False,S387669830,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L280284,Frantz Lake SWA,2026-08-28 07:58,5.0,38.5435336,-106.0224427,True,True,False,S387743983,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L692254,CO-Routt Marabou,2026-08-28 07:03,5.0,40.5287404,-106.9276142,True,False,True,S388471958,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76402962,BLM Grassy Knoll River Access,2026-08-27 15:23,2.0,38.890573,-106.169248,True,True,True,S388050364,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11866692,Monte Vista (town),2026-08-26 08:22,,37.5778994,-106.1479221,True,True,False,S387091596,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3632359,Cottonwood Park (Mancos Dog Park),2026-08-26 06:55,1.0,37.3417255,-108.3008537,True,False,False,S387115799,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76175263,"Colorado 9, Silverthorne, Colorado, US (39.811, -106.194)",2026-08-23 16:14,2.0,39.8110624,-106.194144,True,True,True,S386627555,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76106409,"22047 U.S. 550, Ridgway, Colorado, US (38.144, -107.74)",2026-08-23 10:22,6.0,38.1439017,-107.7404167,True,True,True,S386225562,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76225900,"33450 Colorado 131, Steamboat Springs, Colorado, US (40.405, -106.826)",2026-08-22 18:23,2.0,40.4052166,-106.825511,True,False,True,S386951673,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76050969,"S Lincoln Ave, Steamboat Springs US-CO 40.46494, -106.82579",2026-08-22 13:47,2.0,40.464937,-106.825795,True,False,True,S385895706,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L31416487,Garvin Mesa,2026-08-22 07:30,2.0,38.9056472,-107.5868139,True,False,True,S386569643,US-CO,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77424376,"County Road 7
+Morrill NE 69358
+United States",2026-09-19 16:43,2.0,41.926205,-103.948506,True,False,True,S394385674,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L41219526,Niobrara Boat Ramp and WTP,2026-09-17 16:42,2.0,42.7609622,-98.0274796,True,True,False,S393786773,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1102896,Lake Wanahoo,2026-09-17 10:38,2.0,41.2434171,-96.610508,True,False,False,S393703342,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1540350,Lake Wanahoo--Sand Creek Wetlands,2026-09-13 14:16,2.0,41.2637052,-96.6174567,True,False,False,S392660732,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L569258,Niobrara SP,2026-09-11 09:12,2.0,42.7653566,-98.062849,True,True,False,S391845045,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11980201,"Niobrara State Park, Niobrara US-NE 42.75148, -98.06556",2026-09-10 09:04,2.0,42.751485,-98.065558,True,True,True,S391779727,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L22609441,Niobrara River at NE-12,2026-09-10 08:05,2.0,42.7464112,-98.0499182,True,True,True,S391576846,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L209645,Box Butte Reservoir,2026-09-07 06:10,2.0,42.45848,-103.08634,True,True,False,S390884501,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1111719,Fort Kearny SRA--south Platte River bridge,2026-09-05 13:12,1.0,40.6604977,-98.987385,True,False,False,S390054711,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12032884,The Cabin,2026-09-04 07:17,1.0,42.946909,-98.470875,True,False,True,S389619005,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8010728,North Buffalo Road,2026-08-31 08:04,4.0,41.2064237,-100.7911382,True,False,True,S388633974,US-NE,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1024345,Maxwell NWR--Lake 13,2026-09-18 09:26,1.0,36.5810737,-104.5828056,True,True,False,S393959612,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L265647,Maxwell NWR,2026-09-13 11:18,3.0,36.5688651,-104.5815831,True,True,False,S392646808,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12478660,Maxwell NWR--Lake 13,2026-09-11 07:30,2.0,36.5828908,-104.5814996,True,True,True,S393277774,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8460211,NM-211 Bridge over the Gila,2026-09-07 06:57,2.0,32.9690103,-108.5871804,True,True,False,S390871010,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76134355,Maxwell I-25 S Playa,2026-08-23 17:29,1.0,36.554974,-104.538351,True,True,True,S386383309,US-NM,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L9644475,"Greenways Park, Amarillo",2026-09-12 19:04,1.0,35.1379844,-101.9295859,True,True,False,S392344429,US-TX,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L52757987,Sandhole (NO MOTORIZED ACCESS),2026-09-19 19:07,80.0,43.928225,-112.22805,True,False,True,S394422994,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L765722,Ben Ross Reservoir,2026-09-19 12:22,1.0,44.521953,-116.4487159,True,False,False,S394336598,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2418379,Cascade Lake--Gold Fork Arm,2026-09-19 10:57,2.0,44.685742,-116.0679603,True,False,False,S394327841,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109176,Camas NWR,2026-09-19 09:46,200.0,43.9509896,-112.2557731,True,False,False,S394333981,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L24704682,Mud Lake WMA--Camas Creek Delta,2026-09-19 09:37,2.0,43.8888989,-112.3570382,True,False,False,S394360617,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L466951,Beaver Dick Park,2026-09-19 09:28,3.0,43.8251772,-111.9061911,True,False,False,S394274230,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77368862,"2905 South 4000 West, Rexburg, Idaho, US (43.787, -111.858)",2026-09-19 09:18,7.0,43.7872384,-111.8584671,True,False,True,S394254226,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1676985,Mud Lake WMA--East End,2026-09-19 08:00,6.0,43.8924953,-112.357379,True,False,False,S394300363,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77407103,"83805, Bonners Ferry US-ID 48.71119, -116.41453",2026-09-19 07:58,1.0,48.711195,-116.414532,True,False,True,S394278395,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L31275455,First Pullout,2026-09-19 07:46,1.0,48.7141286,-116.4134679,True,False,False,S394278198,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1915425,Camas NWR--Headquarters,2026-09-19 07:15,80.0,43.9640943,-112.2639656,True,False,False,S394328392,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4585399,Beaver Dick Camp,2026-09-19 06:54,1.0,43.7780196,-112.0366055,True,False,False,S394259230,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1223385,Ashton Reservoir--Boat Launch,2026-09-18 14:11,125.0,44.1115929,-111.4556122,True,False,False,S394012720,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L352584,Silver Creek Preserve--General,2026-09-18 09:00,2.0,43.3166853,-114.1500092,True,False,False,S394015962,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1145057,Chester Wetlands,2026-09-18 08:16,2.0,44.0185621,-111.5833014,True,False,False,S394031454,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L51070177,Camas NWR Observation Tower,2026-09-18 07:10,30.0,43.92829,-112.270032,True,False,True,S393956934,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L878382,Hayspur Fish Hatchery,2026-09-17 18:04,2.0,43.3398492,-114.1469193,True,False,False,S393796777,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L33951478,West Silver Creek,2026-09-17 07:32,2.0,43.326294,-114.105446,True,False,True,S393796811,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77299237,W 2000 S,2026-09-16 18:55,160.0,43.6942481,-111.184862,True,False,True,S393651271,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1667722,Nickerson Bridge (Teton River at S Bates Road),2026-09-16 18:40,2.0,43.696165,-111.1657828,True,False,False,S393651340,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12585317,"18301 US-20, Bellevue US-ID (43.3306,-114.1953)",2026-09-16 18:18,120.0,43.330609,-114.195302,True,False,True,S393534834,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L807188,Blue Creek,2026-09-16 08:52,5.0,42.051842,-116.1807632,True,False,False,S393495443,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18440108,S 5000 W -- Bates to S Bates,2026-09-16 08:35,3.0,43.7064161,-111.2009079,True,False,True,S393426009,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77233577,Egin Lake Campground,2026-09-15 19:59,3.0,43.961862,-111.855009,True,False,True,S393279575,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L51338930,US Highway 20 -- Picabo to Idaho Highway 75,2026-09-15 18:53,48.0,43.3309384,-114.1519191,True,False,True,S393978698,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18519505,Horseshoe Bridge Pond,2026-09-15 10:25,16.0,43.771565,-111.204496,True,False,False,S393192256,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L25892677,Horseshoe bridge to cache,2026-09-15 10:19,5.0,43.773209,-111.215536,True,False,True,S393174256,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77222773,"I-84 E, Caldwell US-ID 43.62986, -116.62530",2026-09-15 08:49,1.0,43.629859,-116.625298,True,False,True,S393148321,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77200465,Granite Peak,2026-09-14 12:46,12.0,44.422953,-116.142547,True,False,True,S393002451,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L353105,Lake Cascade--South,2026-09-14 11:40,1.0,44.4939036,-116.0549486,True,False,False,S392942660,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77154010,"3003–3589 W Highway 31, Victor US-ID 43.59257, -111.17037",2026-09-13 16:50,3.0,43.592565,-111.170369,True,False,True,S392702934,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77158651,"5601 W Black Canyon Hwy, Emmett US-ID 43.90782, -116.60677",2026-09-13 16:28,5.0,43.907818,-116.606768,True,False,True,S392733086,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77126495,"956 Rainey Creek Rd, Swan Valley US-ID 43.43779, -111.30488",2026-09-13 07:15,8.0,43.437793,-111.304881,True,False,True,S392507213,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1894671,Camas NWR--Center Pond,2026-09-12 12:16,23.0,43.9358188,-112.2652129,True,False,False,S392247145,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77077439,"10570 Highway 52, Emmett, Idaho, US (43.923, -116.704)",2026-09-12 11:08,3.0,43.9233319,-116.70361,True,False,True,S392205792,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7212677,Little Rock (Thornock) Rd Ponds,2026-09-12 10:25,27.0,43.9183398,-116.693573,True,False,False,S392202194,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77070139,"83425, Hamer US-ID 43.92934, -112.26985",2026-09-12 08:51,2.0,43.929344,-112.26985,True,False,True,S392161026,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6377278,"4400–4476 N 1000 E, Sugar City US-ID (43.8933,-111.7578)",2026-09-11 19:18,5.0,43.893347,-111.757761,True,False,True,S391962981,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1766775,Chilly Slough,2026-09-11 15:17,2.0,44.0842018,-113.8418531,True,False,False,S391926184,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6031282,Kootenai NWR--HQ Area,2026-09-11 11:30,11.0,48.7066779,-116.4151642,True,True,False,S391929507,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L210639,Mountain View Lake,2026-09-11 10:03,87.0,42.0449588,-116.1654847,True,False,False,S391883702,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77015687,"13230–13242 Finlandia Rd, McCall US-ID 44.74727, -116.02749",2026-09-11 09:13,2.0,44.747269,-116.027493,True,False,True,S391830644,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109181,Kootenai NWR,2026-09-11 08:05,11.0,48.7166667,-116.4,True,True,False,S392178349,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3406540,Market Lake WMA--General,2026-09-11 07:44,2.0,43.7808238,-112.146163,True,False,False,S391851135,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L24665660,"Old Highway 95, Bonners Ferry, Idaho, US (48.7, -116.409)",2026-09-11 07:00,3.0,48.7000371,-116.4086102,True,False,True,S392165886,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76987658,"4582–4596 N Highway 20, Island Park US-ID 44.54400, -111.33192",2026-09-10 18:40,5.0,44.544005,-111.331924,True,False,True,S391659580,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12387826,Chester Dam Boat Ramp,2026-09-10 17:33,4.0,44.0173546,-111.5840149,True,False,True,S391651738,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2264981,Coeur d'Alene River WMA--Killarney Lake Rd.,2026-09-10 10:48,2.0,47.5354785,-116.5155029,True,False,False,S391595680,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8871237,Mud Lake WMA--North Boat Ramp,2026-09-10 10:31,2.0,43.8979357,-112.3886632,True,False,False,S391597772,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L20757966,Rails to Trails State Park -- Bull Elk Creek to Felt,2026-09-10 09:58,2.0,43.895055,-111.158268,True,False,False,S391612899,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76682450,"Lowell Pivot Pond, Baker, US-ID",2026-09-09 19:06,3.0,45.101386,-113.742,True,False,True,S391418694,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L47320830,Little Creek Drainage (private),2026-09-09 11:59,2.0,44.687107,-116.21039,True,False,True,S391400745,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8317391,Bates Bridge (Teton River at Bates Road),2026-09-09 09:28,8.0,43.72351,-111.1879535,True,False,False,S391352889,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76929548,"108–268 N Picabo Rd, Bellevue US-ID (43.3191,-114.0660)",2026-09-09 08:23,2.0,43.319114,-114.066043,True,False,True,S391295086,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L20782867,Rails to Trails State Park--Felt to Badger Creek,2026-09-09 08:12,2.0,43.8685419,-111.175668,True,False,False,S391316764,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6261987,Ball Creek Ranch Preserve Wetlands - From Westside Rd,2026-09-09 02:55,4.0,48.8200535,-116.4122915,True,False,True,S392556317,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2086108,Silver Creek Preserve--Visitor Center Grove,2026-09-08 11:36,5.0,43.3134926,-114.1493118,True,False,False,S391381645,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L125284,"Chilly Butte house area, Custer Co., ID",2026-09-08 10:45,20.0,44.08025,-113.89535,True,False,True,S391101617,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1529298,Intermountain Bird Observatory at Lucky Peak,2026-09-08 10:00,3.0,43.6056275,-116.0600716,True,True,False,S391172894,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11693985,Packsaddle Estates subdivision,2026-09-08 09:03,4.0,43.7704469,-111.2855071,True,False,True,S391082886,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76872600,"High Valley Rd, Cascade US-ID 44.22367, -116.16844",2026-09-07 19:41,3.0,44.223669,-116.168438,True,False,True,S390925058,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4682665,Bear Lake NWR--Dingle Unit,2026-09-07 10:34,12.0,42.2321105,-111.3492626,True,False,False,S390837912,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L829681,Cache Bridge (Teton River at Packsaddle Road),2026-09-07 09:14,4.0,43.7816293,-111.207304,True,False,False,S390794992,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L74708868,Camas NWR - Q2,2026-09-07 08:24,23.0,43.954067,-112.257627,True,False,True,S391108165,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2156107,Packsaddle Home,2026-09-06 19:31,2.0,43.7705476,-111.2866169,True,False,True,S390565745,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L340414,Stanley Creek Overlook,2026-09-06 18:22,2.0,44.2552818,-115.0052261,True,False,False,S391102858,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L50789341,"241 Lee Way, Donnelly, Idaho, US (44.662, -116.093)",2026-09-06 13:30,4.0,44.6624064,-116.0925222,True,False,True,S390521139,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2392377,Stanley Lake,2026-09-06 11:42,3.0,44.24751,-115.06186,True,False,False,S390540306,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L295755,Henrys Lake,2026-09-06 10:24,2.0,44.6459166,-111.4054871,True,False,False,S390517789,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77158075,"343 Beckwith Street, Montpelier, Idaho, US (42.313, -111.307)",2026-09-06 08:30,4.0,42.3127775,-111.3066031,True,False,True,S392729477,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4682750,Bear Lake NWR--Salt Meadow Unit,2026-09-06 08:12,2.0,42.2057796,-111.3359852,True,False,False,S390503451,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76780267,"10412–10482 SH-75, Bellevue US-ID 43.36187, -114.27023",2026-09-06 07:51,15.0,43.361872,-114.270227,True,False,True,S390334590,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76787434,"Dingle Bottoms Rd, Montpelier US-ID 42.23615, -111.35303",2026-09-06 07:08,4.0,42.236154,-111.353025,True,False,True,S390378661,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8709357,"Dogwood Lane, Salmon, Idaho, US (45.217, -113.896)",2026-09-05 17:48,3.0,45.2174794,-113.8961742,True,False,True,S390405027,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76745606,"Rocks Above Lick Creek Road, McCall, Idaho, US (44.925, -116.018)",2026-09-05 16:45,2.0,44.925145,-116.0180369,True,False,True,S390120339,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7832143,Fox Creek West,2026-09-05 15:39,3.0,43.65557,-111.178593,True,False,False,S390120677,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40276134,Lemhi Backroad - Town to Kirtley Cr,2026-09-05 15:36,2.0,45.173653,-113.864467,True,False,True,S390096434,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109179,Grays Lake NWR,2026-09-05 13:25,9.0,43.0343933,-111.4064482,True,False,False,S390110306,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4007448,Falk Bridge,2026-09-05 11:31,3.0,43.9531739,-116.7171514,True,False,False,S390011728,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21175514,"West Black Canyon Highway, Emmett, Idaho, US (43.908, -116.604)",2026-09-05 10:51,2.0,43.9084282,-116.6035104,True,False,True,S389995401,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77127058,Market Lake Management,2026-09-05 08:45,4.0,43.74199,-112.122335,True,False,True,S392511439,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L24419022,Texas Slough,2026-09-05 06:55,3.0,43.7682712,-111.9141228,True,False,False,S389949053,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6124281,Falls Campground,2026-09-04 16:55,8.0,43.4326331,-111.3624973,True,False,False,S389735596,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L41045079,"60th Ln, Cascade US-ID 44.33751, -115.99517",2026-09-04 16:12,2.0,44.337508,-115.995168,True,False,True,S389734640,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76676282,"218–298 Titus Ln, Donnelly US-ID 44.74189, -116.02794",2026-09-04 15:11,2.0,44.741889,-116.027938,True,False,True,S389716777,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77027864,"Soda Creek Campground, 690 W Highway 30, Soda Springs US-ID 42.65971, -111.62140",2026-09-04 12:21,5.0,42.659713,-111.621401,True,False,True,S391901246,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L25729577,Spring Creek North,2026-09-04 11:21,2.0,43.81737,-111.133139,True,False,True,S389677431,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2418405,Lake Cascade--shore at Old State Rd. South,2026-09-04 10:43,6.0,44.6299397,-116.068368,True,False,False,S389689675,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6358122,US-Idaho-McCall-13329 Vili Road - 44.759x-116.026,2026-09-04 09:22,1.0,44.7591081,-116.0264528,True,False,True,S389647711,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L787337,Lake Cascade--Sugarloaf Area North,2026-09-04 08:31,3.0,44.598046,-116.0679817,True,False,False,S389725671,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76639938,"Sawtooth National Recreation Area, Stanley US-ID (44.3063,-115.0167)",2026-09-03 17:40,7.0,44.306344,-115.016734,True,False,True,S389501784,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L15528975,Harriman State Park,2026-09-03 16:27,2.0,44.342351,-111.477078,True,False,True,S389488948,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76625366,"18048–18296 US-20, Bellevue US-ID 43.33083, -114.20444",2026-09-03 10:53,3.0,43.330833,-114.204445,True,False,True,S389413568,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21466857,"SwiftRiverFarm, Salmon",2026-09-03 08:00,3.0,45.2127564,-113.897516,True,False,True,S389488633,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76881907,"2046 Highway 93 N, North Fork US-ID 45.40680, -113.99519",2026-09-02 09:15,2.0,45.406799,-113.995192,True,False,True,S390976838,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76907427,"Highway 93 N, Carmen US-ID 45.26652, -113.89306",2026-09-02 08:42,2.0,45.266521,-113.893057,True,False,True,S391150793,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76863327,"2800 South 2400 West, Weston, Idaho, US (42.05, -111.935)",2026-09-01 15:00,2.0,42.0495361,-111.9354138,True,False,True,S390861628,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1247777,Grandine Ranger Station,2026-09-01 11:49,4.0,42.0499098,-112.650075,True,False,False,S388933976,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76548217,Kelly Island Campground,2026-09-01 10:44,1.0,43.6226377,-111.661587,True,False,True,S388949317,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1252383,Lolo Pass Visitor Center,2026-09-01,1.0,46.6348517,-114.5785296,True,False,False,S389080047,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76510230,Old Highway 28: Lemhi Rd,2026-08-31 13:23,2.0,45.030007,-113.654383,True,False,True,S388701608,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L443105,Ball Creek Ranch Preserve,2026-08-31 12:49,2.0,48.8169527,-116.4104462,True,False,False,S389404058,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76620973,Westside Road - overlooking refuge ponds,2026-08-31 11:30,4.0,48.7174047,-116.4164264,True,False,True,S389388567,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1650750,Cartier Slough WMA,2026-08-31 09:13,2.0,43.8146699,-111.9331388,True,False,False,S388640170,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76642323,"Clayton, Idaho SACR",2026-08-31 09:12,2.0,44.252265,-114.467778,True,False,True,S389515369,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1743141,Harriman SP--Ranchview Parking and River Trail Area,2026-08-30 15:51,6.0,44.3348585,-111.4654583,True,False,False,S388468049,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3284680,Meadows Valley North of 55,2026-08-30 11:00,4.0,44.9980191,-116.2637329,True,False,True,S388630041,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76457847,"Airport Rd, Montpelier US-ID (42.2464,-111.2995)",2026-08-30 10:37,5.0,42.246398,-111.299501,True,False,True,S388398558,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76468366,"US-26, Carey US-ID 43.25232, -113.94815",2026-08-30 09:26,2.0,43.252322,-113.948149,True,False,True,S388444819,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76443092,"Dingle Bottoms Rd, Montpelier US-ID (42.2313,-111.3701)",2026-08-30 07:43,6.0,42.23127,-111.370107,True,False,True,S388294144,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76441327,"S Main St, Saint Charles US-ID (42.1538,-111.3966)",2026-08-30 07:25,3.0,42.15379,-111.396564,True,False,True,S388281959,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L50746493,"S Main St, Saint Charles US-ID 42.17498, -111.40018",2026-08-29 18:51,22.0,42.174982,-111.400178,True,False,True,S388107742,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L109184,Oxford Slough WPA,2026-08-29 17:19,2.0,42.25,-112.0,True,False,False,S388091977,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76412213,"Sawtooth National Recreation Area, Stanley US-ID (44.0958,-114.8530)",2026-08-29 15:30,2.0,44.095783,-114.852962,True,False,True,S388106443,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L765471,Minidoka NWR--West End,2026-08-29 10:36,2.0,42.6763779,-113.47435,True,False,False,S388074615,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L47160858,Camp Teebag,2026-08-29 10:28,2.0,44.254926,-116.134913,True,False,True,S387999824,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76346612,"11748–11760 SH-55, Cascade US-ID 44.54144, -116.02883",2026-08-28 13:13,11.0,44.541437,-116.028832,True,False,True,S387711382,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2268574,Brown's Pond,2026-08-28 09:15,3.0,44.8770082,-116.0998893,True,False,False,S387660062,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76339241,"Mesa Ln, Donnelly US-ID 44.69659, -116.06737",2026-08-28 08:24,2.0,44.696593,-116.067368,True,False,True,S387670273,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40976952,Jake's Twin Butte Road Menan,2026-08-28 08:11,20.0,43.8115003,-111.9648629,True,False,True,S387632499,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2272855,Harriman SP--Silver Lake,2026-08-27 10:04,2.0,44.3282611,-111.4669875,True,False,False,S387459543,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2261456,Mud Lake WMA--West End,2026-08-26 10:11,2.0,43.888429,-112.466054,True,False,False,S387143993,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4117167,Picabo Rd. Hot Springs,2026-08-26 08:55,4.0,43.3345872,-114.0855347,True,False,False,S387104228,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11577653,Palisades Reservoir—Indian Creek Delta,2026-08-25 18:34,2.0,43.246912,-111.1068657,True,False,False,S386940335,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76204151,Pond across the highway from Beaver Dick Park,2026-08-25 09:34,1.0,43.830021,-111.905896,True,False,True,S386818851,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L952612,Mud Lake WMA--South End,2026-08-25 09:22,2.0,43.8695595,-112.4142551,True,False,False,S386839951,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76223062,"Idaho 75, Stanley, Idaho, US (43.994, -114.833)",2026-08-25 08:55,4.0,43.9942567,-114.8331217,True,False,True,S386935373,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1425825,Home,2026-08-25 08:00,3.0,44.9573137,-116.2246686,True,False,True,S387356962,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76412742,Salmon to Stanley,2026-08-25 06:54,2.0,45.0476491,-113.9136432,True,False,True,S388106938,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76163993,"3707 Red Rock Pass Road, Island Park, Idaho, US (44.604, -111.416)",2026-08-24 15:48,2.0,44.6038834,-111.4164262,True,False,True,S386620366,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76347933,"Lola Creek - Forest Road 083C, Stanley, Idaho, US (44.406, -115.172)",2026-08-24 12:44,2.0,44.4059594,-115.1724065,True,False,True,S387718940,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L157943,Little Camas Reservoir,2026-08-24 08:50,,43.34624,-115.387566,True,False,False,S386535309,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1169019,Glendale Reservoir,2026-08-23 17:38,2.0,42.133431,-111.8028831,True,False,False,S386356117,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2980216,Casino Creek Campground,2026-08-23 10:22,2.0,44.2537449,-114.8569107,True,False,False,S386293549,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76105427,"12437–12477 SH-55, Donnelly US-ID (44.6438,-116.0493)",2026-08-23 10:10,2.0,44.643777,-116.049283,True,False,True,S386219705,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76130897,"Snake River Road, Swan Valley, Idaho, US (43.441, -111.378)",2026-08-23 10:00,2.0,43.4412909,-111.3783521,True,False,True,S386363555,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L35895215,"7683 Idaho 52, Emmett, Idaho, US (43.877, -116.635)",2026-08-23 09:39,24.0,43.8769412,-116.6348173,True,False,True,S386207444,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2329462,Henrys Lake--Hope Creek,2026-08-23 09:05,2.0,44.6119787,-111.4212799,True,False,False,S386246385,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6025274,North Menan Butte,2026-08-23 09:01,2.0,43.7828687,-111.9767332,True,False,False,S386233838,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11424553,Fox Creek East,2026-08-23 07:12,6.0,43.6505132,-111.1688611,True,False,False,S386140113,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L63334280,"Pond across from 28 Club, Salmon US-ID",2026-08-22 18:00,41.0,45.125796,-113.789399,True,False,True,S385972530,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2302227,Draper Wood River Preserve,2026-08-22 13:26,1.0,43.5118137,-114.3180442,True,False,False,S385889383,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3842017,Galena Overlook,2026-08-22 12:30,14.0,43.8729422,-114.7297043,True,False,False,S385958539,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76047000,"17137–17175 SH-75, Ketchum US-ID 43.98603, -114.83301",2026-08-22 11:44,8.0,43.986025,-114.833008,True,False,True,S385874908,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76046374,"Idaho Panhandle National Forest, Bonners Ferry US-ID 48.71242, -116.42050NWT NWR Overlook Myrtle Creek Rd",2026-08-22 11:08,4.0,48.712424,-116.420497,True,False,True,S385871839,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76027930,"Caribou-Targhee National Forest, Island Park US-ID (44.5871,-111.3119)",2026-08-22 06:00,2.0,44.587117,-111.31194,True,False,True,S385772083,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1246027,Sunny Gulch Campground,2026-08-22 05:25,1.0,44.1754,-114.91267,True,False,False,S385930709,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11059280,Sheep Lake,2026-08-21 14:00,5.0,45.3305651,-116.5395446,True,False,False,S386886181,US-ID,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77425969,"869–1005 WY-345, Ranchester US-WY 44.93289, -107.22059",2026-09-19 17:20,154.0,44.932889,-107.22059,True,False,True,S394392037,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3882767,Yellowstone NP--Hayden Valley--Alum Creek,2026-09-19 11:30,2.0,44.6774641,-110.4858524,True,False,False,S394425054,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2145511,Cokeville Meadows NWR,2026-09-19 11:00,220.0,41.93089,-110.975647,True,False,False,S394299927,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L10026572,Worland - sugarbeet setttling pond 1,2026-09-19 10:50,3.0,43.9909619,-107.9530793,True,False,True,S394287792,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3271366,WY highway 432 - Nowater Creek,2026-09-19 10:23,2.0,43.9738403,-107.9922152,True,False,True,S394286097,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8118503,Worland - Railway Ave,2026-09-19 10:10,45.0,43.9933674,-107.9685778,True,False,True,S394288111,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L421073,Beck & Alkali Lakes,2026-09-19 06:37,39.0,44.5096973,-109.0376973,True,False,False,S394245382,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L264617,Dry Lake,2026-09-18 18:08,2.0,42.740173,-108.6428976,True,False,False,S394067470,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1531258,Worland--BLM Duck Swamp,2026-09-18 10:15,4.0,44.0526065,-107.9602997,True,False,False,S393971787,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3633166,Fontenelle Recreation Area and causeway,2026-09-18 10:10,1.0,42.0803559,-110.1578522,True,False,False,S393985124,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77350250,"200–268 WY-31, Manderson US-WY 44.27600, -107.91571",2026-09-18 08:47,4.0,44.275998,-107.91571,True,False,True,S393940661,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77349673,"1177–1269 WY-31, Manderson US-WY 44.22239, -107.76256",2026-09-18 08:23,4.0,44.222387,-107.762561,True,False,True,S393933164,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77348438,"118 Second St, Ten Sleep US-WY 44.03404, -107.45050",2026-09-18 07:54,2.0,44.034036,-107.450495,True,False,True,S393925575,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L21137147,"Road 7, Powell, Wyoming, US (44.734, -108.719)",2026-09-17 18:15,465.0,44.734089,-108.7193215,True,False,True,S393804842,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1298108,Yellowstone NP--Fountain Flats,2026-09-17 14:45,1.0,44.5653093,-110.8365369,True,False,False,S393801110,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L12883475,Hudson (town),2026-09-17 08:41,1.0,42.9049347,-108.5836255,True,False,False,S393686621,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77300078,"85–107 Bear Creek Rd, Cody US-WY 44.40812, -109.29833",2026-09-17 07:43,1.0,44.408116,-109.298327,True,False,True,S393657667,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77282175,"Grand Teton National Park, Moran US-WY (43.7421,-110.6590)",2026-09-16 19:24,1.0,43.742092,-110.659015,True,False,True,S393543127,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L770156,Lake Viva Naughton,2026-09-16 17:29,3.0,41.9980289,-110.6644249,True,False,False,S393545389,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L69883341,Yellowstone NP--Bighorn Pass Trailhead,2026-09-16 12:00,4.0,44.9280735,-111.0491693,True,False,False,S394085398,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77269078,"Iron Bridge, Fort Laramie, Wyoming, US (42.211, -104.533)",2026-09-16 10:54,6.0,42.2107645,-104.5330911,True,False,True,S393458967,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L9307120,"National Elk Refuge Road, Jackson, Wyoming, US (43.516, -110.693)",2026-09-16 10:21,2.0,43.5163323,-110.6931087,True,False,True,S393472523,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L34657115,Thayne,2026-09-16 09:00,3.0,42.922611,-111.002648,True,False,True,S393543424,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1311129,Yellowstone NP--Black Sand Basin,2026-09-15 11:36,1.0,44.4620997,-110.8535689,True,False,False,S393198849,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77189277,"Mickelson Lane, Big Piney, Wyoming, US (42.556, -110.143)",2026-09-14 11:52,4.0,42.5555336,-110.1432982,True,False,True,S392932894,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77203032,"12475 Wolff Ranch Road, Moran, Wyoming, US (43.802, -110.519)",2026-09-14 09:55,3.0,43.8017377,-110.5185409,True,False,True,S393018198,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2172224,Ralston Reservoir,2026-09-14 08:28,4.0,44.7142939,-108.8918495,True,False,False,S392911084,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4130929,Laramie River--Monolith Public Access Area,2026-09-14 07:29,2.0,41.2559361,-105.667963,True,False,False,S392896361,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77037214,"82414, Cody US-WY 44.46811, -109.44650",2026-09-13 19:24,3.0,44.468109,-109.446495,True,False,True,S392730405,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11808914,Rock Creek Access Area,2026-09-13 18:47,2.0,41.625572,-106.166236,True,False,False,S392730167,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77157096,"Wyoming State Highway 89, Kemmerer, Wyoming, US (41.812, -110.99)",2026-09-13 18:39,250.0,41.8116117,-110.9901966,True,True,True,S392723598,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L271593,Flat Creek Wildlife Observation Point and Marshes,2026-09-13 17:52,2.0,43.4908574,-110.7611319,True,False,False,S392715663,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L603410,National Elk Refuge,2026-09-13 14:22,2.0,43.4890331,-110.7488394,True,False,False,S392706821,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L15411170,Grand Teton NP--Jackson Lake Overlook,2026-09-13 13:59,3.0,43.981794,-110.662129,True,False,False,S393552714,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6425455,Lovell Lakes,2026-09-13 12:26,5.0,44.8042063,-108.3565195,True,False,False,S392656596,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77182902,NORTHWEST OF ETHETE,2026-09-13 12:00,2.0,43.052043,-108.7863758,True,False,True,S392894319,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L18780077,Treasure Island Access Area,2026-09-13 10:15,5.0,41.3318767,-106.7274157,True,False,False,S392717425,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1627403,Yellowstone NP--Pelican Creek,2026-09-13 09:49,5.0,44.557846,-110.3626563,True,False,False,S393780119,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3515736,Worland - Lane 17,2026-09-13 09:46,4.0,43.9316326,-107.9981697,True,False,True,S392581457,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L53393844,Dike Road,2026-09-13 09:15,3.0,44.4437137,-109.2064296,True,False,True,S392597872,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L385452,"Yellowstone NP--Wyoming (HISTORICAL DATA ONLY, NOT FOR CURRENT CHECKLISTS)",2026-09-13 08:00,5.0,44.5435052,-110.5993652,True,False,False,S393982087,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3054292,Grand Teton NP--Lizard Creek Campground,2026-09-13 07:38,5.0,44.0032346,-110.6885511,True,False,False,S392517186,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77087129,"1087 S Fork Rd, Cody US-WY 44.43314, -109.20907",2026-09-12 14:41,7.0,44.433139,-109.209068,True,False,True,S392262929,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1551069,Springer/Bump Sullivan WHMA--Goshen Hole Reservoir,2026-09-12 11:35,15.0,41.8842596,-104.2829132,True,False,False,S392318059,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L74525486,"152 S Muddy Rd
+Riverton WY 82501
+United States",2026-09-12 09:01,1.0,43.285584,-108.494923,True,False,True,S392160585,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4809185,Yellowstone NP--Pelican Valley Trail,2026-09-12 08:37,2.0,44.5800752,-110.2459574,True,False,False,S392675295,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77098364,Beaver creek,2026-09-12 08:00,5.0,41.1720494,-106.6205173,True,False,True,S392330881,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3829621,Swan Lake,2026-09-12 07:57,2.0,43.8908135,-110.632553,True,False,False,S392187108,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1041788,Hawk Springs Reservoir,2026-09-12 06:25,26.0,41.7097333,-104.1844654,True,False,False,S392318006,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77084839,"Multi Use Pathway Jackson to Gros Ventre Jct, Jackson US-WY 43.56218, -110.73257",2026-09-11 17:32,2.0,43.562183,-110.732566,True,False,True,S392249375,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L419819,Palisades Reservoir wetlands,2026-09-11 15:06,2.0,43.1377098,-111.0321339,True,False,False,S391941747,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7057623,Jackson Hole & Greater Yellowstone Visitor Center,2026-09-11 13:32,4.0,43.4862989,-110.7618213,True,False,False,S391946628,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L33817539,"Slough Creek Campground Road, Yellowstone National Park, Wyoming, US (44.932, -110.316)",2026-09-11 12:21,3.0,44.9318495,-110.3157817,True,False,True,S391973240,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77133373,lower wind river campground,2026-09-11 11:00,2.0,43.4310137,-108.178854,True,False,True,S392556124,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3088236,Yellowstone NP--Bunsen Peak Rd,2026-09-11 09:23,2.0,44.92204,-110.71988,True,False,False,S391971750,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77011357,Hudson House Bed,2026-09-11 07:52,1.0,42.089754,-105.016268,True,False,True,S391799877,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L955862,Grand Teton NP--Oxbow Bend,2026-09-11 07:24,4.0,43.8665429,-110.5501413,True,False,False,S391842100,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2204783,Yellowtail WHMA (general),2026-09-11 07:01,2.0,44.885778,-108.225948,True,False,False,S392337640,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4634172,Goose Ponds,2026-09-10 16:57,4.0,42.982168,-108.671461,True,False,True,S391658266,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40322424,Yellowstone NP--Steamboat Point,2026-09-10 14:50,5.0,44.5298778,-110.2979802,True,False,False,S393505931,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77301811,"East Entrance Road, Cody, Wyoming, US (44.558, -110.355)",2026-09-10 14:42,23.0,44.5584456,-110.3545926,True,False,True,S393670372,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L38185828,Stagecoach and 6Qs,2026-09-10 11:15,12.0,44.4253718,-109.2356793,True,False,True,S392593707,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77118905,"Grand Loop Rd, Yellowstone National Park US-WY 44.66900, -110.47159",2026-09-10 09:32,7.0,44.668996,-110.471591,True,False,True,S392452580,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L9635832,Big Sandy Reservoir (Sublette County),2026-09-10 07:36,2.0,42.2710546,-109.4280364,True,False,False,S391619324,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L771915,Grand Teton NP--Jackson Lake Dam area,2026-09-10 07:26,1.0,43.8581111,-110.5886364,True,False,False,S391539180,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76944103,"8720 U.S. 14, Ranchester, Wyoming, US (44.902, -107.197)",2026-09-09 16:18,5.0,44.9020676,-107.1967932,True,False,True,S391390712,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1311204,Grand Teton NP--Colter Bay Campground,2026-09-09 13:50,2.0,43.9121775,-110.6439543,True,False,False,S392922312,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L981925,Yellowstone NP--Fishing Bridge,2026-09-09 11:42,2.0,44.56641,-110.3820848,True,False,False,S391348980,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76941608,"2534–2898 S Fork Rd, Cody US-WY 44.29595, -109.43915",2026-09-09 11:01,4.0,44.295954,-109.439148,True,False,True,S391374034,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4685650,Yellowstone NP--Slough Creek,2026-09-09 08:28,4.0,44.9268147,-110.3228295,True,False,False,S391530571,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76929198,"CR-47, Ten Sleep US-WY (44.0819,-107.5247)",2026-09-09 07:38,1.0,44.081902,-107.524712,True,False,True,S391292539,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76926788,"101–113 CR-47, Ten Sleep US-WY 44.03481, -107.46592",2026-09-09 06:33,1.0,44.034815,-107.465918,True,False,True,S391276243,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2350471,Yellowstone NP--DeLacy Creek Trail,2026-09-08 15:19,2.0,44.43011,-110.70097,True,False,False,S391387247,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1283588,Yellowstone NP--LeHardy Rapids,2026-09-08 11:34,2.0,44.6073502,-110.3845739,True,False,False,S391348729,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6217651,Hwy 189--Hwy 30 to Lincoln Co. line,2026-09-08 11:29,2.0,41.6428365,-110.5713415,True,False,False,S391095935,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L963288,Grand Teton NP--Gros Ventre CG,2026-09-08 10:57,3.0,43.6148889,-110.6650686,True,False,False,S391142560,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7487348,Home,2026-09-07 18:50,4.0,44.4318776,-109.1740621,True,False,True,S390921402,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7619963,Buffalo Bill Reservoir--South Fork,2026-09-07 09:51,3.0,44.4454103,-109.2266424,True,False,False,S390781222,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76860257,"Swift Creek Trail, Jackson US-WY 43.34984, -110.43743",2026-09-07 09:29,2.0,43.349837,-110.437427,True,False,True,S390843072,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3757425,Yellowstone NP--Lamar Canyon,2026-09-07 06:48,4.0,44.9183824,-110.3037643,True,False,False,S392349819,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7529941,Upper Hoback Rd (Forest Rd 30700),2026-09-07 06:40,3.0,43.123897,-110.420242,True,False,False,S390883187,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76808159,"1087 S Fork Rd
+Cody WY 82414
+United States",2026-09-06 15:04,8.0,44.430187,-109.21164,True,False,True,S390509601,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76809656,"1024 Southfork Road, Cody, Wyoming, US (44.428, -109.209)",2026-09-06 14:57,8.0,44.4284196,-109.2088485,True,False,True,S390508241,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76893757,"39–65 Fayette Pole Creek Rd, Pinedale US-WY 42.85576, -109.84417",2026-09-06 13:30,1.0,42.855757,-109.844167,True,False,True,S391061842,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1510157,Bradford Brinton Memorial and Museum,2026-09-06 12:07,2.0,44.6445823,-107.0076299,True,False,False,S390566745,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L24397892,Ralston Reservoir - Ln 12,2026-09-06 10:10,2.0,44.7110993,-108.8774846,True,False,True,S390403925,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L559015,Lander--Water Treatment Ponds,2026-09-06 09:28,1.0,42.8463472,-108.7231493,True,False,False,S390425637,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76744882,"Upper Willow Flats, Moran US-WY (43.8730,-110.5741)",2026-09-05 18:20,4.0,43.873002,-110.574054,True,False,True,S390159696,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6357532,Yellowtail WHMA--Bighorn River Delta,2026-09-05 15:44,1.0,44.8314804,-108.1871474,True,False,False,S390111481,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L49595966,Skelton Rd near Lucerne,2026-09-05 14:30,3.0,43.7429537,-108.1553443,True,False,False,S390902650,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L16203002,"Peryam Ranch House, Encampment, Wyoming, US (41.233, -106.774)",2026-09-05 13:27,1.0,41.2333123,-106.7743954,True,False,True,S390061361,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L35683630,Yellowstone NP--Tuff Cliff,2026-09-05 10:23,1.0,44.650551,-110.829331,True,False,False,S390536033,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76742475,Salt River- Creamery Road Public Access Area,2026-09-05 09:00,40.0,43.044703,-111.036375,True,False,True,S390101296,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L74352716,Pinedale South Road,2026-09-05 08:38,2.0,42.852685,-109.861256,True,False,True,S391171754,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L59776786,Grand Teton NP--Lakeview Picnic Area,2026-09-05 08:13,3.0,43.976866,-110.656505,True,False,False,S390114642,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L981923,Grand Teton NP--Jackson Lake Lodge area,2026-09-05 08:09,2.0,43.8774947,-110.5777359,True,False,False,S390011112,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3766675,Yellowstone NP--Inspiration Point on Canyon,2026-09-05 08:06,2.0,44.7252869,-110.4705226,True,False,False,S390161205,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76728244,Fall Creek Road,2026-09-05 07:54,2.0,43.327978,-110.7980707,True,False,True,S390028399,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L743130,Yellowstone NP--Old Faithful area,2026-09-05 07:34,2.0,44.4584125,-110.8293915,True,False,False,S389911584,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77190503,"Peale Island, South Arm, Yellowstone Lake",2026-09-05 07:00,30.0,44.2881598,-110.3168988,True,False,True,S392943476,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76808898,"NE Entrance Rd, Yellowstone National Park US-WY 44.90743, -110.25139",2026-09-05 06:44,2.0,44.907428,-110.251391,True,False,True,S390503873,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2913410,Yellowstone NP--Nez Perce Ford Picnic Area,2026-09-05 06:36,2.0,44.62139,-110.41844,True,False,False,S390481956,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40735253,Clear Creek Wetlands,2026-09-05 06:35,2.0,44.340904,-106.71541,True,False,True,S391144661,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76873026,8j1 Campsite,2026-09-04 19:06,4.0,44.2773157,-110.475332,True,False,True,S390927645,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1873962,Yellowstone NP--Grizzly Overlook,2026-09-04 18:18,6.0,44.6683445,-110.4707959,True,False,False,S389865487,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76641258,"Mary Mountain-Nez Perce Trail, Wyoming, US (44.57, -110.816)",2026-09-04 12:29,2.0,44.5698931,-110.8161969,True,False,True,S389912780,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7949645,Grand Teton NP--Timbered Pullout,2026-09-04 10:08,7.0,43.59778,-110.697828,True,False,False,S389657049,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L760406,Yellowstone NP--Blacktail Ponds,2026-09-04 09:57,2.0,44.9531216,-110.6025195,True,False,False,S389762919,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L771967,Grand Teton NP--Colter Bay,2026-09-04 09:21,2.0,43.9033038,-110.643332,True,False,False,S389694689,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2954304,Yellowstone NP--Bunsen Peak Trail,2026-09-04 08:58,2.0,44.9326027,-110.7067823,True,False,False,S389769166,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L41730670,Buchanan Lake,2026-09-04 08:49,2.0,44.5103072,-109.0245359,True,False,True,S389643721,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4766653,Grand Teton NP--Grassy Lake Road (please use more precise locations),2026-09-04 08:26,4.0,44.108745,-110.685633,True,False,False,S391281912,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3495580,Wagner Reservoir,2026-09-04 08:25,4.0,44.925091,-107.2951198,True,False,False,S394223047,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1625282,Yellowstone NP--Fairy Falls Trail,2026-09-04 07:41,2.0,44.51818,-110.833,True,False,False,S389865226,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L8055097,"Road 7, Powell, Wyoming, US (44.732, -108.719)",2026-09-03 18:35,112.0,44.7315458,-108.7192091,True,False,True,S389514184,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L68161209,Fear Access-Big Piney,2026-09-03 12:33,2.0,42.517871,-110.073198,True,False,True,S389464307,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3771551,National Museum of Wildlife Art area,2026-09-03 12:30,3.0,43.521015,-110.747948,True,False,False,S389957171,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76871190,Broader Wind River Range,2026-09-03 12:00,2.0,43.102279,-109.635657,True,False,True,S390915436,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76622839,"320 West Main Street, Kirby, Wyoming, US (43.804, -108.186)",2026-09-03 09:41,3.0,43.8038569,-108.1863394,True,False,True,S389397627,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76621375,"1558–1560 US Highway 20 S, Worland US-WY 43.95569, -108.01537",2026-09-03 09:00,2.0,43.955695,-108.015372,True,False,True,S389388325,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L9960437,Yellowstone NP--Elk Park turnout,2026-09-03 08:55,3.0,44.717578,-110.722784,True,False,False,S389493516,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76949647,"Soldier's Trail, Yellowstone National Park US-WY 44.95142, -110.30359",2026-09-03 08:20,2.0,44.951425,-110.303591,True,False,True,S391426721,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1414232,Yellowstone NP--Nymph Lake,2026-09-03 07:24,2.0,44.75298,-110.72532,True,False,False,S389481892,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76637030,"Grand Loop Rd, Yellowstone National Park US-WY 44.81927, -110.72787",2026-09-03 06:38,3.0,44.81927,-110.727867,True,False,True,S389481146,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L15855007,Wenzel Ln,2026-09-03 06:35,4.0,43.4902858,-110.8605599,True,False,True,S389366036,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76597104,Springer/Bump Sullivan WHMA,2026-09-02 13:40,14.0,41.8742473,-104.2885125,True,False,True,S389256176,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76581235,"1998–2010 N US Highway 89, Jackson US-WY 43.51134, -110.75204",2026-09-02 09:43,3.0,43.511337,-110.752044,True,False,True,S389155779,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L6214528,Yellowstone NP--Lewis Falls,2026-09-02 08:53,4.0,44.267534,-110.636421,True,False,False,S389228407,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7960444,Grand Teton NP—Two Ocean Lake Rd pullout,2026-09-02 08:26,2.0,43.892367,-110.5002,True,False,False,S389148530,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76555080,"I-80 W, Lyman US-WY 41.35830, -110.33399",2026-09-01 18:49,2.0,41.358296,-110.333986,True,False,True,S388996139,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76555542,"Teton Park Rd, Moran US-WY",2026-09-01 18:13,1.0,43.721954,-110.726481,True,False,True,S388999126,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76683889,west thumb,2026-09-01 12:51,3.0,44.415757,-110.573558,True,False,True,S389763108,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L3874127,Commissary Ridge HawkWatch,2026-09-01 09:15,2.0,42.02471,-110.5895779,True,False,False,S388996226,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L15649341,Four Bear Trailhead and trail,2026-09-01 07:59,8.0,44.4769623,-109.4126033,True,False,True,S388937985,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76516295,Lyman KOA,2026-09-01 07:47,4.0,41.350919,-110.29898,True,False,True,S388892362,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76485372,"Cedar Drive, Riverside, Wyoming, US",2026-09-01 06:17,1.0,41.2189828,-106.7671181,True,False,True,S389341811,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L5052864,Yellowstone NP--Lamar Ranger Station,2026-08-31 19:45,3.0,44.8952214,-110.233233,True,False,False,S389509620,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L47336503,Four Bear Trail,2026-08-31 18:54,2.0,44.4761231,-109.4143429,True,False,False,S389746172,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L981911,Yellowstone NP--Mud Volcano,2026-08-31 14:57,1.0,44.6245642,-110.4341626,True,False,False,S389711236,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L77277508,LeHardy Rapids,2026-08-31 13:45,2.0,44.606,-110.3831,True,False,True,S393512268,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L27747103,Yellowstone NP--Hayden Valley-River Overlook,2026-08-31 11:00,2.0,44.6347871,-110.4479394,True,False,False,S388998910,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1935954,"5077 Riverview Rd.    Riverton,,WY",2026-08-31 07:50,1.0,43.0204766,-108.4631128,True,False,True,S388662050,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76474922,"2982–3012 WY-414, Green River US-WY (41.0282,-110.0012)",2026-08-30 20:05,6.0,41.028174,-110.001222,True,False,True,S388485965,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2928573,Sublette CR 354 (Daniel Merna Rd),2026-08-30 14:13,2.0,42.949418,-110.356282,True,False,False,S388465186,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L907919,Ocean Lake WHMA--Goose Knob Drive Access Area,2026-08-30 13:10,2.0,43.1648913,-108.5797473,True,False,False,S388420008,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L299762,Yellowstone NP--Mammoth Hot Springs area,2026-08-30 12:30,3.0,44.9734094,-110.7041482,True,False,False,S388998132,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76462516,"Colter Bay Marina Rd, Moran US-WY 43.90326, -110.64332",2026-08-30 11:21,6.0,43.903259,-110.643318,True,False,True,S388409476,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L67627541,Swamp Lake,2026-08-30 11:17,2.0,44.8385416,-109.6056718,True,False,True,S388462801,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L20682345,"Yellowstone National Park, Cody US-WY 44.70785, -110.50051",2026-08-30 10:14,12.0,44.707847,-110.500513,True,False,True,S391426743,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76451540,"Wyoming 230, Encampment, Wyoming, US",2026-08-30 10:13,2.0,41.2182316,-106.7374038,True,False,True,S388346305,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4758315,Grand Teton NP--Antelope Flats Rd,2026-08-29 11:18,2.0,43.647855,-110.663918,True,False,False,S388018967,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L34771481,River Road House (Private),2026-08-29 08:35,2.0,44.9016886,-107.1623548,True,False,True,S387942655,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76385840,"1505–1511 Stagecoach Trail, Cody US-WY 44.47885, -109.32733",2026-08-29 08:10,5.0,44.478848,-109.327331,True,False,True,S387953688,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11621372,Yellowstone NP--Slough Creek Trail (trailhead to first meadow),2026-08-29 08:09,2.0,44.9513419,-110.2770243,True,False,False,S390335509,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76393449,Canal by dike pond,2026-08-29 08:03,40.0,44.443572,-109.207366,True,False,True,S387998613,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40977058,Big Horn--Brinton Road,2026-08-28 11:15,3.0,44.6597013,-106.9980876,True,False,False,S388416828,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L299772,Yellowstone NP--Floating Island Lake,2026-08-28 06:38,,44.9423636,-110.4497081,True,False,False,S387608974,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4924472,Yellowstone NP--Lone Star Geyser trail,2026-08-27 17:20,2.0,44.4313896,-110.8133733,True,False,False,S387687679,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76312901,"Grand Loop Rd, Yellowstone National Park US-WY 44.77025, -110.73261",2026-08-27 13:18,2.0,44.770252,-110.732607,True,False,True,S387497832,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2982325,Yellowstone NP--Beaver Ponds Trail (WY),2026-08-27 08:19,2.0,44.9864963,-110.7089281,True,False,False,S387437032,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2659742,16 miles SW Cody,2026-08-27 08:00,2.0,44.4083141,-109.2902265,True,False,True,S387382835,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76313030,"NE Entrance Rd, Yellowstone National Park US-WY 44.87772, -110.21345",2026-08-27 06:59,2.0,44.877719,-110.213445,True,False,True,S387498913,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76307487,"Marshall Rd, Rock River US-WY 41.92462, -106.02575",2026-08-27 06:50,1.0,41.924621,-106.025747,True,False,True,S387461659,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L10063566,"986 Road 7, Powell, Wyoming, US (44.74, -108.719)",2026-08-26 19:15,72.0,44.7398806,-108.7191478,True,False,True,S387239837,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L68592622,Willow Creek Burn (2025)--Forest Service Rd. 10381,2026-08-26 18:11,2.0,42.5256701,-110.9194656,True,False,True,S387426160,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1900124,Yellowstone NP--Cascade Meadows,2026-08-26 10:30,3.0,44.7368944,-110.5109482,True,False,False,S388626955,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76254945,Salt River Upper Burton Access,2026-08-26 08:29,1.0,42.77079,-110.9730972,True,False,True,S387134006,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1435524,Ucross,2026-08-26 08:00,3.0,44.5626857,-106.5371126,True,False,False,S387104879,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2939066,Duck Creek Overlook,2026-08-26 07:24,4.0,42.8716239,-109.9316025,True,False,False,S387076331,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76251823,"Auto selected 44.90520, -110.24835",2026-08-26 06:48,8.0,44.905202,-110.248353,True,False,True,S387115911,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1626786,Yellowstone NP--Lamar Valley (please use more precise locations),2026-08-26,,44.8716252,-110.1849747,True,False,False,S387190389,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76268957,"Wyoming, US (44.729, -110.486)",2026-08-25 16:48,2.0,44.7289231,-110.4861843,True,False,True,S387221129,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75625569,Shoshone NF--Swamp Lake Area,2026-08-25 15:58,,44.84065,-109.57509,True,False,False,S386923456,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L955859,Grand Teton NP--Christian Pond,2026-08-25 09:00,2.0,43.8759247,-110.565784,True,False,False,S386936131,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L36531867,Worland -- Lower Hanover Canal,2026-08-25 08:54,2.0,44.0199831,-107.9358762,True,False,False,S386828377,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L4354653,Yellowstone NP--Lamar Valley River Trail,2026-08-25 08:45,,44.8691921,-110.1658452,True,False,False,S386891187,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2161824,Springer/Bump Sullivan WHMA--Bump Sullivan Reservoir (currently dry),2026-08-25 07:39,2.0,41.863169,-104.3146706,True,False,False,S386785508,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76173294,"John D Rockefeller Junior Parkway, Moran, Wyoming, US (44.001, -110.677)",2026-08-24 11:53,3.0,44.0005297,-110.6772312,True,False,True,S386614891,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2350431,Yellowstone NP--Riddle Lake Trail,2026-08-24 10:15,2.0,44.3585384,-110.5816787,True,False,False,S393506117,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1515784,Healy Reservoir,2026-08-23 14:34,3.0,44.4134538,-106.6063384,True,False,False,S386330833,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76590432,US Hwy 89,2026-08-23 13:00,2.0,43.2147044,-110.787121,True,False,True,S388465391,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L75898346,"Specimen Ridge Trail, Wyoming, US (44.903, -110.377)",2026-08-23 08:08,,44.9030038,-110.3772701,True,False,True,S386302619,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L11497572,J's cabin,2026-08-23 07:45,2.0,43.1211969,-110.2334601,True,False,True,S387212281,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L7247341,Country Garden Lane cupola,2026-08-23 06:21,3.0,42.885825,-108.610869,True,False,True,S386130064,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L41676805,Barker Road & Fivemile Reservoir,2026-08-22 18:30,40.0,44.9534828,-107.2717548,True,True,False,S385957919,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76125366,"Northeast Entrance Road, Yellowstone National Park, Wyoming, US (44.882, -110.218)",2026-08-22 16:10,3.0,44.8822884,-110.2181524,True,False,True,S386330537,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76249927,"Grand Loop Rd, Yellowstone National Park US-WY 44.78855, -110.73900",2026-08-22 13:01,2.0,44.788548,-110.738999,True,False,True,S387104084,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76122592,Grand Teton NP--Uhl Hill,2026-08-22 10:44,1.0,43.809091,-110.476939,True,False,True,S386316186,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L2956091,Grand Teton NP--Mormon Row Historic District,2026-08-22 08:38,2.0,43.6666638,-110.6640086,True,False,False,S385805176,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L76122436,Bridger-Teton NF--Toppings Lakes Rd,2026-08-22 08:14,2.0,43.765394,-110.537534,True,False,True,S386315389,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L40329976,Crandall Ranger Station,2026-08-22 08:11,,44.8471603,-109.6341705,True,False,True,S386487945,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L30646674,Oxbow Bend Pullout,2026-08-22 07:26,1.0,43.866573,-110.550381,True,False,True,S385811879,US-WY,2026-09-20
+sancra,Sandhill Crane,Antigone canadensis,L1313100,Grand Teton NP--Moose Junction,2026-08-21 17:35,2.0,43.6509197,-110.7077694,True,False,False,S385596520,US-WY,2026-09-20
