@@ -22,9 +22,10 @@
       <li><a href="pca.html">PCA</a></li>
       <li><a href="naivebayes.html">NaiveBayes</a></li>
       <li><a href="dectrees.html">DecTrees</a></li>
-      <li><a href="svms.html">SVMs</a></li>
       <li><a href="regression.html">Regression</a></li>
-      <li><a href="nn.html">NN</a></li>
+      <li><a href="adaboost.html">AdaBoost</a></li>
+      <li><a href="gradientboosting.html">GradientBoosting</a></li>
+      <li><a href="xgboost.html">XGBoost</a></li>
       <li><a href="conclusions.html">Conclusions</a></li>
       <li><a href="about.html">About Me</a></li>
   </ul>
@@ -33,23 +34,74 @@
 
 <div class="prose">
 <h2>Clustering</h2>
-<p class="coming"><b>Coming in Module 2.</b> This tab is set up now and will be completed when the method is covered in class.</p>
+<p>Clustering looks for natural groups in data that has no labels telling it what the groups should be. Here it is used to see whether cleaned crane sightings, described only by where, when, and how many birds were counted, fall into groups on their own, without ever being told the season, the site, or any other category used elsewhere on this site.</p>
 
 <span class="section-label">Overview</span>
-<p>Clustering groups records that resemble one another without using any labels. Partitional clustering (k-means) and hierarchical clustering will be applied to crane reports described by location, day of year, and flock size, to see whether natural groups line up with wintering areas, staging areas, and breeding areas, or with early and late years.</p>
+<p><b>Partitional vs. hierarchical.</b> Partitional clustering, the kind k-means does, picks a number of groups <i>k</i> ahead of time and assigns every point to whichever of <i>k</i> centers is closest, moving the centers and reassigning points until neither changes. Hierarchical clustering builds a tree instead, starting with every point as its own group and repeatedly merging the two closest groups until only one remains, with a chosen height in that tree, the dendrogram, cut to get back to some number of groups. K-means needs <i>k</i> chosen in advance, while hierarchical clustering produces every value of <i>k</i> at once and lets the tree itself suggest a good one.</p>
+<p><b>Distance metrics.</b> Both methods need a way to measure how far apart two points are, and here they use different ones. K-means, through scikit-learn, measures plain straight-line Euclidean distance between points once the features below are put on the same scale. The hierarchical clustering instead uses cosine similarity, which compares the <i>direction</i> two points point in from the origin rather than how far apart their tips are, so two points pointing the same way score as similar even if one represents a much larger value overall. The two diagrams below illustrate both ideas with a small made-up example, not the project's data.</p>
+<p><b>Plan for discovery.</b> Every cleaned sighting already carries a location, a date, and a flock size, but nothing on this site has grouped sightings using only those three kinds of information. Clustering them is a way to ask the data directly whether sightings fall into a handful of natural groups, such as distinct migration pulses or regions, and whether two different clustering methods agree on how many groups there are and which sightings belong together.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/clustering/concept_partitional_vs_hierarchical.png"><img src="images/clustering/concept_partitional_vs_hierarchical.png" alt="Two ways to group points" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Two ways to group points.</b> A small made-up example, not project data. Partitional clustering (left) assigns every point to its nearest of k fixed centers (X marks). Hierarchical clustering (right) instead merges the two closest groups repeatedly, building a tree from the bottom up.</figcaption>
+</figure>
+<figure>
+  <a href="images/clustering/concept_distance_metrics.png"><img src="images/clustering/concept_distance_metrics.png" alt="Two ways to compare two points" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Two ways to compare two points.</b> A small made-up example, not project data. Euclidean distance (left) is the straight-line gap between two points. Cosine similarity (right) instead measures the angle between them, so two points pointing the same way score as similar regardless of length.</figcaption>
+</figure>
+</div>
 
-<span class="section-label">Data</span>
-<p>Planned inputs: <a href="data/clean/observations_clean.csv">observations_clean.csv</a> and <a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a> (cleaned data); <a href="data/raw/gbif_ebird_sandhill_raw.csv">raw sightings</a> (raw data).</p>
-<p class="coming">A small image of the prepared dataset for this method will appear here, along with links to the raw and cleaned files.</p>
+<span class="section-label">Data Prep</span>
+<p>Clustering and PCA both require unlabeled numeric data: every column has to be a number, and none of them may be a category that answers the question being asked, such as season or site. <a href="data/clean/cluster_features.csv">cluster_features.csv</a> was built from <a href="data/clean/observations_clean.csv">observations_clean.csv</a> for this purpose. It has one row per cleaned sighting and five columns, all numeric and all scaled to a comparable 0-to-1 range: <code>lat_norm</code> and <code>lon_norm</code> (where), <code>day_norm</code> and <code>year_norm</code> (when), and <code>count_norm</code> (how many birds). No season, phase, site name, or count-class label is included anywhere in the table, so neither method can take a shortcut by reading off an answer that a person already assigned. Before clustering, this table is standardized again (each column rescaled to mean 0, standard deviation 1), which keeps k-means' Euclidean distance from being dominated by whichever column happens to have the widest spread.</p>
+<figure>
+  <a href="images/clustering/cluster_features_preview.png"><img src="images/clustering/cluster_features_preview.png" alt="Sample of the clustering/PCA data" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Sample of the clustering/PCA data.</b> Eight representative rows of cluster_features.csv, the unlabeled numeric table both methods use. Every value is already on a comparable 0-to-1 scale.</figcaption>
+</figure>
 
 <span class="section-label">Code</span>
-<p>Python with pandas, NumPy, scikit-learn, SciPy, and matplotlib. Code links will be added here.</p>
+<p>Written in Python with pandas, NumPy, scikit-learn (<code>KMeans</code>, <code>silhouette_score</code>, <code>StandardScaler</code>), SciPy (<code>linkage</code>, <code>dendrogram</code>, <code>fcluster</code> for the cosine-distance hierarchical clustering), and matplotlib. Full code: <a href="code/04_clustering_pca.py">code/04_clustering_pca.py</a> (the two overview diagrams above come from <a href="code/05_concept_diagrams.py">code/05_concept_diagrams.py</a>).</p>
 
 <span class="section-label">Results</span>
-<p class="coming">Results, parameter choices, and visualizations will be added here.</p>
+<p><b>Choosing k for k-means.</b> The silhouette score, a measure from -1 to 1 of how well-separated the clusters are, was computed for every k from 2 to 10 on a 4,000-point sample. The silhouette scores remain within a relatively narrow range across the tested values of k = 2 through 10, between about 0.20 and 0.25. Although k = 10 has the highest overall score, that is the edge of the tested range, where a score that only keeps climbing is not trustworthy as "the best k," so the comparison instead uses the best score within a practical range of 3 to 8 clusters, chosen because the site tracks 7 reference locations: within that range, <b>k = 6</b> has the highest score.</p>
+<figure>
+  <a href="images/clustering/kmeans_silhouette_by_k.png"><img src="images/clustering/kmeans_silhouette_by_k.png" alt="Silhouette score by k" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Silhouette score by k.</b> The silhouette score for k-means stays in a narrow, noisy 0.20-to-0.25 band across every k tested and never clearly peaks. Within the shaded, interpretable range of 3 to 8 clusters, k=6 scores highest and is used below.</figcaption>
+</figure>
+<p>K-means was then run with three k values, 3, 6, and 8, to compare how the map of clusters changes as more groups are allowed. At k=3 the clusters read almost entirely as geography, a western group, an eastern group, and a thin transitional group between them. At k=6 and k=8, additional clusters peel off that separate more by timing and flock size than by location alone, which matches the loadings PCA finds below.</p>
+<figure>
+  <a href="images/clustering/kmeans_three_k_map.png"><img src="images/clustering/kmeans_three_k_map.png" alt="K-means clusters at three values of k" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>K-means clusters at three values of k.</b> Each panel is the same sightings, colored by their k-means cluster, plotted by location only (the model also used day of year, year, and flock size). More clusters increasingly split groups by timing and count rather than only by geography.</figcaption>
+</figure>
+<p>At the chosen k=6, two clusters, about 20 percent of all sightings or 33,696 of 167,678, hold nearly all of the September-through-December reports regardless of location, and a third cluster, about 12 percent or 20,277 reports, similarly holds most of the January-through-April reports. The remaining three clusters, holding about two-thirds of the data (67.8 percent, 113,705 reports), span almost the whole year and instead separate mainly by location. In other words, k-means finds a plausible mix: some of its six groups really describe migration timing, and the rest really describe geography.</p>
+<figure>
+  <a href="images/clustering/kmeans_best_k_day_of_year.png"><img src="images/clustering/kmeans_best_k_day_of_year.png" alt="K-means clusters by day of year" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>K-means clusters by day of year.</b> Boxplots of day of year for each of the six k-means clusters (middle 50% of each cluster; individual outlier points are not drawn to keep the chart readable). Clusters 0 and 1 are clearly fall/winter, cluster 2 is clearly January-April, and clusters 3 to 5 overlap broadly across spring and summer, so they are not separated by timing.</figcaption>
+</figure>
+
+<p><b>Hierarchical clustering.</b> Average-linkage hierarchical clustering with cosine distance was run on a smaller, 220-point sample, since the method compares every pair of points and a smaller sample keeps it fast. Its silhouette score was checked the same way, for every k from 2 to 8, and unlike k-means it peaks clearly, at <b>k = 6</b> again, with a silhouette score of 0.367, noticeably higher than any k-means result.</p>
+<figure>
+  <a href="images/clustering/hclust_dendrogram.png"><img src="images/clustering/hclust_dendrogram.png" alt="Hierarchical clustering dendrogram" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Hierarchical clustering dendrogram.</b> Average-linkage dendrogram over the 220-point sample using cosine distance. Branch color marks the six clusters obtained by cutting the tree to k=6, the value its own silhouette score favors most clearly.</figcaption>
+</figure>
+<figure>
+  <a href="images/clustering/hclust_best_k_map.png"><img src="images/clustering/hclust_best_k_map.png" alt="Hierarchical clusters mapped" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
+  <figcaption><b>Hierarchical clusters mapped.</b> The same 220 sampled sightings, colored by their hierarchical cluster at k=6 and plotted by location. Clusters mix location and timing in a broadly similar way to the k-means result above.</figcaption>
+</figure>
+<p><b>Comparing the two methods.</b> K-means was refit on that same 220-point sample at k=6 so the two methods could be compared directly on identical points. Their cluster labels agree with an Adjusted Rand Index of 0.63, where 1.0 would mean identical groupings and 0 would mean no more agreement than chance, so two different clustering methods, using two different distance measures, substantially agree on how six groups should look, though not perfectly.</p>
+
+<span class="section-label">Conclusions</span>
+<p>Two results stand out. First, both methods independently point to around six natural groups in the unlabeled data and agree with each other reasonably well (Adjusted Rand Index 0.63), even though the silhouette scores themselves are modest, 0.20 to 0.37 at best, which is itself a finding: sandhill crane sightings do not fall into a small number of tight, well-separated clusters, and migration is more of a continuum across space and time than a set of discrete categories, matching what the DataPrep/EDA tab already showed about the gradual, overlapping nature of spring and fall movement. Second, clustering adds a cleaner picture of <i>which</i> continuum dominates: about a third of the six clusters are defined mainly by when a sighting happened, clearly separating fall/winter and January-April reports, while the rest are defined mainly by where it happened. That split, discovered without being told anything about seasons or sites, is a useful starting point for the supervised models still to come. What clustering establishes is this geographic and seasonal structure in the data as it stands, not whether migration timing has shifted year over year; that question is left for the Regression tab, which will test day-of-year against year directly.</p>
 </div>
 
 </main>
-<footer>CSCI 5612 &middot; Project Part 1 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
+<footer>CSCI 5612 &middot; Project Part 2 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
 </body>
 </html>

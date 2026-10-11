@@ -467,6 +467,9 @@ def fig21(sd):
     save(fig, "fig21_snow_and_wind_trends")
 
 
+MIN_DAYS = 30                                    # minimum days in a weather class, per site, for fig22
+
+
 @figure("fig22_crane_reports_by_snow_and_wind")
 def fig22(sd):
     if "om_snowfall_mm" not in sd.columns:
@@ -483,7 +486,9 @@ def fig22(sd):
     for ax, (col, lab) in zip(np.atleast_1d(axes), facets):
         base = d.groupby("site")["has_records"].mean()
         rate = d.groupby(["site", col], observed=True)["has_records"].mean().unstack()
-        ratio = rate.div(base, axis=0)
+        days = d.groupby(["site", col], observed=True).size().unstack()
+        ratio = rate.div(base, axis=0).where(days >= MIN_DAYS)          # too few days in a class = too noisy to show
+        ratio = ratio[ratio.notna().sum(axis=1) >= 2]                   # a site needs two usable classes to show contrast
         x = np.arange(ratio.shape[1])
         ax.bar(x, ratio.mean(), color=BLUE, width=0.6, linewidth=0)
         for i, c in enumerate(ratio.columns):

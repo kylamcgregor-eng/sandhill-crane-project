@@ -95,8 +95,7 @@ F_EFFORT_CLEAN = CLEAN / "site_year_effort_clean.csv"
 F_CELL_CHANGE_CLEAN = CLEAN / "cell_change_clean.csv"
 
 # ---------------------------------------------------------------- reference sites
-# Created dataset. Reference-site coordinates are approximate points used to associate 
-# nearby observations and environmental data; they do not represent the full boundary of each refuge.and are used
+# Created dataset. Coordinates are approximate (refuge / town centres) and are used
 # only to pull weather and to group nearby observations. First five sites are named
 # in the sources cited on the Introduction page; the last two are additional
 # well-known crane areas and should be double-checked before being cited.

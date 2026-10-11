@@ -119,7 +119,7 @@
       "rows_after": 38352,
       "removed": 1
     },
-    "snow_depth_included": false
+    "snow_depth_included": true
   },
   "site_daily": {
     "keep only days with both NCEI station weather and Open-Meteo values": {
