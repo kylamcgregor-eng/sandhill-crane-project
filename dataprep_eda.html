@@ -10,7 +10,7 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
-  <p class="kicker">CSCI 5612</p>
+  <p class="kicker">CSCI 5612 &middot; The Website Project</p>
   <h1>Sandhill Crane Migration Over Time</h1>
   <p class="sub">How the timing and routes of sandhill crane migration have changed over time</p>
 </header>
@@ -22,9 +22,10 @@
       <li><a href="pca.html">PCA</a></li>
       <li><a href="naivebayes.html">NaiveBayes</a></li>
       <li><a href="dectrees.html">DecTrees</a></li>
-      <li><a href="svms.html">SVMs</a></li>
       <li><a href="regression.html">Regression</a></li>
-      <li><a href="nn.html">NN</a></li>
+      <li><a href="adaboost.html">AdaBoost</a></li>
+      <li><a href="gradientboosting.html">GradientBoosting</a></li>
+      <li><a href="xgboost.html">XGBoost</a></li>
       <li><a href="conclusions.html">Conclusions</a></li>
       <li><a href="about.html">About Me</a></li>
   </ul>
@@ -33,7 +34,7 @@
 
 <div class="prose">
 <h2>DataPrep/EDA</h2>
-<p>Understanding when and where sandhill cranes appear requires observations that span many years, many places, and a range of weather conditions. This page shows where each dataset came from, how it was gathered, how it was cleaned, and what the cleaned data looks like. Everything on the page can be reproduced by running the three Python scripts linked below, in order.</p>
+<p>Understanding when and where sandhill cranes appear requires observations that span many years, many places, and a range of weather conditions. This page documents where each dataset came from, how it was gathered, how it was cleaned, and what the cleaned data look like. Everything on the page can be reproduced by running the three Python scripts linked below, in order.</p>
 <div class="note info"><b>Data currency.</b> The data were pulled on September 20, 2026. GBIF's copy of the eBird dataset contains no records for 2025 yet, so the historical study period is 2010 to 2024, the eBird API extends the record to the present, and land cover is available for six dates between 2008 and 2021.</div>
 </div>
 
@@ -60,7 +61,7 @@
     <td><a href="data/raw/ncei_daily_weather_raw.csv">ncei_daily_weather_raw.csv</a><br><a href="data/raw/ncei_stations_used.csv">ncei_stations_used.csv</a> (stations chosen)</td>
     <td><a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a> (weather joined to daily crane reports)</td></tr>
 <tr><td><b>Snow and wind</b><br><a href="https://open-meteo.com/en/docs/historical-weather-api">Open-Meteo Historical Weather API</a></td>
-    <td>Web service (no key). One request per reference site returns daily snowfall, wind speed, wind gusts, wind direction and mean temperature, for 2010&ndash;2024. The values are a computer-model reconstruction of the weather (the ERA5 reanalysis) at a grid point near each site, not station readings.</td>
+    <td>Web service (no key). One request per reference site returns daily snowfall, wind speed, wind gusts, wind direction and mean temperature, plus hourly snow depth, for 2010&ndash;2024. The values are a computer-model reconstruction of the weather (the ERA5 reanalysis) at a grid point near each site, not station readings. Hourly snow depth was reduced to each day&rsquo;s maximum.</td>
     <td>The station files from NCEI were too patchy for snowfall, snow depth, and wind (see the cleaning steps), and spring storms and headwinds are thought to shape when cranes move. The model record has no gaps, so it fills that need, with the caveat that it is modelled.</td>
     <td><a href="data/raw/openmeteo_daily_weather_raw.csv">openmeteo_daily_weather_raw.csv</a></td>
     <td><a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a> (<code>om_</code> columns)</td></tr>
@@ -101,10 +102,11 @@ GET https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-inventory.txt
 GET https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries
     &amp;stations=USW00014935&amp;startDate=2010-01-01&amp;endDate=2024-12-31
     &amp;dataTypes=TMAX,TMIN,TAVG,PRCP,SNOW,SNWD,AWND&amp;format=csv&amp;units=metric&amp;includeStationName=true</code></pre>
-<p><b>Open-Meteo Historical Weather API</b> (no key). The service returns snowfall in centimeters, which the cleaning step converts to millimeters.</p>
+<p><b>Open-Meteo Historical Weather API</b> (no key). Snow depth is offered only as an hourly variable, so it is requested as an hourly variable and summarized to the daily maximum by the script. The service returns snowfall in centimeters, which the cleaning step converts to millimeters.</p>
 <pre><code>GET https://archive-api.open-meteo.com/v1/archive?latitude=40.7&amp;longitude=-99.08
     &amp;start_date=2010-01-01&amp;end_date=2024-12-31&amp;timezone=auto
-    &amp;daily=temperature_2m_mean,snowfall_sum,wind_speed_10m_max,wind_gusts_10m_max,wind_direction_10m_dominant</code></pre>
+    &amp;daily=temperature_2m_mean,snowfall_sum,wind_speed_10m_max,wind_gusts_10m_max,wind_direction_10m_dominant
+    &amp;hourly=snow_depth</code></pre>
 <p><b>MRLC Web Coverage Service (NLCD land cover)</b> (no key). X and Y are meters in the map projection the service uses (EPSG:5070); the script computes them from each site&rsquo;s latitude and longitude.</p>
 <pre><code>GET https://www.mrlc.gov/geoserver/mrlc_download/wcs?service=WCS&amp;version=2.0.1&amp;request=GetCoverage
     &amp;coverageId=mrlc_download__NLCD_2011_Land_Cover_L48&amp;format=image/geotiff
@@ -123,7 +125,7 @@ GET https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries
 </ul>
 
 <h2>2. Raw data and clean data</h2>
-<p>Previews show the first rows of a raw file next to the cleaned version. The raw files are stored exactly as received.</p>
+<p>Small previews show the first rows of a raw file next to the cleaned version. The raw files are stored exactly as received.</p>
 </div>
 <div class="preview-row">
 <figure>
@@ -150,24 +152,24 @@ GET https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries
 
 <div class="prose">
 <h2>3. Cleaning and preparation</h2>
-<p>Cleaning and visualization were done together: each figure below either exposed a data problem or confirmed that one had been fixed. All decisions are implemented in <a href="code/02_clean_data.py">02_clean_data.py</a>, and every filtering step is counted in <a href="data/clean/cleaning_log.json">cleaning_log.json</a>.</p>
-<h3>Steps applied during cleaning</h3>
+<p>Cleaning and visual exploration were done together: each figure below either exposed a data problem or confirmed that one had been fixed. All decisions are implemented in <a href="code/02_clean_data.py">02_clean_data.py</a>, and every filtering step is counted in <a href="data/clean/cleaning_log.json">cleaning_log.json</a>.</p>
+<h3>Steps applied to the sightings</h3>
 <ul>
   <li><b>Duplicates.</b> Records with a repeated GBIF identifier were removed.</li>
   <li><b>Missing or invalid location and date.</b> Records without a usable date or coordinates were removed, and so were coordinates outside North America (latitude 14&ndash;72, longitude &minus;170 to &minus;50).</li>
   <li><b>Vague locations.</b> Records whose reported coordinate uncertainty exceeded 10 km were removed, because they cannot be mapped or matched to weather reliably.</li>
-  <li><b>Presence-only reports.</b> eBird allows an &ldquo;X&rdquo; when a species is present but not counted. These arrive with no count and were removed. The share removed is charted in the figure on presence-only reports.</li>
+  <li><b>Presence-only reports.</b> eBird allows an &ldquo;X&rdquo; when a species is present but not counted. These arrive with no count and were removed, since later models need a number of birds. The share removed is charted in the figure on presence-only reports.</li>
   <li><b>Impossible counts.</b> Counts below 1 or above 500,000 birds in a single report were removed. Large but plausible flocks were kept and flagged instead (see below).</li>
   <li><b>Missing state or province.</b> Filled with &ldquo;Unknown&rdquo; so the column stays complete.</li>
   <li><b>Site-area records.</b> The same steps were applied to the site-area pull. Each remaining record was then kept only if it lay within 60 km of its nearest reference site, which removes the corners of the search boxes and the copies of records that fall inside the overlapping boxes of the two Platte River sites.</li>
 </ul>
-<h3>Steps applied to the weather and station site tables</h3>
+<h3>Steps applied to the weather and site tables</h3>
 <ul>
   <li><b>Station choice.</b> For each reference site, the nearest GHCN-Daily station within 60 km (widened to 100 km if needed) that reports maximum temperature, minimum temperature, and precipitation from 2010 through 2024 was selected. First-order weather stations, and stations that also report snow and wind, were favored. A site with no suitable station is left out of the weather table. The stations chosen are listed in <a href="data/raw/ncei_stations_used.csv">ncei_stations_used.csv</a>.</li>
   <li><b>Required values.</b> Days missing maximum temperature, minimum temperature, or precipitation were removed, along with physically impossible values (a maximum below the minimum, temperatures beyond &plusmn;60&nbsp;&deg;C, or negative precipitation, snow, or wind).</li>
   <li><b>Daily mean temperature.</b> Calculated as the average of the daily maximum and minimum, because the station average temperature field is blank at many stations.</li>
   <li><b>Snow and wind gaps in the station data.</b> Snow depth and snowfall blanks in June through September were set to zero because snow does not fall then, and other gaps of up to three days were filled by linear interpolation. A station variable was kept only if every site had at least 85 percent of its days filled. Snowfall (77 percent at the weakest site), snow depth (75 percent), and station wind (reported at only two of the seven stations) all fell short, so none of them was kept from NCEI.</li>
-  <li><b>Snow and wind from Open-Meteo.</b> Because those station variables were dropped, snowfall and wind were taken from the Open-Meteo reanalysis instead. Duplicate days, days with a missing value, and physically impossible values (negative snow or wind, a gust below the sustained wind, or a wind direction outside 0 to 360 degrees) were removed, and snowfall was converted from centimeters to millimeters. The result was joined to the station table by site and date, and only days with both sources were kept. The temperature and precipitation columns still come from the stations. As a check, the model&rsquo;s daily mean temperature and the station-based value agree closely (a correlation of 0.96, with the model averaging 0.3&nbsp;&deg;C warmer).</li>
+  <li><b>Snow and wind from Open-Meteo.</b> Because those station variables were dropped, snowfall and wind, snow depth, were taken from the Open-Meteo reanalysis instead. Duplicate days, days with a missing value, and physically impossible values (negative snow or wind, a gust below the sustained wind, or a wind direction outside 0 to 360 degrees) were removed, snowfall was converted from centimeters to millimeters, and hourly snow depth was reduced to the daily maximum. The result was joined to the station table by site and date, and only days with both sources were kept. The temperature and precipitation columns still come from the stations. As a check, the model&rsquo;s daily mean temperature and the station-based value agree closely (a correlation of 0.96, with the model averaging 0.3&nbsp;&deg;C warmer).</li>
   <li><b>Crane reports per site.</b> The cleaned site-area records were summed by site and day into the number of reports, the total cranes counted, and the largest single count. Days with no counted report at a site were recorded as zero reports, not as missing, because an unreported day is the absence of observers as much as the absence of cranes. Site-days with reports but no usable weather were removed, and a <code>has_records</code> column keeps the zero-versus-reported distinction visible.</li>
 </ul>
 <h3>Steps applied to the land-cover and effort tables</h3>
@@ -192,7 +194,7 @@ GET https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries
 <tr><td><code>large_flock</code></td><td>1 for reports at or above the 99th percentile of flock size (flagged, not removed).</td></tr>
 <tr><td><code>lat_norm, lon_norm, day_norm</code></td><td>Min-max normalized (0 to 1) latitude, longitude, and day of year.</td></tr>
 <tr><td><code>temp_mean_c, temp_max_c, temp_min_c, precip_mm</code></td><td>Standardized NCEI daily temperature (&deg;C) and precipitation (mm).</td></tr>
-<tr><td><code>om_snowfall_mm</code></td><td>Modelled daily snowfall (mm) from Open-Meteo.</td></tr>
+<tr><td><code>om_snowfall_mm, om_snow_depth_max_m</code></td><td>Modelled daily snowfall (mm) and the day&rsquo;s maximum modelled snow depth (m) from Open-Meteo.</td></tr>
 <tr><td><code>om_wind_max_kmh, om_gust_max_kmh, om_wind_dir_deg</code></td><td>Modelled daily maximum 10 m wind speed and gust (km/h) and dominant wind direction (degrees) from Open-Meteo.</td></tr>
 <tr><td><code>pct_developed, pct_cropland, pct_wetland, pct_open_water, &hellip;</code></td><td>Percentage of a 5 km cell (or of a whole site area) in each land-cover group, by NLCD year, in the land-cover files.</td></tr>
 <tr><td><code>d_developed_pp, d_cropland_pp, d_wetland_pp, &hellip;</code></td><td>Change in each land-cover group from 2011 to 2021, in percentage points (<code>cell_change_clean.csv</code>).</td></tr>
@@ -223,7 +225,6 @@ GET https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries
   <li><b>Observer effort.</b> Sightings come from volunteers, so places and months with more birdwatchers produce more reports. Counts of reports are not counts of birds.</li>
   <li><b>Site coordinates.</b> Reference-site coordinates are approximate and the two sites added beyond those named in the Introduction should be verified before being cited.</li>
   <li><b>Modelled snow and wind.</b> Open-Meteo values are a weather-model reconstruction on a grid of roughly 10 km to 25 km, so they smooth over local conditions, can understate snow depth and gusts at a particular field or river bend, and are not readings from an instrument. The grid point used for each site sits a few kilometers from the coordinates requested.</li>
-  <li><b>Snow depth not included.</b> Open-Meteo offers snow depth only as an hourly variable, which is a much larger download, and the free service refused that request when it was made because its daily allowance had been used up. Snowfall and wind, which are offered as daily values, were obtained. Snow depth can be added later by re-running the Open-Meteo step of <code>01_gather_data.py</code>.</li>
   <li><b>Station distance.</b> A weather station can be tens of kilometers from the site it represents, so its readings approximate, rather than equal, conditions at the birds' location.</li>
   <li><b>Recent API window.</b> The eBird API reaches back only 30 days, so its time series begins on the date of the first pull.</li>
 </ul>
@@ -317,7 +318,7 @@ GET https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries
 <figure>
   <a href="images/eda/fig11_correlation_heatmap.png"><img src="images/eda/fig11_correlation_heatmap.png" alt="Correlations among weather, season, and reports" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
   <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
-  <figcaption><b>Correlations among weather, season, and reports.</b> Colors show rank correlations among temperature, precipitation, modelled snowfall and wind, day of year, number of reports, and cranes counted across all site-days, including days with no reports, with blue for negative, red for positive, and gray near zero. Reports and cranes counted move together almost perfectly (0.99) while temperature has only a weak negative link with either (about -0.17) and snowfall and wind are even closer to zero (-0.07 to -0.01), so weather explains little of the daily variation on its own.</figcaption>
+  <figcaption><b>Correlations among weather, season, and reports.</b> Colors show rank correlations among temperature, precipitation, modelled snowfall, snow depth, and wind, day of year, number of reports, and cranes counted across all site-days, including days with no reports, with blue for negative, red for positive, and gray near zero. Reports and cranes counted move together almost perfectly (0.99) while temperature has only a weak negative link with either (about -0.17) and modelled snowfall, snow depth, and wind are even closer to zero (-0.07 to 0.00), so weather explains little of the daily variation on its own.</figcaption>
 </figure>
 <figure>
   <a href="images/eda/fig21_snow_and_wind_trends.png"><img src="images/eda/fig21_snow_and_wind_trends.png" alt="Snowfall and wind, 2010 to 2024" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
@@ -327,7 +328,7 @@ GET https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries
 <figure>
   <a href="images/eda/fig22_crane_reports_by_snow_and_wind.png"><img src="images/eda/fig22_crane_reports_by_snow_and_wind.png" alt="Crane reports on snowy and windy spring days" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
   <div class="ph">Figure appears here after <code>code/03_eda_figures.py</code> has been run on the gathered data.</div>
-  <figcaption><b>Crane reports on snowy and windy spring days.</b> Bars show how often a crane report was made on spring days (February to April) with different amounts of modelled snowfall or wind, relative to each site's average spring day (1.0), and each orange dot is one site. Reports were made about a third less often than usual on days with 2 centimeters or more of snowfall (0.67 versus 1.06 on snow-free days) and somewhat less often on the windiest third of days (0.88 versus 1.14 on the calmest), but stormy days also keep birdwatchers at home, so this shows a change in reports and not necessarily in where the cranes are.</figcaption>
+  <figcaption><b>Crane reports on snowy and windy spring days.</b> Bars show how often a crane report was made on spring days (February to April) with different amounts of modelled snowfall, snow on the ground, or wind, relative to each site's average spring day (1.0), and each orange dot is one site with at least 30 days in that class. Reports were made about a quarter less often than usual on days with 2 centimeters or more of snowfall (0.76 versus 1.06 on snow-free days) and about 40 percent less often with 5 centimeters or more of snow on the ground (0.58 versus 1.02), with a smaller drop on the windiest third of days (0.88 versus 1.14 on the calmest), but stormy days also keep birdwatchers at home, so this shows a change in reports and not necessarily in where the cranes are.</figcaption>
 </figure>
 </div>
 <h3>Land use and cranes</h3>
@@ -395,6 +396,6 @@ GET https://www.ncei.noaa.gov/access/services/data/v1?dataset=daily-summaries
 </script>
 
 </main>
-<footer>CSCI 5612 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
+<footer>CSCI 5612 &middot; Project Part 2 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
 </body>
 </html>

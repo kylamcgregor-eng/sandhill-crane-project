@@ -4,3 +4,5 @@ numpy>=1.26
 matplotlib>=3.8
 tifffile>=2023.7
 pyproj>=3.6
+scikit-learn>=1.4
+scipy>=1.11

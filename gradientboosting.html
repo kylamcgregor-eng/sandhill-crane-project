@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SVMs | Sandhill Crane Migration Over Time</title>
+<title>GradientBoosting | Sandhill Crane Migration Over Time</title>
 <meta name="description" content="Data science project on sandhill crane migration patterns over time, built with eBird community-science data.">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -22,9 +22,10 @@
       <li><a href="pca.html">PCA</a></li>
       <li><a href="naivebayes.html">NaiveBayes</a></li>
       <li><a href="dectrees.html">DecTrees</a></li>
-      <li><a href="svms.html" aria-current="page">SVMs</a></li>
       <li><a href="regression.html">Regression</a></li>
-      <li><a href="nn.html">NN</a></li>
+      <li><a href="adaboost.html">AdaBoost</a></li>
+      <li><a href="gradientboosting.html" aria-current="page">GradientBoosting</a></li>
+      <li><a href="xgboost.html">XGBoost</a></li>
       <li><a href="conclusions.html">Conclusions</a></li>
       <li><a href="about.html">About Me</a></li>
   </ul>
@@ -32,14 +33,14 @@
 <main id="main">
 
 <div class="prose">
-<h2>Support Vector Machines</h2>
-<p class="coming"><b>Coming in Module 4.</b> This tab is set up now and will be completed when the method is covered in class.</p>
+<h2>Gradient Boosting</h2>
+<p class="coming"><b>Coming in Part 5.</b> This tab is set up now and will be completed when the method is covered in class.</p>
 
 <span class="section-label">Overview</span>
-<p>Support vector machines separate classes with the boundary that leaves the widest margin between them. Linear, polynomial, and radial kernels will be compared on the crane labels, using confusion matrices and accuracy measures to show how kernel choice changes the result.</p>
+<p>Gradient boosting also combines many weak learners in sequence, but each new learner is fit to the residual errors left by the combined model so far rather than to reweighted mistakes. It will be compared against AdaBoost on the same classification task to show how the two boosting strategies differ in accuracy and in which features they lean on most.</p>
 
 <span class="section-label">Data</span>
-<p>Planned inputs: <a href="data/clean/observations_clean.csv">observations_clean.csv</a> (normalized columns <code>lat_norm</code>, <code>lon_norm</code>, <code>day_norm</code>) and <a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a>.</p>
+<p>Planned inputs: <a href="data/clean/observations_clean.csv">observations_clean.csv</a> and <a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a>.</p>
 <p class="coming">A small image of the prepared dataset for this method will appear here, along with links to the raw and cleaned files.</p>
 
 <span class="section-label">Code</span>
@@ -50,6 +51,6 @@
 </div>
 
 </main>
-<footer>CSCI 5612 &middot; Project Part 1 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
+<footer>CSCI 5612 &middot; Project Part 2 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
 </body>
 </html>
