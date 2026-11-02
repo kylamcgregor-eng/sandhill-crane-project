@@ -34,23 +34,93 @@
 
 <div class="prose">
 <h2>Decision Trees</h2>
-<p class="coming"><b>Coming in Part 3.</b> This tab is set up now and will be completed when the method is covered in class.</p>
+<p>A decision tree is a supervised classification method that predicts a label by asking a sequence of yes-or-no questions about the features, branching down to a leaf that holds the prediction. Here it is asked to predict the <i>season</i> a sighting happened in, using only where it was and how many birds were counted, never when.</p>
 
 <span class="section-label">Overview</span>
-<p>A decision tree classifies records by asking a sequence of yes-or-no questions about the features. Trees will be trained on the same labels as Naive Bayes so that the two methods can be compared, and the learned rules will show which conditions best separate the seasons of the crane year.</p>
+<p><b>What a decision tree is.</b> Every internal node of the tree is a test on one feature, every leaf is a prediction (the majority class among the training rows that land there), and the tree is built recursively: start with all the training rows at the root, pick the single best question to split them with, then repeat on each resulting group. To classify a new sighting, drop it in at the root and follow the answers down to a leaf.</p>
+<p><b>Measuring impurity: Gini and entropy.</b> A good split makes its children more pure, meaning closer to holding just one class. Two common ways to score how mixed a node is, from its class proportions p<sub>1</sub>,...,p<sub>K</sub>, are Gini impurity, G = 1 - &sum;p<sub>k</sub><sup>2</sup>, and entropy, H = -&sum;p<sub>k</sub> log<sub>2</sub>(p<sub>k</sub>). Both are 0 for a pure node and both are at their largest for an evenly mixed node; for two classes split 50/50 that is G = 0.5 and H = 1 bit. In practice the two measures tend to agree on which split is best, which scikit-learn's default (Gini) and the code below's comparison both bear out.</p>
+<p><b>Information gain.</b> A candidate split is scored by how much impurity it removes: Gain = impurity(parent) - the size-weighted average of impurity(child) across the children it creates. At each node, the tree tries every feature and, for a numeric feature, every candidate threshold between neighboring sorted values, computes the gain each would produce, and keeps the largest. A worked example using the project's own data appears in Results below, after the tree has actually been fit.</p>
+<p><b>Why depth has to be controlled.</b> Nothing stops a tree from splitting until every leaf is pure, which for real data usually means one or a few points per leaf and zero training error, a tree that has memorized the noise rather than learned the signal. Depth is the knob that trades this off: a shallow tree can underfit, while an unrestricted tree chases individual data points and does not generalize. The standard fix is pruning, either pre-pruning (stopping early with a rule such as a maximum depth) or post-pruning (growing the full tree, then cutting back branches that do not improve held-out performance); the Results below use pre-pruning by capping <code>max_depth</code>.</p>
+<p><b>Why there are effectively infinitely many possible trees.</b> For a numeric feature, a split threshold can sit anywhere between two neighboring data values, so even one feature offers a continuum of candidate cut points, not a handful of fixed options. Stack that with every possible choice of which feature to split on at every node, how deep to let the tree grow, and which stopping rule to use, and the number of trees that could be fit to the same data is enormous, for most practical purposes unbounded. That same sensitivity is also why a single tree is considered unstable: a small change in the training rows can shift which split looks best at the root and cascade into a differently shaped tree below it.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/dectrees/concept_infinite_trees.png"><img src="images/dectrees/concept_infinite_trees.png" alt="Three different valid trees on the same data" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/08_concept_diagrams2.py</code> has been run.</div>
+  <figcaption><b>Many valid trees.</b> A small made-up example, not project data. A cut on x, a cut on y, or two cuts together each separate these two groups about equally well; nothing picks out a single "correct" tree.</figcaption>
+</figure>
+<figure>
+  <a href="images/dectrees/concept_gini_info_gain.png"><img src="images/dectrees/concept_gini_info_gain.png" alt="Scoring a split by Gini and information gain" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/08_concept_diagrams2.py</code> has been run.</div>
+  <figcaption><b>Scoring a split.</b> A small made-up example, not project data. A 50/50 parent (Gini 0.50) splits into two much purer children (Gini 0.28 each), for a Gini gain of about 0.22.</figcaption>
+</figure>
+</div>
 
-<span class="section-label">Data</span>
-<p>Planned inputs: <a href="data/clean/observations_clean.csv">observations_clean.csv</a> and <a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a>.</p>
-<p class="coming">A small image of the prepared dataset for this method will appear here, along with links to the raw and cleaned files.</p>
+<span class="section-label">Data Prep</span>
+<p>Each of the 167,678 cleaned sightings carries a <code>season</code> label (winter, spring, summer, fall) assigned from its month, and the tree below is trained to predict that label from three numeric features only: <code>lat_norm</code>, <code>lon_norm</code>, and <code>log10_count</code>. The date itself is deliberately left out of the feature list, since handing the model the month, day of year, or week would make predicting season from it trivial rather than meaningful. A single stratified 80/20 split, built with scikit-learn's <code>train_test_split</code> (stratified on season so all four classes keep roughly their original proportions in both pieces) and saved to <a href="data/clean/nb_dt_train.csv">nb_dt_train.csv</a> and <a href="data/clean/nb_dt_test.csv">nb_dt_test.csv</a>, gives 134,142 training rows and 33,536 disjoint testing rows. Disjoint means every row lands in exactly one of the two sets, never both, which matters because a model tested on rows it already trained on would look far more accurate than it really is.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/dectrees/nb_dt_sample_preview.png"><img src="images/dectrees/nb_dt_sample_preview.png" alt="Sample of the labeled season data" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/07_decision_trees.py</code> has been run.</div>
+  <figcaption><b>Sample of the data.</b> A 400-row stratified sample of the labeled sightings used below, <a href="data/clean/nb_dt_sample.csv">nb_dt_sample.csv</a>.</figcaption>
+</figure>
+<figure>
+  <a href="images/dectrees/nb_dt_train_preview.png"><img src="images/dectrees/nb_dt_train_preview.png" alt="Sample of the training set" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/07_decision_trees.py</code> has been run.</div>
+  <figcaption><b>Training set.</b> First rows of <a href="data/clean/nb_dt_train.csv">nb_dt_train.csv</a>, 134,142 rows (80%).</figcaption>
+</figure>
+<figure>
+  <a href="images/dectrees/nb_dt_test_preview.png"><img src="images/dectrees/nb_dt_test_preview.png" alt="Sample of the testing set" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/07_decision_trees.py</code> has been run.</div>
+  <figcaption><b>Testing set.</b> First rows of <a href="data/clean/nb_dt_test.csv">nb_dt_test.csv</a>, 33,536 rows (20%), disjoint from training.</figcaption>
+</figure>
+</div>
 
 <span class="section-label">Code</span>
-<p>Python with pandas, scikit-learn, and matplotlib. Code links will be added here.</p>
+<p>Written in Python with pandas, scikit-learn (<code>DecisionTreeClassifier</code>, <code>plot_tree</code>, <code>confusion_matrix</code>), and matplotlib. Full code: <a href="code/07_decision_trees.py">code/07_decision_trees.py</a> (the overview diagrams above come from <a href="code/08_concept_diagrams2.py">code/08_concept_diagrams2.py</a>).</p>
 
 <span class="section-label">Results</span>
-<p class="coming">Results, parameter choices, and visualizations will be added here.</p>
+<p><b>Choosing a depth.</b> Test accuracy was tracked across every <code>max_depth</code> from 1 to 30. The raw peak sits at depth 26 (55.6% test accuracy), but by then the tree has grown 34,042 leaves and its training accuracy (81.7%) has pulled far ahead of its test accuracy, the signature of memorizing individual sightings rather than learning general rules; that gap is exactly the overfitting the Overview describes, and the same caution applies to any search like this one: a raw peak sitting right at the edge of the range tested should not be trusted at face value, since it may just mean the range was not searched far enough. Restricting the search to a practical depth of 12 or less, deep enough to still look like an explainable set of rules, gives a best depth of 12, with 53.2% test accuracy and a much smaller gap to its 56.5% training accuracy.</p>
+<figure>
+  <a href="images/dectrees/dt_depth_sweep.png"><img src="images/dectrees/dt_depth_sweep.png" alt="Train vs test accuracy across tree depth" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/07_decision_trees.py</code> has been run.</div>
+  <figcaption><b>Train vs. test accuracy as depth grows.</b> Training accuracy keeps climbing past depth 12, but test accuracy is nearly flat from there on; the shaded band marks the practical depth range this tab searches within.</figcaption>
+</figure>
+<p><b>Three trees.</b> Trees 1 and 2 use the same shallow max_depth=2 limit with different impurity measures, Gini and entropy, to compare them directly; both reach identical root and second-level splits and the same 40.8% test accuracy, matching the Overview's point that the two measures usually agree. Tree 3 uses the practical best depth of 12 (Gini); only its top three levels are shown below for readability, but its full 53.2% test accuracy comes from all 12 levels.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/dectrees/dt_tree_gini_shallow.png"><img src="images/dectrees/dt_tree_gini_shallow.png" alt="Tree 1, Gini, max depth 2" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/07_decision_trees.py</code> has been run.</div>
+  <figcaption><b>Tree 1, Gini, depth 2.</b> Splits first on latitude, then on flock size in both branches; test accuracy 40.8%.</figcaption>
+</figure>
+<figure>
+  <a href="images/dectrees/dt_tree_entropy_shallow.png"><img src="images/dectrees/dt_tree_entropy_shallow.png" alt="Tree 2, entropy, max depth 2" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/07_decision_trees.py</code> has been run.</div>
+  <figcaption><b>Tree 2, entropy, depth 2.</b> Identical structure to Tree 1 and the same 40.8% test accuracy, since Gini and entropy agree on the best split here.</figcaption>
+</figure>
+</div>
+<figure>
+  <a href="images/dectrees/dt_tree_gini_best.png"><img src="images/dectrees/dt_tree_gini_best.png" alt="Tree 3, Gini, practical best depth" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/07_decision_trees.py</code> has been run.</div>
+  <figcaption><b>Tree 3, Gini, depth 12 (top 3 levels shown).</b> The same root and second-level splits as Trees 1 and 2, continuing to further splits on latitude, longitude, and flock size below; full-depth test accuracy 53.2%.</figcaption>
+</figure>
+<p><b>A worked example from this project's own root split.</b> Tree 1's root splits on <code>lat_norm &le; 0.314</code> (roughly the 36th parallel, separating the southern wintering range from everything farther north). Before the split, the parent node's 134,142 training rows have Gini impurity 0.746 and entropy 1.989 bits. The split sends 30,196 rows left (Gini 0.642) and 103,946 rows right (Gini 0.719), for a size-weighted Gini gain of 0.746 - [(30,196/134,142)&times;0.642 + (103,946/134,142)&times;0.719] = <b>0.044</b>. By entropy the same split removes <b>0.134</b> bits (1.989 down to a weighted 1.855). Both measures agree the split is worth making, and scikit-learn's own recorded impurity at these three nodes (0.746, 0.642, 0.699 at depth 2) matches this by-hand calculation.</p>
+<p><b>Feature importance and confusion matrix.</b> In the practical-depth tree, latitude drives about half of the total impurity reduction (50.2%), longitude about three-tenths (30.5%), and flock size the rest (19.3%), confirming that location, especially how far north or south a sighting was, is what lets a tree separate seasons at all without being told the date.</p>
+<figure>
+  <a href="images/dectrees/dt_feature_importance.png"><img src="images/dectrees/dt_feature_importance.png" alt="Feature importance of the best tree" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/07_decision_trees.py</code> has been run.</div>
+  <figcaption><b>Which feature does the best tree lean on?</b> Gini-based feature importance for the depth-12 tree. Latitude alone accounts for about half of the total impurity it removes.</figcaption>
+</figure>
+<figure>
+  <a href="images/dectrees/dt_confusion_matrix.png"><img src="images/dectrees/dt_confusion_matrix.png" alt="Confusion matrix for the best tree" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/07_decision_trees.py</code> has been run.</div>
+  <figcaption><b>Best tree confusion matrix.</b> Rows are the true season, columns the predicted season, on the 33,536-row held-out test set. Winter is recovered correctly 73.6% of the time, by far the strongest result for any season.</figcaption>
+</figure>
+
+<span class="section-label">Conclusions</span>
+<p>Two results stand out. First, the tree recovers winter sightings correctly 73.6% of the time, by far its strongest season, against a 53.2% overall test accuracy. That winter result comes from being able to carve out an explicit rectangular region in latitude-longitude-flock-size space for the southern wintering range, rather than weighing each feature independently: winter really is defined by a specific combination of being far enough south and showing up in particular counts, and a tree's branching structure is well suited to catching exactly that kind of combined condition. Second, depth has to be controlled on purpose: the raw best test accuracy keeps inching up past the practical range tested here, but only by growing tens of thousands of leaves and opening a widening gap between train and test accuracy, the signature of memorizing individual sightings rather than learning a generalizable rule, so the tree used throughout Results deliberately trades a few points of accuracy for one that still reads as an explainable set of rules. That a single setting like depth can reshape the whole tree this much is a reminder that one tree is only ever one particular, somewhat arbitrary answer among many that could have been fit to the same rows.</p>
 </div>
 
 </main>
-<footer>CSCI 5612 &middot; Project Part 2 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
+<footer>CSCI 5612 &middot; Project Part 3 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
 </body>
 </html>
