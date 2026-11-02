@@ -1,0 +1,102 @@
+{
+  "n_total": 167678,
+  "n_train": 134142,
+  "n_test": 33536,
+  "train_season_counts": {
+    "spring": 37010,
+    "summer": 36646,
+    "fall": 33755,
+    "winter": 26731
+  },
+  "test_season_counts": {
+    "spring": 9253,
+    "summer": 9162,
+    "fall": 8438,
+    "winter": 6683
+  },
+  "features": [
+    "lat_norm",
+    "lon_norm",
+    "log10_count"
+  ],
+  "majority_class": "spring",
+  "baseline_accuracy": 0.2759124522900763,
+  "multinomial_accuracy": 0.3636390744274809,
+  "multinomial_confusion_matrix": [
+    [
+      324,
+      2686,
+      587,
+      3086
+    ],
+    [
+      42,
+      4520,
+      3384,
+      1307
+    ],
+    [
+      0,
+      4158,
+      3891,
+      1113
+    ],
+    [
+      132,
+      3571,
+      1275,
+      3460
+    ]
+  ],
+  "multinomial_confusion_labels": [
+    "winter",
+    "spring",
+    "summer",
+    "fall"
+  ],
+  "multinomial_classification_report": {
+    "winter": {
+      "precision": 0.6506024096385542,
+      "recall": 0.048481221008529106,
+      "f1-score": 0.09023812839437405,
+      "support": 6683.0
+    },
+    "spring": {
+      "precision": 0.3026447941078005,
+      "recall": 0.4884902193883065,
+      "f1-score": 0.373739044154126,
+      "support": 9253.0
+    },
+    "summer": {
+      "precision": 0.42585093575571853,
+      "recall": 0.4246889325474787,
+      "f1-score": 0.42526914039018526,
+      "support": 9162.0
+    },
+    "fall": {
+      "precision": 0.38590229756859246,
+      "recall": 0.41004977482815835,
+      "f1-score": 0.3976097448862331,
+      "support": 8438.0
+    },
+    "accuracy": 0.3636390744274809,
+    "macro avg": {
+      "precision": 0.4412501092676664,
+      "recall": 0.34292753694311817,
+      "f1-score": 0.3217140144562296,
+      "support": 33536.0
+    },
+    "weighted avg": {
+      "precision": 0.4265934531181898,
+      "recall": 0.3636390744274809,
+      "f1-score": 0.3373275190607896,
+      "support": 33536.0
+    }
+  },
+  "bernoulli_binarize_thresholds": {
+    "lat_norm": 0.3910465461334084,
+    "lon_norm": 0.7173927647736718,
+    "log10_count": 0.4771212547196624
+  },
+  "bernoulli_accuracy": 0.4001669847328244
+}
