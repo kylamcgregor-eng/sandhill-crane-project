@@ -34,23 +34,78 @@
 
 <div class="prose">
 <h2>AdaBoost</h2>
-<p class="coming"><b>Coming in Part 4.</b> This tab is set up now and will be completed when the method is covered in class.</p>
+<p>AdaBoost is a supervised classification method that builds a sequence of very simple classifiers, one after another, each one trained to pay more attention to whatever the ones before it got wrong. Here it is asked the same question as Part 3's single decision tree: predict the <i>season</i> a sighting happened in, from only where it was and how many birds were counted.</p>
 
 <span class="section-label">Overview</span>
-<p>AdaBoost builds a sequence of weak classifiers, each one focused on correcting the mistakes of the ones trained before it, and combines their votes into a single stronger model. It will predict the same seasonal and flock-size labels as Naive Bayes and Decision Trees, so a direct comparison can show whether boosting a weak learner beats the single-tree and probabilistic approaches.</p>
+<p><b>Boosting vs. bagging.</b> Bagging (the idea behind a random forest) fits many deep, flexible trees independently and in parallel, each on its own bootstrap-resampled rows, and then averages their votes; each tree is already low-bias and high-variance, and averaging cancels out the variance. Boosting does the opposite: it fits many very weak, high-bias learners one after another in sequence, and each new one is trained on a reweighted version of the data that emphasizes exactly the rows the previous ones got wrong. Where bagging reduces variance by averaging independent models, boosting reduces bias by chaining dependent ones, each patching the last.</p>
+<p><b>Decision stumps.</b> AdaBoost's weak learner is typically a decision stump, a decision tree of depth 1: one single yes-or-no split on one feature, with two leaves. A stump barely does better than guessing on its own (see the baseline below), but it is cheap to fit, and boosting's whole premise is that a long, carefully reweighted sequence of weak learners can combine into something strong.</p>
+<p><b>Reweighting and alpha.</b> Every row starts with equal weight 1/n. After each stump is fit, its weighted error rate &epsilon; is computed (the fraction of weighted mistakes it makes), and that stump earns a vote weight &alpha; = ln((1-&epsilon;)/&epsilon;) (scikit-learn's multiclass SAMME version adds ln(K-1) for K classes), which is large when the stump is accurate and small, even negative, when it barely beats chance. Every row the stump got wrong then has its weight multiplied up by roughly e<sup>&alpha;</sup> before the weights are renormalized to sum to 1 again, so the next stump in the sequence is fit on data that leans harder toward the rows that are still being missed.</p>
+<p><b>The final vote.</b> After M rounds, the final prediction is not a simple majority of the M stumps; it is a weighted vote, &sum;<sub>m</sub> &alpha;<sub>m</sub> h<sub>m</sub>(x), with each stump's say in the outcome set by how accurate it was when it was fit. A stump that nailed a hard reweighted problem gets more influence than one that barely scraped by.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/adaboost/concept_bagging_vs_boosting.png"><img src="images/adaboost/concept_bagging_vs_boosting.png" alt="Bagging vs boosting diagram" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/11_concept_diagrams3.py</code> has been run.</div>
+  <figcaption><b>Bagging vs. boosting.</b> A made-up illustration, not project data. Parallel independent trees vs. a sequential chain of stumps, each one reweighting what the last one missed.</figcaption>
+</figure>
+<figure>
+  <a href="images/adaboost/concept_reweighting.png"><img src="images/adaboost/concept_reweighting.png" alt="Reweighting misclassified rows" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/11_concept_diagrams3.py</code> has been run.</div>
+  <figcaption><b>Reweighting.</b> A made-up illustration, not project data. Marker size is weight; the handful of rows a stump misses grow larger for the next round.</figcaption>
+</figure>
+</div>
 
-<span class="section-label">Data</span>
-<p>Planned inputs: <a href="data/clean/observations_clean.csv">observations_clean.csv</a> and <a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a>.</p>
-<p class="coming">A small image of the prepared dataset for this method will appear here, along with links to the raw and cleaned files.</p>
+<span class="section-label">Data Prep</span>
+<p>The headline model reuses the exact stratified 80/20 split already saved to <a href="data/clean/nb_dt_train.csv">nb_dt_train.csv</a> and <a href="data/clean/nb_dt_test.csv">nb_dt_test.csv</a> (134,142 training rows, 33,536 disjoint testing rows, three numeric features: <code>lat_norm</code>, <code>lon_norm</code>, <code>log10_count</code>, date left out of the features for the same reason as every classification tab in this project), so its test-set accuracy below is directly comparable, row for row, to Part 3's Decision Tree. To choose AdaBoost's own settings honestly, 25% of the training rows are further carved off as a validation set (100,606 train / 33,536 validation), used only to pick <code>learning_rate</code> and <code>n_estimators</code>; the 33,536-row test set is never touched until the model is finalized.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/adaboost/nb_dt_sample_preview.png"><img src="images/adaboost/nb_dt_sample_preview.png" alt="Sample of the labeled season data" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/10_adaboost.py</code> has been run.</div>
+  <figcaption><b>Sample of the data.</b> A 400-row stratified sample of the labeled sightings, <a href="data/clean/nb_dt_sample.csv">nb_dt_sample.csv</a>.</figcaption>
+</figure>
+<figure>
+  <a href="images/adaboost/nb_dt_train_preview.png"><img src="images/adaboost/nb_dt_train_preview.png" alt="Training set" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/10_adaboost.py</code> has been run.</div>
+  <figcaption><b>Training set.</b> First rows of <a href="data/clean/nb_dt_train.csv">nb_dt_train.csv</a>, 134,142 rows (80%), further split into a train/validation piece for tuning.</figcaption>
+</figure>
+<figure>
+  <a href="images/adaboost/nb_dt_test_preview.png"><img src="images/adaboost/nb_dt_test_preview.png" alt="Testing set" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/10_adaboost.py</code> has been run.</div>
+  <figcaption><b>Testing set.</b> First rows of <a href="data/clean/nb_dt_test.csv">nb_dt_test.csv</a>, 33,536 rows (20%), untouched until the final score.</figcaption>
+</figure>
+</div>
+<p><b>One-hot encoding a categorical column.</b> scikit-learn's <code>AdaBoostClassifier</code> needs every feature to be numeric. The three features above already are, but <a href="data/clean/observations_clean.csv">observations_clean.csv</a> also carries <code>stateProvince</code>, a 62-category text column left out of the main split, which is used here to demonstrate encoding a categorical variable properly: the 9 most common states/provinces in the training rows keep their own name and everything else is bucketed to "Other", then that 10-category column is one-hot encoded into 10 separate 0/1 columns, one per bucket, so a tree-based model like AdaBoost can split on "is this Ontario or not" the same way it splits on a numeric threshold.</p>
+<figure>
+  <a href="images/adaboost/ada_onehot_preview.png"><img src="images/adaboost/ada_onehot_preview.png" alt="stateProvince one-hot encoded" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/10_adaboost.py</code> has been run.</div>
+  <figcaption><b>One-hot encoding in action.</b> Each row gets exactly one 1 among the 10 bucketed state/province columns; this enriched feature set is tested separately in Results below.</figcaption>
+</figure>
 
 <span class="section-label">Code</span>
-<p>Python with pandas, scikit-learn, and matplotlib. Code links will be added here.</p>
+<p>Written in Python with pandas, scikit-learn (<code>AdaBoostClassifier</code>, <code>DecisionTreeClassifier</code> as the stump, <code>confusion_matrix</code>), and matplotlib. Full code: <a href="code/10_adaboost.py">code/10_adaboost.py</a> (the overview diagrams above come from <a href="code/11_concept_diagrams3.py">code/11_concept_diagrams3.py</a>).</p>
 
 <span class="section-label">Results</span>
-<p class="coming">Results, parameter choices, and visualizations will be added here.</p>
+<p><b>Stump baseline.</b> A single decision stump, fit on the training rows and scored on validation, reaches only 36.5% accuracy, barely above the roughly-even four-way chance floor, confirming the Overview's point that one stump alone is a very weak classifier on its own.</p>
+<p><b>Tuning learning_rate and n_estimators.</b> Four learning rates (0.05, 0.2, 0.5, 1.0) were each run out to 300 boosting rounds, tracking validation accuracy after every single round added. Lower rates climb smoothly but plateau early (0.05 settles near 44.9%, 0.2 near 44.9%, 0.5 near 45.6%), while learning_rate=1.0 climbs further and reaches the best validation accuracy, 48.1%, at round 298. A follow-up check running learning_rate=1.0 out to 900 rounds confirms this is a genuine plateau and not just an artifact of stopping the search too early: the best it finds by round 881 is 48.3%, only two-tenths of a point higher, so 298 rounds at learning_rate=1.0 is the setting carried forward.</p>
+<figure>
+  <a href="images/adaboost/ada_validation_curve.png"><img src="images/adaboost/ada_validation_curve.png" alt="Validation accuracy vs boosting rounds for four learning rates" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/10_adaboost.py</code> has been run.</div>
+  <figcaption><b>Validation accuracy as stumps are added.</b> A higher learning rate lets each stump's vote count for more, which both speeds up and extends the climb here; the marked point is the chosen setting.</figcaption>
+</figure>
+<p><b>Final test result, against the Decision Tree.</b> Refit on all 134,142 training rows with the chosen settings and scored once on the untouched 33,536-row test set, this AdaBoost model reaches 47.5% accuracy &mdash; below Part 3's single Decision Tree, which reached 53.2% on these identical rows, a 5.6-point gap. Three hundred shallow stumps, each only a single split, do not carve up this three-feature space as effectively here as one deeper tree that can combine latitude, longitude, and flock size across up to 12 sequential splits in one model.</p>
+<figure>
+  <a href="images/adaboost/ada_confusion_matrix.png"><img src="images/adaboost/ada_confusion_matrix.png" alt="AdaBoost confusion matrix" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/10_adaboost.py</code> has been run.</div>
+  <figcaption><b>Confusion matrix.</b> Winter is recovered best (71.4% recall), fall worst (28.8% recall, scattered fairly evenly across the other three predicted seasons); spring and summer are confused with each other more than with anything else, 2,940 and 2,697 sightings each way.</figcaption>
+</figure>
+<p><b>Which mistake would this model rather make?</b> Missing a true winter sighting (calling it something else) happens least often here, 28.6% of the time, while missing a true fall sighting happens most, 71.2% of the time. For a project interested in migration timing, a model that is relatively reliable on winter but weak on fall is a meaningful asymmetry: fall sightings get scattered almost randomly across the other three predicted seasons, which says flock size and location alone do not pin fall down the way they pin down the compact, far-south winter range.</p>
+<p><b>Does one-hot-encoded location help?</b> Adding the 10 bucketed <code>stateProvince</code> columns to the same 298-round, learning_rate=1.0 model changes test accuracy from 47.5% to 47.5% (a 0.1-point drop, essentially no change). That null result makes sense: <code>lat_norm</code> and <code>lon_norm</code> already describe a sighting's location continuously and far more precisely than a 10-bucket state/province label can, so the coarser categorical version adds encoding complexity without adding information the model did not already have.</p>
+<p><b>A worked first round, by hand.</b> Before any reweighting, all 134,142 training rows carry equal weight 1/n, so the first stump's weighted error is just its plain misclassification rate: it gets 85,082 rows wrong, for &epsilon;<sub>1</sub> = 85,082 / 134,142 = 0.634. Its vote weight is &alpha;<sub>1</sub> = ln((1-0.634)/0.634) + ln(4-1) = 0.548 (the ln(K-1) = ln 3 term is SAMME's multiclass correction). scikit-learn's own fitted model reports <code>estimator_errors_[0]</code> = 0.634 and <code>estimator_weights_[0]</code> = 0.548, an exact match to the by-hand numbers. After reweighting by e<sup>&alpha;<sub>1</sub></sup> and renormalizing, a misclassified row's weight rises by a factor of about 1.73 relative to a correctly classified row's, exactly the push that sends the second stump looking harder at what the first one missed.</p>
+
+<span class="section-label">Conclusions</span>
+<p>More models is not automatically a better model: three hundred decision stumps, individually almost useless (36.5% accuracy for just one), combine through boosting into a classifier that clears 47%, a real improvement over guessing but still short of what a single well-tuned deeper tree reaches on this same three-feature problem. The clearest asymmetry in what AdaBoost learns here is between winter, which it recovers correctly most of the time, and fall, which it confuses with everything else; that split lines up with how distinct the underlying geography is, a compact southern wintering range is a far easier target for any classifier than a fall migration that is spread thin across the whole study area. Adding a coarse, categorical description of location on top of the already-continuous latitude and longitude changed nothing, a useful negative result: for this problem the right kind of location information was already in the model, and more features are not the same as more information.</p>
 </div>
 
 </main>
-<footer>CSCI 5612 &middot; Project Part 3 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
+<footer>CSCI 5612 &middot; Project Part 4 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
 </body>
 </html>
