@@ -34,23 +34,103 @@
 
 <div class="prose">
 <h2>Regression</h2>
-<p class="coming"><b>Coming in Part 4.</b> This tab is set up now and will be completed when the method is covered in class.</p>
+<p>Regression is a supervised method for predicting a target from one or more features, and it comes in two forms depending on what kind of target it is. Here two separate questions are asked: can the size of a day's crane count be predicted from that day's weather, and can whether a sighting happened in winter be predicted from where it was and how many birds were in it?</p>
 
 <span class="section-label">Overview</span>
-<p>Regression estimates a numerical outcome from one or more predictors. Linear regression will be used to relate the number of cranes reported, or the day of the spring peak, to temperature, precipitation, land cover, and calendar variables at the reference sites.</p>
+<p><b>Linear regression predicts a number.</b> Given a numeric target y and one or more numeric features x<sub>1</sub>,...,x<sub>k</sub>, linear regression fits a straight-line (or flat-plane, with more than one feature) relationship y&#770; = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> + ... + b<sub>k</sub>x<sub>k</sub>. The coefficients b<sub>0</sub>,...,b<sub>k</sub> are chosen to minimize the sum of squared residuals, &sum;(y<sub>i</sub> - y&#770;<sub>i</sub>)&sup2;, over the training rows, which is why the method is also called least squares. With a single feature there is even a closed-form answer: the slope is the covariance of x and y divided by the variance of x, and the intercept keeps the line through the data's mean point.</p>
+<p><b>Logistic regression predicts a class.</b> It is built for a target that is one of two classes rather than a number. It starts the same way, with a linear score z = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> + ... + b<sub>k</sub>x<sub>k</sub>, but that score is unbounded, so it is passed through the sigmoid function p = 1 / (1 + e<sup>-z</sup>) to squeeze it into a probability between 0 and 1. A prediction becomes a class by thresholding that probability, almost always at p = 0.5, which is exactly where z = 0; since z is linear in the features, that threshold is a straight (or flat) decision boundary through feature space, just like a linear regression line, only used to separate classes instead of predicting a number. Rearranging the sigmoid gives the log-odds, or logit, log(p / (1 - p)) = z: logistic regression is, underneath, a linear model of the log-odds of the positive class, which is also why a coefficient here is read in terms of odds rather than a plain unit change.</p>
+<p><b>Fitting the two models differs too.</b> Least squares has a closed-form solution, but log loss (the quantity logistic regression minimizes) does not, so scikit-learn's <code>LogisticRegression</code> finds its coefficients iteratively instead of in one step. Both models below still answer in plain numeric-feature terms, just toward different kinds of target: a continuous flock-size estimate for linear regression, a winter-or-not probability for logistic regression.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/regression/concept_linreg_fit.png"><img src="images/regression/concept_linreg_fit.png" alt="Linear regression least-squares fit" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/11_concept_diagrams3.py</code> has been run.</div>
+  <figcaption><b>Least squares.</b> A small made-up example, not project data. The fitted line is the one that makes the vertical residuals, shown in grey, as small as possible in total (squared).</figcaption>
+</figure>
+<figure>
+  <a href="images/regression/concept_sigmoid.png"><img src="images/regression/concept_sigmoid.png" alt="Sigmoid function and decision boundary" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/11_concept_diagrams3.py</code> has been run.</div>
+  <figcaption><b>Sigmoid and decision boundary.</b> A small made-up example, not project data. The S-shaped curve turns an unbounded linear score into a probability; thresholding it at 0.5 is the same as thresholding the raw score at zero.</figcaption>
+</figure>
+</div>
 
-<span class="section-label">Data</span>
-<p>Planned input: <a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a>.</p>
-<p class="coming">A small image of the prepared dataset for this method will appear here, along with links to the raw and cleaned files.</p>
+<span class="section-label">Data Prep</span>
+<p><b>Linear regression target: a numeric flock-size estimate.</b> <a href="data/clean/site_daily_clean.csv">site_daily_clean.csv</a> has one row per reference site per day, but on most days no sighting was logged there at all, so a day with no record is not a "zero cranes" measurement, it is a missing one. Restricting to the 6,699 site-days where <code>has_records</code> is 1 and taking log<sub>10</sub> of that day's <code>total_count</code> (always at least 1 on those days, so the log is always defined) gives the numeric target, <code>log10_count</code>. The features are six weather variables already in the cleaned file &mdash; <code>temp_mean_c</code>, <code>precip_mm</code>, <code>om_snowfall_mm</code>, <code>om_wind_max_kmh</code>, <code>om_snow_depth_max_m</code>, <code>temp_7d_mean_c</code> &mdash; plus <code>day</code>, already carried in the cleaned file as day-of-year (the same definition used on the DataPrep/EDA and Clustering tabs), as a calendar variable. A fresh 80/20 split, built with <code>train_test_split</code> and saved to <a href="data/clean/reg_train.csv">reg_train.csv</a> and <a href="data/clean/reg_test.csv">reg_test.csv</a>, gives 5,359 training rows and 1,340 disjoint testing rows; disjoint so that the test error reported below reflects days the model never got to see weather-and-count pairs for during fitting.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/regression/reg_sample_preview.png"><img src="images/regression/reg_sample_preview.png" alt="Sample of site-days used for linear regression" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>Sample of the data.</b> Site-days with a sighting record, <a href="data/clean/reg_sample.csv">reg_sample.csv</a>.</figcaption>
+</figure>
+<figure>
+  <a href="images/regression/reg_train_preview.png"><img src="images/regression/reg_train_preview.png" alt="Linear regression training set" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>Training set.</b> First rows of <a href="data/clean/reg_train.csv">reg_train.csv</a>, 5,359 rows (80%).</figcaption>
+</figure>
+<figure>
+  <a href="images/regression/reg_test_preview.png"><img src="images/regression/reg_test_preview.png" alt="Linear regression testing set" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>Testing set.</b> First rows of <a href="data/clean/reg_test.csv">reg_test.csv</a>, 1,340 rows (20%), disjoint from training.</figcaption>
+</figure>
+</div>
+<p><b>Logistic regression target: a two-class winter label.</b> The target here, <code>is_winter</code>, is 1 when a sighting's <code>season</code> is winter and 0 otherwise, built from the same stratified 80/20 split already saved to <a href="data/clean/nb_dt_train.csv">nb_dt_train.csv</a> and <a href="data/clean/nb_dt_test.csv">nb_dt_test.csv</a> (134,142 training rows, 33,536 disjoint testing rows, winter making up about 19.9% of each). Reusing that exact split, with the same three features &mdash; <code>lat_norm</code>, <code>lon_norm</code>, <code>log10_count</code> &mdash; and the date still left out for the same reason as before, means this model's test rows are the identical rows used for every comparison below.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/regression/log_sample_preview.png"><img src="images/regression/log_sample_preview.png" alt="Sample of the season data with is_winter added" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>Sample of the data.</b> The labeled sightings with <code>is_winter</code> added, <a href="data/clean/nb_dt_sample.csv">nb_dt_sample.csv</a>.</figcaption>
+</figure>
+<figure>
+  <a href="images/regression/log_train_preview.png"><img src="images/regression/log_train_preview.png" alt="Logistic regression training set" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>Training set.</b> First rows of <a href="data/clean/nb_dt_train.csv">nb_dt_train.csv</a>, 134,142 rows (80%).</figcaption>
+</figure>
+<figure>
+  <a href="images/regression/log_test_preview.png"><img src="images/regression/log_test_preview.png" alt="Logistic regression testing set" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>Testing set.</b> First rows of <a href="data/clean/nb_dt_test.csv">nb_dt_test.csv</a>, 33,536 rows (20%), disjoint from training.</figcaption>
+</figure>
+</div>
 
 <span class="section-label">Code</span>
-<p>Python with pandas, scikit-learn, statsmodels, and matplotlib. Code links will be added here.</p>
+<p>Written in Python with pandas, scikit-learn (<code>LinearRegression</code>, <code>LogisticRegression</code>), and matplotlib. Full code: <a href="code/09_regression.py">code/09_regression.py</a> (the overview diagrams above come from <a href="code/11_concept_diagrams3.py">code/11_concept_diagrams3.py</a>).</p>
 
 <span class="section-label">Results</span>
-<p class="coming">Results, parameter choices, and visualizations will be added here.</p>
+<p><b>Linear regression: a weak but real signal.</b> On the 1,340-row test set, the fitted model reaches RMSE 1.178 and MAE 0.949 on the log<sub>10</sub>(count) scale, with R&sup2; = 0.296 &mdash; weather explains roughly 30% of the day-to-day variation in how many cranes get logged at a site, leaving most of it to whatever weather does not capture (count rounding at hotspots, which species are actively staging that week, observer effort). A one degree Celsius rise in <code>temp_mean_c</code> is associated with a predicted count about 4.6% lower (10<sup>-0.0205</sup> &asymp; 0.954), holding the other weather variables fixed; a one millimeter rise in <code>precip_mm</code> is associated with about 1.76% lower (10<sup>-0.0077</sup> &asymp; 0.982). Both point the same direction: milder, drier days see somewhat smaller logged counts at these sites, consistent with the biggest counts coming from cold-season staging and wintering flocks rather than fair-weather spread-out birds. Of the remaining four coefficients, <code>om_snowfall_mm</code> is practically negligible (-0.3% per millimeter), and <code>temp_7d_mean_c</code> has the single largest per-degree weather effect in the whole model (-18.6% per degree, steeper than same-day temperature, a week of warming matters more than one warm day); <code>om_wind_max_kmh</code> and <code>om_snow_depth_max_m</code> both look outsized per unit (+6.4% per km/h and the -98.9% already flagged below) for the same reason, a "one-unit" change in either is far bigger than what a typical day-to-day swing in the data actually looks like, so neither is a realistic one-step change to picture. <code>day</code>'s effect is tiny per calendar day (+0.14%) but compounds to roughly a 66% rise in predicted count from January 1st to December 31st with weather held fixed, the model's one echo of the seasonal cycle running underneath the weather variables themselves.</p>
+<div class="fig-grid">
+<figure>
+  <a href="images/regression/lin_pred_vs_actual.png"><img src="images/regression/lin_pred_vs_actual.png" alt="Predicted vs actual log10 count" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>Predicted vs. actual.</b> Test-set points cluster loosely around the perfect-prediction line; the model captures the broad trend but leaves plenty of day-to-day scatter unexplained.</figcaption>
+</figure>
+<figure>
+  <a href="images/regression/lin_residuals.png"><img src="images/regression/lin_residuals.png" alt="Residuals vs fitted values" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>Residuals vs. fitted.</b> A mild downward drift at higher fitted values, a sign the straight-line fit is not quite catching the full curve of how count grows, a plain linear form has limits here.</figcaption>
+</figure>
+</div>
+<figure>
+  <a href="images/regression/lin_coefficients.png"><img src="images/regression/lin_coefficients.png" alt="Linear regression coefficients" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>All seven coefficients, interpreted in the text above.</b> <code>om_snow_depth_max_m</code> looks dominant only because it is measured in meters, a unit where a "one-unit" change is enormous, not because snow depth matters more than everything else combined.</figcaption>
+</figure>
+<p><b>Logistic regression: better at finding winter, still a modest model overall.</b> On the 33,536-row test set the model reaches 81.4% accuracy, only a few points above the 80.1% a classifier gets for free by always guessing "not winter" (winter is 19.9% of the rows), so the headline accuracy number alone overstates how much it has actually learned. Looking at winter specifically is more informative: precision is 56.6% and recall is 29.1%, meaning just over half of its winter guesses are right, and it catches about three in ten of the true winter sightings. A one-unit rise in <code>log10_count</code> &mdash; a sighting ten times larger &mdash; multiplies the odds of that sighting being winter by about 2.06 (a 106% increase), which fits the project's own data: the largest staging and wintering flocks are logged in the cold months.</p>
+<p>Compared with Part 3's Naive Bayes model on this identical test set, which reached 65.1% precision but only 4.8% recall for winter, logistic regression trades some precision for far more recall, correctly flagging about six times as many of the true winter sightings. Naive Bayes almost never guesses winter at all (hence the near-perfect precision whenever it does), while logistic regression's smoothly weighted combination of all three features is willing to call a sighting winter much more often, at some cost to how often those calls are right.</p>
+<figure>
+  <a href="images/regression/log_confusion_matrix.png"><img src="images/regression/log_confusion_matrix.png" alt="Logistic regression confusion matrix" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>Confusion matrix.</b> Of 6,683 true winter sightings, 1,945 are caught and 4,738 are missed; of 26,853 true non-winter sightings, 25,360 are correctly passed over.</figcaption>
+</figure>
+<figure>
+  <a href="images/regression/log_sigmoid_slice.png"><img src="images/regression/log_sigmoid_slice.png" alt="Fitted sigmoid slice" loading="lazy" onerror="this.closest('figure').classList.add('pending')"></a>
+  <div class="ph">Figure appears here after <code>code/09_regression.py</code> has been run.</div>
+  <figcaption><b>The fitted sigmoid in practice.</b> Predicted P(winter) as flock size grows, with latitude and longitude held at their median; the curve crosses 0.5 only once flock size is already unusually large.</figcaption>
+</figure>
+
+<span class="section-label">Conclusions</span>
+<p>Weather alone explains a real but limited share of how many cranes get logged on a given day, around 30% of the variance on an already-compressed log scale, which says that temperature and precipitation matter but that a lot of what drives a big count day (exactly where the migration front is, how many observers were out, which flock happened to pass a hotspot) is simply not in this feature set. On the classification side, the clearest finding is that a sighting's flock size carries real information about whether it happened in winter: supersized counts in the hundreds or thousands are a winter signature at these reference sites, strongly enough that a model built on size and location alone can more than double its odds estimate for every tenfold jump in count. That the model still misses most individual winter sightings is a reminder that flock size and location describe a tendency, not a certainty, since plenty of smaller, more modest sightings happen in winter too.</p>
 </div>
 
 </main>
-<footer>CSCI 5612 &middot; Project Part 3 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
+<footer>CSCI 5612 &middot; Project Part 4 &middot; Bird sighting data courtesy of the eBird community and the Cornell Lab of Ornithology, accessed through GBIF.org and the eBird API.</footer>
 </body>
 </html>

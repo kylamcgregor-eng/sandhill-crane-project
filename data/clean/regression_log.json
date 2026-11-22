@@ -1,0 +1,69 @@
+{
+  "linear_n_total": 6699,
+  "linear_n_train": 5359,
+  "linear_n_test": 1340,
+  "linear_features": [
+    "temp_mean_c",
+    "precip_mm",
+    "om_snowfall_mm",
+    "om_wind_max_kmh",
+    "om_snow_depth_max_m",
+    "temp_7d_mean_c",
+    "day"
+  ],
+  "linear_intercept": 2.728966279884924,
+  "linear_coefficients": {
+    "temp_mean_c": -0.020467097465144957,
+    "precip_mm": -0.007715779029409906,
+    "om_snowfall_mm": -0.0012741099589662734,
+    "om_wind_max_kmh": 0.026836870646809074,
+    "om_snow_depth_max_m": -1.95508029066823,
+    "temp_7d_mean_c": -0.08956217318831733,
+    "day": 0.0006028437792241173
+  },
+  "linear_rmse": 1.1778527657166273,
+  "linear_mae": 0.9491703740658458,
+  "linear_r2": 0.295770824243784,
+  "linear_coef_pct_per_unit": {
+    "temp_mean_c": -4.603398658547464,
+    "precip_mm": -1.7609348655363788
+  },
+  "logistic_n_train": 134142,
+  "logistic_n_test": 33536,
+  "logistic_features": [
+    "lat_norm",
+    "lon_norm",
+    "log10_count"
+  ],
+  "logistic_train_winter_rate": 0.19927390377361304,
+  "logistic_test_winter_rate": 0.19927838740458015,
+  "logistic_baseline_accuracy": 0.8007216125954199,
+  "logistic_accuracy": 0.8141996660305344,
+  "logistic_confusion_matrix": [
+    [
+      25360,
+      1493
+    ],
+    [
+      4738,
+      1945
+    ]
+  ],
+  "logistic_confusion_labels": [
+    "not_winter",
+    "winter"
+  ],
+  "logistic_precision_winter": 0.5657358929610239,
+  "logistic_recall_winter": 0.2910369594493491,
+  "logistic_intercept": 1.9881846921804656,
+  "logistic_coefficients": {
+    "lat_norm": -6.564538783951513,
+    "lon_norm": -2.70430722721154,
+    "log10_count": 0.720844091220031
+  },
+  "logistic_odds_ratios": {
+    "lat_norm": 0.0014094738729870406,
+    "lon_norm": 0.06691666583769203,
+    "log10_count": 2.0561680717666473
+  }
+}
